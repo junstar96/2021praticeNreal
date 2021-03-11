@@ -2,54 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NRKernal.NRExamples;
 
-namespace NRKernal.NRExamples
+public class Scenemanager : MonoBehaviour
 {
-    public class Scenemanager : MonoBehaviour
+    private float count_time;
+
+
+    // Start is called before the first frame update
+
+    //text를 조작하기 위해 받아오자.
+
+
+
+    private Scenemanager instance;
+
+    public Scenemanager scenemanager
     {
-        private float count_time;
-        
-        // Start is called before the first frame update
-
-        //text를 조작하기 위해 받아오자.
-        
-        
-
-        private Scenemanager instance;
-
-        public Scenemanager scenemanager
+        get
         {
-            get
+            if (instance == null)
             {
-                if(instance == null)
-                {
-                    instance = this;
-                }
-                return instance;
+                instance = this;
             }
+            return instance;
         }
-        void Start()
-        {
-            count_time = 0.0f;
+    }
+    void Start()
+    {
+        count_time = 0.0f;
 
-            DontDestroyOnLoad(this);
-        }
+        DontDestroyOnLoad(this);
+    }
 
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
+    {
+        if (count_time >= 1.0f)
         {
             count_time += Time.deltaTime;
-
-
-            if(count_time >= 1.0f)
+            if (count_time >= 1.0f)
             {
                 SceneManager.LoadScene(1);
+
             }
-          
         }
 
-        
+
+
+
+
     }
+
+
 }
 
 

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class CanvusControll : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Canvas canvas;
     void Start()
     {
         
@@ -13,6 +14,16 @@ public class CanvusControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            if(!canvas.gameObject.activeSelf)
+            {
+                canvas.gameObject.SetActive(true);
+            }
+            else
+            {
+                canvas.gameObject.SetActive(false);
+            }
+        }
     }
 }

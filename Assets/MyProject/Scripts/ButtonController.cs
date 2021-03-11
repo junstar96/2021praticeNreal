@@ -15,6 +15,7 @@ public class ButtonController : MonoBehaviour
     {
         for(int i = 0;i<xml_pos.List_length;i++)
         {
+            Debug.Log("화면에 버튼을 띄우는 중이다");
             BUSstationXML.GPSinfo buttoninfo;
             buttoninfo = xml_pos.ButtonInfo(i);
             button.nameOfStation = buttoninfo.name;
@@ -25,8 +26,8 @@ public class ButtonController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
         
-    }
+    //}
 }
