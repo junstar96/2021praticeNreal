@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{59FFC0AD-B048-2292-89FF-67C39A32D6A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRSDK", "NRSDK.csproj", "{0536C086-8C32-44AD-86BF-0D8C276B7913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRSDKEditor", "NRSDKEditor.csproj", "{9787BD99-C6BF-C3F3-56FB-85C76163F906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{3CA8B94B-90CB-E78B-BE4B-1D1B079B36A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59FFC0AD-B048-2292-89FF-67C39A32D6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FFC0AD-B048-2292-89FF-67C39A32D6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FFC0AD-B048-2292-89FF-67C39A32D6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FFC0AD-B048-2292-89FF-67C39A32D6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0536C086-8C32-44AD-86BF-0D8C276B7913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0536C086-8C32-44AD-86BF-0D8C276B7913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0536C086-8C32-44AD-86BF-0D8C276B7913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0536C086-8C32-44AD-86BF-0D8C276B7913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9787BD99-C6BF-C3F3-56FB-85C76163F906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9787BD99-C6BF-C3F3-56FB-85C76163F906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9787BD99-C6BF-C3F3-56FB-85C76163F906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9787BD99-C6BF-C3F3-56FB-85C76163F906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA8B94B-90CB-E78B-BE4B-1D1B079B36A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA8B94B-90CB-E78B-BE4B-1D1B079B36A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA8B94B-90CB-E78B-BE4B-1D1B079B36A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA8B94B-90CB-E78B-BE4B-1D1B079B36A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
