@@ -2,32 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayerPoint : MonoBehaviour
+namespace NRKernal.NRExamples
 {
-    private GameObject playerobject;
-
-    // Start is called before the first frame update
-    void Start()
+    public class FollowPlayerPoint : MonoBehaviour
     {
-        playerobject = GameObject.FindGameObjectWithTag("Player");
+        private GameObject playerobject;
 
-        if(playerobject == null)
+        // Start is called before the first frame update
+        void Start()
         {
-            Debug.Log("player connect fail");
-            
+            playerobject = GameObject.FindGameObjectWithTag("Player");
+
+            if (playerobject == null)
+            {
+                Debug.Log("player connect fail");
+
+            }
+            else
+            {
+                Debug.Log("player connect success");
+            }
+
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            Debug.Log("player connect success");
+
+            gameObject.transform.position = playerobject.transform.position + new Vector3(0.175f, 0.239f, 3.0f);
+            //gameObject.transform.rotation = playerobject.transform.rotation;
         }
+
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        gameObject.transform.position = playerobject.transform.position + new Vector3(0.175f, 0.239f, 3.0f);
-    }
-
-    
 }
+

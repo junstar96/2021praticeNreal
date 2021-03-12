@@ -1,0 +1,1280 @@
+ScriptsOnlyBuild:
+  usedScripts:
+    Assembly-CSharp.dll:
+    - NRKernal.NRExamples.FollowPlayerPoint
+    - NRKernal.NRExamples.GPScontroller
+    - NRKernal.NRExamples.MyArrowProject.ArrowController
+    - NRKernal.NRExamples.MyArrowProject.BUSstationXML
+    - NRKernal.NRExamples.MyArrowProject.ButtonController
+    - NRKernal.NRExamples.MyArrowProject.LocationChange
+    - Scenemanager
+    - TurnTheGameOn.ArrowWaypointer.Waypoint
+    - TurnTheGameOn.ArrowWaypointer.WaypointController
+    NRSDK.dll:
+    - NRKernal.CanvasRaycastTarget
+    - NRKernal.ControllerAnchorsHelper
+    - NRKernal.ControllerTracker
+    - NRKernal.FinchShiftControllerVisual
+    - NRKernal.GazeTracker
+    - NRKernal.MainThreadDispather
+    - NRKernal.MultiScreenController
+    - NRKernal.NRButton
+    - NRKernal.NREmulatorController
+    - NRKernal.NREmulatorHeadPose
+    - NRKernal.NREmulatorManager
+    - NRKernal.NRExamples.AppManager
+    - NRKernal.NRExamples.CameraSmoothFollow
+    - NRKernal.NRExamples.NRHomeMenu
+    - NRKernal.NRGlassesInitErrorTip
+    - NRKernal.NRHMDPoseTracker
+    - NRKernal.NRInput
+    - NRKernal.NRLaserReticle
+    - NRKernal.NRLaserVisual
+    - NRKernal.NRMultScrPointerRaycaster
+    - NRKernal.NRMultiDisplayManager
+    - NRKernal.NRNotificationListener
+    - NRKernal.NRNotificationWindow
+    - NRKernal.NRPhoneControllerVisual
+    - NRKernal.NRPointerRaycaster
+    - NRKernal.NRSessionBehaviour
+    - NRKernal.NRSessionConfig
+    - NRKernal.NRTrackingImageDatabase
+    - NRKernal.NRVirtualDisplayer
+    - NRKernal.NRVisualProfiler
+    - NRKernal.NrealLightControllerVisual
+    - NRKernal.Record.NRCameraInitializer
+    - NRKernal.Record.NRCaptureBehaviour
+    - NRKernal.Record.NRPreviewer
+    - NRKernal.Record.NRRecordBehaviour
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.BaseInput
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Text
+  sceneClasses:
+    Assets/MyProject/Scenes/Logo scene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11278}
+    - Class: 114
+      Script: {instanceID: 11280}
+    - Class: 114
+      Script: {instanceID: 11282}
+    - Class: 114
+      Script: {instanceID: 11286}
+    - Class: 114
+      Script: {instanceID: 11450}
+    - Class: 114
+      Script: {instanceID: 11542}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11644}
+    - Class: 114
+      Script: {instanceID: 11654}
+    - Class: 114
+      Script: {instanceID: 11742}
+    - Class: 114
+      Script: {instanceID: 11754}
+    - Class: 114
+      Script: {instanceID: 11788}
+    - Class: 114
+      Script: {instanceID: 11956}
+    - Class: 114
+      Script: {instanceID: 11980}
+    - Class: 114
+      Script: {instanceID: 11998}
+    - Class: 114
+      Script: {instanceID: 12018}
+    - Class: 114
+      Script: {instanceID: 12020}
+    - Class: 114
+      Script: {instanceID: 12078}
+    - Class: 114
+      Script: {instanceID: 12268}
+    - Class: 114
+      Script: {instanceID: 12352}
+    - Class: 114
+      Script: {instanceID: 12360}
+    - Class: 114
+      Script: {instanceID: 12374}
+    - Class: 114
+      Script: {instanceID: 12376}
+    - Class: 114
+      Script: {instanceID: 12380}
+    - Class: 114
+      Script: {instanceID: 12396}
+    - Class: 114
+      Script: {instanceID: 12412}
+    - Class: 114
+      Script: {instanceID: 12498}
+    - Class: 114
+      Script: {instanceID: 12548}
+    - Class: 114
+      Script: {instanceID: 12668}
+    - Class: 114
+      Script: {instanceID: 12754}
+    - Class: 114
+      Script: {instanceID: 13046}
+    - Class: 114
+      Script: {instanceID: 13112}
+    - Class: 114
+      Script: {instanceID: 13150}
+    - Class: 114
+      Script: {instanceID: 13250}
+    - Class: 114
+      Script: {instanceID: 13342}
+    - Class: 114
+      Script: {instanceID: 13356}
+    - Class: 114
+      Script: {instanceID: 13378}
+    - Class: 114
+      Script: {instanceID: 13392}
+    - Class: 114
+      Script: {instanceID: 13470}
+    - Class: 114
+      Script: {instanceID: 13480}
+    - Class: 114
+      Script: {instanceID: 13484}
+    - Class: 114
+      Script: {instanceID: 13554}
+    - Class: 114
+      Script: {instanceID: 13556}
+    - Class: 114
+      Script: {instanceID: 13604}
+    - Class: 114
+      Script: {instanceID: 13606}
+    - Class: 114
+      Script: {instanceID: 13626}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/MyProject/Scenes/Main Scene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11278}
+    - Class: 114
+      Script: {instanceID: 11280}
+    - Class: 114
+      Script: {instanceID: 11282}
+    - Class: 114
+      Script: {instanceID: 11284}
+    - Class: 114
+      Script: {instanceID: 11286}
+    - Class: 114
+      Script: {instanceID: 11542}
+    - Class: 114
+      Script: {instanceID: 12152}
+    - Class: 114
+      Script: {instanceID: 12248}
+    - Class: 114
+      Script: {instanceID: 12270}
+    - Class: 114
+      Script: {instanceID: 12360}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 13328}
+    - Class: 114
+      Script: {instanceID: 13492}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+  scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: c42672c997f8be6b1aa86a927ebea785
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: e8aa6bc84a0168a132f0be0274ece5ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples
+    className: GPSChecker
+  - hash:
+      serializedVersion: 2
+      Hash: 87ff43d2baf3385cba327d8f803a4ebb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b4fc42b020df4b67385e61ff21d513cc
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: d25088bd58f30d855896652dc7f2acc6
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: PolygonPlaneVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: c7ffed8f5be8329353232250ade282b0
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: TrackingInfomationTips
+  - hash:
+      serializedVersion: 2
+      Hash: 19aa6750d18b8570c6aa3fec05617a6e
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: CustomVirtualControlerUI
+  - hash:
+      serializedVersion: 2
+      Hash: eb0a05ebdcc086276c705fa928dfdcc7
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: PhotoCaptureExample
+  - hash:
+      serializedVersion: 2
+      Hash: 383d822deef3760767c756870826f185
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: MoveWithCamera
+  - hash:
+      serializedVersion: 2
+      Hash: e7a73f5f78ba6445195ec23b74a1ce2d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: be5a896454f0972b7a0ef7906023c85c
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: MultiScreenController
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a5781dc71a671b1ad2b38de19f24b71f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3f92c63915621ffe803fead2b50331b2
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: TrackingImageExampleController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: AutoRotate
+  - hash:
+      serializedVersion: 2
+      Hash: f8bd7a92bf9f22d289759689ae7b1fd4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TurnTheGameOn.ArrowWaypointer
+    className: SmoothFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 499fd23433e68e265d153aa6b95d0047
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: f0f7c90f5cc012b7d2a0f4e2d0a1b157
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: HiddenDebugPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: abf1930d8126d0b2e00e9449129a0190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 234d407605354852c48e57df17c9a1c6
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NREmulatorManager
+  - hash:
+      serializedVersion: 2
+      Hash: a60c858c217a650c985726c9a8d98bfb
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRButton
+  - hash:
+      serializedVersion: 2
+      Hash: b18f1f5690ed802d58cd7ead5c7fae0a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TurnTheGameOn.ArrowWaypointer
+    className: Waypoint
+  - hash:
+      serializedVersion: 2
+      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 0dbc3be398b4869a5c8d0d8481ee402c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 287776f18b71859111be5f3fab7663ef
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.Record
+    className: CaptureBehaviourBase
+  - hash:
+      serializedVersion: 2
+      Hash: 85aa462ead89089880881ac119bc0d2e
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: EnsureSlamTrackingMode
+  - hash:
+      serializedVersion: 2
+      Hash: 2bcab464c0236a2cba17235634e83708
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRTrackingImageDatabase
+  - hash:
+      serializedVersion: 2
+      Hash: bd3cf68c8964d3c66d1c43f4f98508c9
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9ae03dac5ddb6765b5813d23e2b4bd3e
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRVisualProfiler
+  - hash:
+      serializedVersion: 2
+      Hash: cf9f5cf2c3145a37ac07f00e50e460f9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: ControllerVisualManager
+  - hash:
+      serializedVersion: 2
+      Hash: ef5c43f921427d03730f6ea4c848f07d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 704d012391712fac1cd88709838613a8
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRNotificationListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1103fb0758976355cdf9b7d5ce9cb7e0
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: d8ae1cf1fea897cb2d540ed7091d868d
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: SimpleControllerVibration
+  - hash:
+      serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: dea189cf620f6ac37dd27d491e1234b1
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: PlaneDetector
+  - hash:
+      serializedVersion: 2
+      Hash: 86376d3679b96386e80788cb04869feb
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: FinchShiftControllerVisual
+  - hash:
+      serializedVersion: 2
+      Hash: 7e179b9018b32a9e1052910ca06b410a
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRTrackablePlaneBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NrealLightControllerVisual
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: MainThreadDispather
+  - hash:
+      serializedVersion: 2
+      Hash: fb027a197aea82184456683c9e458138
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: CameraCaptureController
+  - hash:
+      serializedVersion: 2
+      Hash: 7ec03bf5e1a71958a9d5adefe3f4dcf5
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRInput
+  - hash:
+      serializedVersion: 2
+      Hash: 5f170942ee57c7a568f5bcfc7521adea
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools
+    className: EnumerableTestState
+  - hash:
+      serializedVersion: 2
+      Hash: cc4274b586df3c02688bac01b88bd16c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 601cde80be64918d3259eecc52190dab
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.Record
+    className: NRPreviewer
+  - hash:
+      serializedVersion: 2
+      Hash: 0fb27be807aa299702f28ad0bcad1f46
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 5cc439bf63c0539d39588e69465ac2ab
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 46a313bfb58772b6a79303ee0c1d4ded
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: TrackingImageVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3fef8356547fc14006cbb837f7f5ace8
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRMultScrPointerRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: CubeInteractiveTest
+  - hash:
+      serializedVersion: 2
+      Hash: 7ddd60fbf0f38b067a2984b82f11e013
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples.MyArrowProject
+    className: LocationChange
+  - hash:
+      serializedVersion: 2
+      Hash: 7e179b9018b32a9e1052910ca06b410a
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: TrackablePlaneBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 4af6ab94a517c566b4beee7fcada767d
+    assemblyName: NRSDK.dll
+    namespaceName: 
+    className: TrackableObserver
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 8112f203b8e7eddae7c79ea89886ad5c
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRRenderer
+  - hash:
+      serializedVersion: 2
+      Hash: 49e460181543cd8f9b503fc5f924febc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples.MyArrowProject
+    className: ArrowController
+  - hash:
+      serializedVersion: 2
+      Hash: ae1aa89734d89de2749b4ba958ccc9ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TurnTheGameOn.ArrowWaypointer
+    className: WaypointController
+  - hash:
+      serializedVersion: 2
+      Hash: d453f65cbd1a3b4ed8fc58a8ed10a472
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples
+    className: GPScontroller
+  - hash:
+      serializedVersion: 2
+      Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 80b0dd76d9bcf5ab9a2a5baa2a1a4204
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: TargetModelDisplayCtrl
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3894de3c0e1a351c6eab1967f8598095
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRSessionBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 06ec5a802436794537adc2b2a106b756
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: CanvasRaycastTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: bf9416c4023318f39f7d8c588107fbdb
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: GazeTracker
+  - hash:
+      serializedVersion: 2
+      Hash: c9e61e9b9b56db85db160ecee415bd99
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: AppManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5750eb2df8e0ee83934c3d869512f3df
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRHMDPoseTracker
+  - hash:
+      serializedVersion: 2
+      Hash: f5474bd8fede4d176fe5560a5a765c4c
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NREmulatorHeadPose
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scenemanager
+  - hash:
+      serializedVersion: 2
+      Hash: fb027a197aea82184456683c9e458138
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: CameraYUVCaptureController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: f0f7c90f5cc012b7d2a0f4e2d0a1b157
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: DemoScenesMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: DetectedPlaneVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 4fd8bf02e3089425d3502e26c44ba31a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRPhoneControllerVisual
+  - hash:
+      serializedVersion: 2
+      Hash: f84d945e5e1ca985698660fc26e9657f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: UserDefineButton
+  - hash:
+      serializedVersion: 2
+      Hash: 5ad4aa237d47ac2bab17bacb672edf7a
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 7ce70aef7e6f0155f2e2426434f28186
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRTrackableImageBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: c6687fb97edc05d7f50394082dd879e3
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: ControllerAnchorsHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 089e9675bb8622af5aa6e22dccdb8498
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: FPSCounter
+  - hash:
+      serializedVersion: 2
+      Hash: f64fd37da5cb89243ec68b5026d70bb8
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: bcca2626329ab7ea0fa1a349e3b6addc
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.Record
+    className: NRCameraInitializer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: ControllerStateParseUtility
+  - hash:
+      serializedVersion: 2
+      Hash: c9a8b80298a116835b51ba1cf9284367
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 5ad4aa237d47ac2bab17bacb672edf7a
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 344a8c2e106a0a4e098e91a52e0af063
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRPhoneDisplayReplayceTool
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRAnchor
+  - hash:
+      serializedVersion: 2
+      Hash: 87ad3705a58f19c47136728d4a6e9c47
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartSceneManager
+  - hash:
+      serializedVersion: 2
+      Hash: c0bb8d7c875d946bfe5483f1283c0450
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: HelloMRController
+  - hash:
+      serializedVersion: 2
+      Hash: c1933cc0a2f4ff6eb13333347497beb3
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples
+    className: FollowPlayerPoint
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRKernalUpdater
+  - hash:
+      serializedVersion: 2
+      Hash: 6939772cb3ce775a8e8d99f332534491
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 073ab10ebbebf1ad7081fb54cccd4c88
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRLaserReticle
+  - hash:
+      serializedVersion: 2
+      Hash: 4e1784458dce6c4b9ff18b528f503aff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples
+    className: GPSprint
+  - hash:
+      serializedVersion: 2
+      Hash: f336e086360abe49a3323e5f1583c35a
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 39d0850c624e363f9e62396f5d01a634
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: CameraSmoothFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 8e6ceabfd38a184413d69b7db56c89cc
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools
+    className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: CanvasTargetCollector
+  - hash:
+      serializedVersion: 2
+      Hash: eb0a05ebdcc086276c705fa928dfdcc7
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: VideoCapture2LocalExample
+  - hash:
+      serializedVersion: 2
+      Hash: 362613242dbe4e919d768a18cb8305e0
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRLaserVisual
+  - hash:
+      serializedVersion: 2
+      Hash: 27015f0380e6ed3e9f2c57cfdd605e09
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: ControllerInfoDisplayUI
+  - hash:
+      serializedVersion: 2
+      Hash: fb28dd07ae261822ab5f4e77c0a8f14b
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: FPSDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: TrackableImageBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: b3d8adac3ca889331476407a16255276
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRGlassesInitErrorTip
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d791aa6007fa3640be1164ea75bb087d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: dea189cf620f6ac37dd27d491e1234b1
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: DetectedPlaneGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 313779d031213f218326729e4da8a2d2
+    assemblyName: NRSDK.dll
+    namespaceName: 
+    className: TrackableFoundTest
+  - hash:
+      serializedVersion: 2
+      Hash: ee20d80db0e71b45fa52fb7b04c4606c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples.MyArrowProject
+    className: BUSstationXML
+  - hash:
+      serializedVersion: 2
+      Hash: 3549430525fa27e050a5b34455627bc1
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NREmulatorController
+  - hash:
+      serializedVersion: 2
+      Hash: 287776f18b71859111be5f3fab7663ef
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.Record
+    className: NRCaptureBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 287776f18b71859111be5f3fab7663ef
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.Record
+    className: NRRecordBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: a1194d9650bd02b688190ec73622ae16
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: NRHomeMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 3165968ba45c74472d279ba04455fccb
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: ea8c567049a41b0553cb2edbe60483c3
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: MarkerDetecter
+  - hash:
+      serializedVersion: 2
+      Hash: 5e8a01a14cef8c5fb6866e39e13545df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterControllerThirdPerson
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 7e179b9018b32a9e1052910ca06b410a
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRTrackableBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: ExamplesHub
+  - hash:
+      serializedVersion: 2
+      Hash: 53e4b18631f723486d155d3440a12fc0
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRNotificationWindow
+  - hash:
+      serializedVersion: 2
+      Hash: c0c0ec5ed3ac2e9d2a7de0033c16d709
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRMultiDisplayManager
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: d7bad06df674b3edc63d89b74f97a106
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples.MyArrowProject
+    className: ButtonController
+  - hash:
+      serializedVersion: 2
+      Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 5dea360fb0b147724ac344e6f399c2f3
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 9726bc46e15d44429bd38fb013657f1e
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner
+    className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 2aeeec1b1a144c469cd2d37776bc2315
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: da05008bc6c1fc3f807981ed9f3d90c5
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal.NRExamples
+    className: UserDefinePanel
+  - hash:
+      serializedVersion: 2
+      Hash: 9e20e5fd860007d3eebebd74018c4e20
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRPointerRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: aa88ae22474df55295327e4ee99e5a24
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UserControlThirdPerson
+  - hash:
+      serializedVersion: 2
+      Hash: 8220b46879dc5e37db1b940c938f5744
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 7072231382eb3c4871b3dd75ad0227e1
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: d7ef427815a2bcee014988403a851f81
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRVirtualDisplayer
+  - hash:
+      serializedVersion: 2
+      Hash: 525514b13fb264ddb927ebdf9947ad2b
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: ControllerTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 9ddebc8dcdb6e3f698d4c0c0e572eddb
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: FollowMouseMove
+  - hash:
+      serializedVersion: 2
+      Hash: 0fd6822f6177297bd0eb4d83cc7a9030
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: c608a4316901d20624f8d0f9354b185c
+    assemblyName: NRSDK.dll
+    namespaceName: NRKernal
+    className: NRSessionConfig
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  platform: 13
+  scenePathNames:
+  - Assets/MyProject/Scenes/Logo scene.unity
+  - Assets/MyProject/Scenes/Main Scene.unity
+  playerPath: C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Test.apk

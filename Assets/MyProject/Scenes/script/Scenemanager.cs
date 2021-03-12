@@ -38,7 +38,7 @@ public class Scenemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count_time >= 1.0f)
+        if (count_time <= 1.0f)
         {
             count_time += Time.deltaTime;
             if (count_time >= 1.0f)
