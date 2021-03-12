@@ -2,8 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NRKernal.NRExamples
+namespace MyArrowProject
 {
+    /// <summary>
+    /// 부모쪽에서 데이터를 보낼 때
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="lati"></param>
+    /// <param name="longi"></param>
+    public delegate void DataPushEventHandler(string name, double lati, double longi); 
+
+    /// <summary>
+    /// 자식쪽에서 데이터를 보낼 때
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="lati"></param>
+    /// <param name="longi"></param>
+    public delegate void DataGetEventHandler(string name, double lati, double longi);
+
     public class ArrowController : MonoBehaviour
     {
         // Start is called before the first frame update
@@ -42,7 +58,7 @@ namespace NRKernal.NRExamples
 
         private void OnEnable()
         {
-            
+
         }
 
         // Update is called once per frame
@@ -80,18 +96,19 @@ namespace NRKernal.NRExamples
 
             //Debug.Log("distance : " + distance);
 
-            
-             //Debug.Log("close");
+
+            //Debug.Log("close");
             arrow.transform.rotation = Quaternion.Euler(0, -(float)degree, 0);
-            
+
 
 
         }
-        
-        private void ChangeGPSfollower()
+
+        public void ChangeGPSfollower()
         {
             mario_lat = xmlcontrol.updated_lat;
             mario_long = xmlcontrol.updated_long;
         }
     }
 }
+

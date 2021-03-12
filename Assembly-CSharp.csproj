@@ -64,22 +64,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MyProject\GPS\BUSstationXML.cs" />
+    <Compile Include="Assets\MyProject\GPS\GPScontroller.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
+    <Compile Include="Assets\MyProject\Models\Arrow\FollowPlayerPoint.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\CharacterControllerThirdPerson.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\SmoothFollow.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\UserControlThirdPerson.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\Waypoint.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\WaypointController.cs" />
-    <Compile Include="Assets\MyProject\Scripts\BUSstationXML.cs" />
-    <Compile Include="Assets\MyProject\Scripts\ButtonController.cs" />
-    <Compile Include="Assets\MyProject\Scripts\CanvusControll.cs" />
-    <Compile Include="Assets\MyProject\Scripts\ControllerEdit.cs" />
-    <Compile Include="Assets\MyProject\Scripts\FollowPlayerPoint.cs" />
-    <Compile Include="Assets\MyProject\Scripts\GPSChecker.cs" />
-    <Compile Include="Assets\MyProject\Scripts\GPScontroller.cs" />
-    <Compile Include="Assets\MyProject\Scripts\Scenemanager.cs" />
-    <Compile Include="Assets\MyProject\Scripts\StartSceneManager.cs" />
-    <Compile Include="Assets\MyProject\UIcontrol\LocationChange.cs" />
+    <Compile Include="Assets\MyProject\Scenes\script\GPSChecker.cs" />
+    <Compile Include="Assets\MyProject\Scenes\script\Scenemanager.cs" />
+    <Compile Include="Assets\MyProject\Scenes\script\StartSceneManager.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\ButtonController.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\LocationChange.cs" />
     <None Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Read Me.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
