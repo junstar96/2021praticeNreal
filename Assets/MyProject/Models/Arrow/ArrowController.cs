@@ -50,13 +50,15 @@ namespace NRKernal.NRExamples
 
             private BUSstationXML xmlcontrol;
 
-
+            public Transform player;
 
             void Start()
             {
                 gpscomtroller = GetComponent<GPScontroller>();
                 xmlcontrol = GetComponent<BUSstationXML>();
                 checktime = 0.0f;
+
+                player = GameObject.FindWithTag("Player").GetComponent<Transform>();
             }
 
             private void OnEnable()
@@ -88,6 +90,13 @@ namespace NRKernal.NRExamples
                     //여기서 내 gps 값을 받아온다.
                     company_lat = gpscomtroller.myGPSpos.latitude;
                     company_long = gpscomtroller.myGPSpos.longitude;
+
+                    if (company_lat < 10.0f && company_long < 10.0f)
+                    {
+                        Debug.Log("still (0,0) position get");
+                        company_lat = 37.47952223150887;
+                        company_long = 126.88753947336387;
+                    }
                 }
                 checktime += Time.deltaTime;
 
@@ -126,7 +135,7 @@ namespace NRKernal.NRExamples
 
 
                 //Debug.Log("close");
-                arrow.transform.rotation = Quaternion.Euler(90, 180-(float)degree, 0);
+                arrow.transform.rotation = Quaternion.Euler(90 - player.rotation.x, 180-(float)degree - Camera.main.transform.rotation.y, 0);
 
 
 

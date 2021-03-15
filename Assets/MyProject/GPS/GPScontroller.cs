@@ -88,32 +88,33 @@ public class GPScontroller : MonoBehaviour
         Debug.Log("get start");
 
 
-        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
-        {
-            Debug.Log("permission check");
-            Permission.RequestUserPermission(Permission.FineLocation);//이걸 해줘야 안드로이드에서 gps를 사용할 수 있다.
+        //if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        //{
+        //    Debug.Log("permission check");
+        //    Permission.RequestUserPermission(Permission.FineLocation);//이걸 해줘야 안드로이드에서 gps를 사용할 수 있다.
 
-        }
+        //}
 
-        float check_locationEnabledByUser = 0.0f;
+        //int check_locationEnabledByUser = 0;
 
-        while (!Input.location.isEnabledByUser)
-        {
-            check_locationEnabledByUser += Time.deltaTime;
+        //while (!Input.location.isEnabledByUser && check_locationEnabledByUser < 20)
+        //{
+        //    check_locationEnabledByUser++;
+        //    yield return new WaitForSeconds(0.01f);
+        //}
 
-            if (check_locationEnabledByUser < 3.0f)
-            {
-                Debug.Log("User has not enabled GPS");
-                yield break;
-            }
-            yield return new WaitForSeconds(0.01f);
-        }
-        if (!Input.location.isEnabledByUser)
-        {
-            isConnected = false;
-            Debug.Log("User has not enabled GPS");
-            yield break;
-        }
+        //if(check_locationEnabledByUser >= 20)
+        //{
+        //    Debug.Log("User has not enabled GPS");
+        //    yield break;
+        //}
+
+        //if (!Input.location.isEnabledByUser)
+        //{
+        //    isConnected = false;
+        //    Debug.Log("User has not enabled GPS");
+        //    yield break;
+        //}
         Input.location.Start(0, 0);
 
 
@@ -142,6 +143,8 @@ public class GPScontroller : MonoBehaviour
             isConnected = true;
             longi = Input.location.lastData.longitude;
             lat = Input.location.lastData.latitude;
+
+            StartCoroutine(updateGPS());
         }
 
         //Stop service if there is no need to query location updates continuously
