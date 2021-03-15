@@ -11,15 +11,18 @@ namespace NRKernal.NRExamples
         public class ButtonController : MonoBehaviour
         {
             // Start is called before the first frame update
-
-            public BUSstationXML xml_pos;
             public LocationChange button;
+
+            [HideInInspector]
+            public BUSstationXML test_pos;
 
             void Start()
             {
-                for (int i = 0; i < xml_pos.List_length; i++)
+                test_pos = FindObjectOfType<BUSstationXML>();
+
+                for (int i = 0; i < test_pos.List_length; i++)
                 {
-                    BUSstationXML.GPSinfo buttoninfo = xml_pos.ButtonInfo(i);
+                    BUSstationXML.GPSinfo buttoninfo = test_pos.ButtonInfo(i);
                     button.count = i;
                     button.adressPrint.text = buttoninfo.name;
                     button.target_lati = buttoninfo.lati;

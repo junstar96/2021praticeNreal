@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MyProject\GPS\BUSstationXML.cs" />
+    <Compile Include="Assets\MyProject\GPS\GPSChecker.cs" />
     <Compile Include="Assets\MyProject\GPS\GPScontroller.cs" />
     <Compile Include="Assets\MyProject\GPS\GPSprint.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
@@ -74,7 +75,6 @@
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\UserControlThirdPerson.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\Waypoint.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\WaypointController.cs" />
-    <Compile Include="Assets\MyProject\Scenes\script\GPSChecker.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\Scenemanager.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\StartSceneManager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\ButtonController.cs" />

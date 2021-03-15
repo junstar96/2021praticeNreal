@@ -711,7 +711,7 @@ ScriptsOnlyBuild:
     className: NRRenderer
   - hash:
       serializedVersion: 2
-      Hash: 49e460181543cd8f9b503fc5f924febc
+      Hash: ff42a3a92af264c7e8b3249967187232
     assemblyName: Assembly-CSharp.dll
     namespaceName: NRKernal.NRExamples.MyArrowProject
     className: ArrowController
@@ -1161,7 +1161,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: d7bad06df674b3edc63d89b74f97a106
+      Hash: 5d6eb920d89cf197bf1306380be8bc05
     assemblyName: Assembly-CSharp.dll
     namespaceName: NRKernal.NRExamples.MyArrowProject
     className: ButtonController

@@ -1,0 +1,216 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:2:1-95:12
+MERGED from [:nrvirtualcontroller:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\fcb57f8dd6569366703d8f6820a35138\AndroidManifest.xml:2:1-11:12
+MERGED from [:nr_api:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\2dff731cc011d0fffef9c69d2b8cf50b\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+	package
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:70-102
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:103-149
+	android:versionCode
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:1-6:12
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:11-69
+	android:installLocation
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:3:150-190
+supports-screens
+ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:3-163
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:14:5-19:40
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:14:5-19:40
+	android:largeScreens
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:78-105
+	android:smallScreens
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:21-48
+	android:normalScreens
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:49-77
+	android:xlargeScreens
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:106-134
+	android:anyDensity
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:4:135-160
+application
+ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:3-83
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:51:5-93:19
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:51:5-93:19
+	android:label
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:16-48
+	android:icon
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml:5:49-80
+	android:theme
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:9-50
+uses-sdk
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:9:5-12:57
+MERGED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:9:5-12:57
+MERGED from [:nrvirtualcontroller:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\fcb57f8dd6569366703d8f6820a35138\AndroidManifest.xml:7:5-9:41
+MERGED from [:nrvirtualcontroller:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\fcb57f8dd6569366703d8f6820a35138\AndroidManifest.xml:7:5-9:41
+MERGED from [:nr_api:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\2dff731cc011d0fffef9c69d2b8cf50b\AndroidManifest.xml:7:5-9:41
+MERGED from [:nr_api:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\2dff731cc011d0fffef9c69d2b8cf50b\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:12:9-54
+	android:targetSdkVersion
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\launcher\src\main\AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:21:22-62
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:22:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:23:5-74
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:23:22-71
+uses-permission#android.permission.QUERY_ALL_PACKAGES
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:24:5-77
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:24:22-74
+uses-feature#0x00030000
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:5-54
+	android:glEsVersion
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:19-51
+uses-permission#android.permission.INTERNET
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:28:5-67
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:28:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:5-66
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:22-63
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:5-79
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:22-76
+uses-feature#android.hardware.location.gps
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:9-53
+uses-feature#android.hardware.location
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:5-37:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:37:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:9-49
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:5-81
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:22-78
+uses-feature#android.hardware.touchscreen
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:5-43:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:43:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:44:5-46:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:5-49:36
+	android:required
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:9-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:48:9-72
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:9-70:20
+	android:screenOrientation
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-49
+	android:launchMode
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:13-44
+	android:hardwareAccelerated
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:13-48
+	android:configChanges
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-194
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:13-66
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:13-65:29
+action#android.intent.action.MAIN
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:17-69
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:25-66
+category#android.intent.category.LAUNCHER
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:17-77
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:27-74
+meta-data#android.notch_support
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-69:40
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:69:17-37
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:68:17-53
+meta-data#nreal_sdk
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:72:9-74:36
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:74:13-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:73:13-37
+meta-data#unity.tango-enable
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:75:9-77:36
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:77:13-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:76:13-46
+meta-data#unityplayer.SkipPermissionsDialog
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:78:9-80:36
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:80:13-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:79:13-61
+meta-data#unity.splash-mode
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:81:9-83:33
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:83:13-30
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:82:13-45
+meta-data#unity.splash-enable
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:84:9-86:36
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:86:13-33
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:85:13-47
+meta-data#notch.config
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:87:9-89:50
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:89:13-47
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:88:13-40
+meta-data#unity.build-id
+ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:90:9-92:68
+	android:value
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:92:13-65
+	android:name
+		ADDED from [:unityLibrary] C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:91:13-42
+uses-permission#ai.nreal.permission.NRSDK
+ADDED from [:nr_api:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\2dff731cc011d0fffef9c69d2b8cf50b\AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from [:nr_api:] C:\Users\dnsoft\.gradle\caches\transforms-2\files-2.1\2dff731cc011d0fffef9c69d2b8cf50b\AndroidManifest.xml:11:22-62

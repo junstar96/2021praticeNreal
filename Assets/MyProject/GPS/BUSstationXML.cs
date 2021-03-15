@@ -167,21 +167,7 @@ namespace NRKernal.NRExamples
                     foreach (string i in station_name)
                     {
 
-                        if (i.Contains("<gpslati>"))
-                        {
-                            Debug.Log(i.Replace("<gpslati>", ""));
-                        }
-
-                        if (i.Contains("<gpslong>"))
-                        {
-                            Debug.Log(i.Replace("<gpslong>", ""));
-                        }
-
-                        if (i.Contains("<nodenm>"))
-                        {
-                            Debug.Log(i);
-                        }
-
+                       
                         if (i.Contains("</item>"))
                         {
                             list_length++;
@@ -190,7 +176,7 @@ namespace NRKernal.NRExamples
 
                         if (i.Contains("</items>"))
                         {
-                            Debug.Log("endofldata :" + list_length);
+                            //Debug.Log("endofldata :" + list_length);
                             break;
                         }
                     }

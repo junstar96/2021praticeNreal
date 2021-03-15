@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_homebutton_selector.xml.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\homebutton_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\src\\main\\res\\mipmap-anydpi-v26\\app_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_home_normal.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\home_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\src\\main\\res\\mipmap-anydpi-v26\\app_icon_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_touchpanel_normal.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\touchpanel_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\src\\main\\res\\mipmap-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_app_hover.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\app_hover.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\layout_virtualcontroller_fragment.xml.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\layout\\virtualcontroller_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_app_normal.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\app_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_app_icon.png.flat",
+        "source": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\src\\main\\res\\mipmap-mdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_controllerlogo.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\controllerlogo.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_touchpanel_hover.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\touchpanel_hover.png"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_appbutton_selector.xml.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\appbutton_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_touchbutton_selector.xml.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\touchbutton_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnsoft\\Desktop\\Practice\\2021_practice\\instant app\\2021praticeNreal\\Temp\\gradleOut\\launcher\\build\\intermediates\\res\\merged\\release\\drawable_home_hover.png.flat",
+        "source": "C:\\Users\\dnsoft\\.gradle\\caches\\transforms-2\\files-2.1\\fcb57f8dd6569366703d8f6820a35138\\res\\drawable\\home_hover.png"
+    }
+]

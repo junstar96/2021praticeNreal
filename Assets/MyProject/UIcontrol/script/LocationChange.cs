@@ -25,7 +25,7 @@ namespace NRKernal.NRExamples
             {
                 yourButton = GetComponent<Button>();
                 //Debug.Log("count : " + count);
-                parantBUSstationXML = GetComponentInParent<ButtonController>().xml_pos;
+                parantBUSstationXML = GetComponentInParent<ButtonController>().test_pos;
 
 
             }

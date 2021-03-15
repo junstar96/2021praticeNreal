@@ -46,7 +46,7 @@ namespace NRKernal.NRExamples
             //GPScontroller를 받아온다.
             private GPScontroller gpscomtroller;
 
-            private Transform arrow;
+            public Transform arrow;
 
             private BUSstationXML xmlcontrol;
 
@@ -55,7 +55,6 @@ namespace NRKernal.NRExamples
             void Start()
             {
                 gpscomtroller = GetComponent<GPScontroller>();
-                arrow = GetComponentInChildren<Transform>();
                 xmlcontrol = GetComponent<BUSstationXML>();
                 checktime = 0.0f;
             }
@@ -68,6 +67,11 @@ namespace NRKernal.NRExamples
             // Update is called once per frame
             void Update()
             {
+                if(NRInput.GetButtonDown(ControllerButton.APP) || Input.GetKeyDown(KeyCode.P))
+                {
+                    arrow.gameObject.SetActive(!arrow.gameObject.activeSelf);
+                }
+
                 if (!gpscomtroller.isConnected)
                 {
                     //arrow.gameObject.SetActive(false);
@@ -122,7 +126,7 @@ namespace NRKernal.NRExamples
 
 
                 //Debug.Log("close");
-                arrow.transform.rotation = Quaternion.Euler(0, -(float)degree, 0);
+                arrow.transform.rotation = Quaternion.Euler(90, 180-(float)degree, 0);
 
 
 
