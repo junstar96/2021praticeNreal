@@ -13,21 +13,23 @@ namespace NRKernal.NRExamples
 
 
 
+            public MygpsTrans myGpsTrans;
+
             //public UnityEngine.Events.UnityEvent changelocation;
             public Text adressPrint;
             public double target_lati;
             public double target_longi;
             public int count;
             private Button yourButton;
-            private BUSstationXML parantBUSstationXML;
+            
 
             private void Awake()
             {
+
+                myGpsTrans = GameObject.FindWithTag("Arrow").GetComponent<ArrowController>();
+
                 yourButton = GetComponent<Button>();
                 //Debug.Log("count : " + count);
-                parantBUSstationXML = GetComponentInParent<ButtonController>().test_pos;
-
-
             }
 
             private void OnEnable()
@@ -49,8 +51,10 @@ namespace NRKernal.NRExamples
 
             public void ChangeTargetGPS()
             {
-                Debug.Log("ChangeTargetGPS()");
-                parantBUSstationXML.GetTargetGPS(adressPrint.text, target_lati, target_longi);
+                Debug.Log("change target : " + adressPrint.text);
+                myGpsTrans.GetLocation(target_lati, target_longi);
+               
+
             }
         }
     }

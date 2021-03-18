@@ -70,10 +70,10 @@ namespace NRKernal
         /// <summary>
         /// Returns a yield instruction that monitors this task for completion within a coroutine. </summary>
         /// <returns> A yield instruction that monitors this task for completion. </returns>
-        public CustomYieldInstruction WaitForCompletion()
-        {
-            return new WaitForTaskCompletionYieldInstruction<T>(this);
-        }
+        //public CustomYieldInstruction WaitForCompletion()
+        //{
+        //    return new WaitForTaskCompletionYieldInstruction<T>(this);
+        //}
 
         /// <summary>
         /// Performs an action (callback) in the first Unity Update() call after task completion. </summary>

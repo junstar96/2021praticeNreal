@@ -8,19 +8,19 @@ namespace NRKernal.NRExamples
     {
         private GameObject playerobject;
         private Vector3 derection;
-        private float distance;
+        //private float distance;
         //private radian 
 
         // Start is called before the first frame update
         void Start()
         {
-            distance = Mathf.Sqrt(Mathf.Pow(0.175f, 2)+ Mathf.Pow(0.239f, 2) + Mathf.Pow(3.0f, 2));
+            //distance = Mathf.Sqrt(Mathf.Pow(0.175f, 2)+ Mathf.Pow(0.239f, 2) + Mathf.Pow(3.0f, 2));
             derection = new Vector3(290.0f, 350f, 4.0f);
             
             
             playerobject = GameObject.FindGameObjectWithTag("Player");
-            StartCoroutine(CheckPlayerLotate());
-            StartCoroutine(CheckScreenView());
+            //StartCoroutine(CheckPlayerLotate());
+            //StartCoroutine(CheckScreenView());
         }
 
         // Update is called once per frame

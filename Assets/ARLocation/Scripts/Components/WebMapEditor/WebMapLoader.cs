@@ -55,6 +55,14 @@ namespace ARLocation {
         private List<GameObject> _stages = new List<GameObject>();
         private List<PlaceAtLocation> _placeAtComponents = new List<PlaceAtLocation>();
 
+        public List<DataEntry> XmlListForNreal
+        {
+            get
+            {
+                return _dataEntries;
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -91,6 +99,7 @@ namespace ARLocation {
                         Label = entry.name
                     };
 
+                Debug.Log("create");
                 var instance = PlaceAtLocation.CreatePlacedInstance(Prefab,
                                                                     location,
                                                                     PlacementOptions,

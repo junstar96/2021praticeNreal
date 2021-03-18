@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyProject/Scenes/Main Scene.unity
     guid: a3d536e63fcfdd34a92178e0517ccea5
+  - enabled: 0
+    path: Assets/MyProject/Scenes/AR_Location Tutorial.unity
+    guid: e67b9aa8bb85d40448b6a16e46daf0e5
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f79c3505c7980444c93daf944b46dc0e,
       type: 2}

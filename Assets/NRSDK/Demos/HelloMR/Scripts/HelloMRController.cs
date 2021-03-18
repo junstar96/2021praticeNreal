@@ -8,26 +8,15 @@
 *****************************************************************************/
 
 using UnityEngine;
-using UnityEngine.Events;
-
 
 namespace NRKernal.NRExamples
 {
     /// <summary> Controls the HelloAR example. </summary>
     [HelpURL("https://developer.nreal.ai/develop/unity/controller")]
-
-    [System.Serializable]
-    public class UnityEvent : UnityEvent<GameObject>
-    {
-
-    }
-
     public class HelloMRController : MonoBehaviour
     {
         /// <summary> A model to place when a raycast from a user touch hits a plane. </summary>
         public GameObject AndyPlanePrefab;
-
-        public UnityEvent click_object;
 
         /// <summary> Updates this object. </summary>
         void Update()
@@ -53,12 +42,7 @@ namespace NRKernal.NRExamples
                     }
 
                     // Instantiate Andy model at the hit point / compensate for the hit point rotation.
-                    var click_objected = Instantiate(AndyPlanePrefab, hitResult.point, Quaternion.identity, behaviour.transform);
-
-                    click_object.Invoke(click_objected);
-
-
-
+                    Instantiate(AndyPlanePrefab, hitResult.point, Quaternion.identity, behaviour.transform);
                 }
             }
         }

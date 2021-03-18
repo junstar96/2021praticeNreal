@@ -6,16 +6,17 @@ using NRKernal.NRExamples;
 
 public class Scenemanager : MonoBehaviour
 {
-    private float count_time;
+    private float time;
+    private bool ischanged;
 
 
     // Start is called before the first frame update
 
     //text를 조작하기 위해 받아오자.
 
-
-
     private Scenemanager instance;
+
+    private ARLocation.WebMapLoader checkgetgps;
 
     public Scenemanager scenemanager
     {
@@ -30,7 +31,8 @@ public class Scenemanager : MonoBehaviour
     }
     void Start()
     {
-        count_time = 0.0f;
+        checkgetgps = GetComponent<ARLocation.WebMapLoader>();
+        ischanged = false;
 
         DontDestroyOnLoad(this);
     }
@@ -38,18 +40,52 @@ public class Scenemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count_time <= 1.0f)
+        if(ischanged)
         {
-            count_time += Time.deltaTime;
-            if (count_time >= 1.0f)
-            {
-                SceneManager.LoadScene(1);
-
-            }
+            return;
         }
 
 
+        time += Time.deltaTime;
 
+        if (time > 3.0f && ischanged )
+        {
+            ischanged = true;
+            Debug.LogWarning("time over load scene");
+            SceneManager.LoadScene(1);
+            return;
+        }
+        if (checkgetgps.XmlListForNreal != null)
+        {
+            if (time > 3.0f)
+            {
+                ischanged = true;
+                Debug.LogWarning("time over load scene");
+                SceneManager.LoadScene(1);
+            }
+            if (Input.location.status == LocationServiceStatus.Running && !ischanged)
+            {
+                ischanged = true;
+                SceneManager.LoadScene(1);
+            }
+
+            if (Input.location.status != LocationServiceStatus.Running && time > 3.0f && !ischanged)
+            {
+                ischanged = true;
+                Debug.LogWarning("time over load scene");
+                SceneManager.LoadScene(1);
+            }
+            //if (!ischanged)
+            //{
+            //    if(time < 1.0f)
+            //    {
+            //        Debug.Log("not yet");
+            //        return;
+            //    }
+            //    ischanged = true;
+            //    SceneManager.LoadScene(1);
+            //}
+        }
 
 
     }
