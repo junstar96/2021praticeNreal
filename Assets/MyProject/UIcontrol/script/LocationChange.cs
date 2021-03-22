@@ -19,9 +19,7 @@ namespace NRKernal.NRExamples
             public Text adressPrint;
             public double target_lati;
             public double target_longi;
-            public int count;
             private Button yourButton;
-            
 
             private void Awake()
             {
@@ -52,7 +50,7 @@ namespace NRKernal.NRExamples
             public void ChangeTargetGPS()
             {
                 Debug.Log("change target : " + adressPrint.text);
-                myGpsTrans.GetLocation(target_lati, target_longi);
+                myGpsTrans.GetLocation(adressPrint.text, target_lati, target_longi);
                
 
             }

@@ -63,6 +63,14 @@ namespace ARLocation {
             }
         }
 
+        public List<GameObject> stagePoint
+        {
+            get
+            {
+                return _stages;
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {

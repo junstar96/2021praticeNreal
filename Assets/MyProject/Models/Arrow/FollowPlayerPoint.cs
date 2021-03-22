@@ -27,21 +27,13 @@ namespace NRKernal.NRExamples
         void Update()
         {
             Vector3 rotationVector = Vector3.zero;
-            //rotationVector.x = derection.x * Mathf.Cos(playerobject.transform.rotation.y) + derection.z * Mathf.Sin(playerobject.transform.rotation.y);
-            //rotationVector.y = derection.y * Mathf.Cos(playerobject.transform.rotation.x) - derection.z * Mathf.Sin(playerobject.transform.rotation.x);
-            //rotationVector.z = -derection.x * Mathf.Sin(playerobject.transform.rotation.y) + derection.z * Mathf.Cos(playerobject.transform.rotation.y) +
-            //                              derection.y * Mathf.Sin(playerobject.transform.rotation.x) + derection.z * Mathf.Cos(playerobject.transform.rotation.x) - 3;
 
-            //Vector2 canvaspos;
-            //Vector2 screenpoint = Camera.main.WorldToScreenPoint(derection);
-
-            //RectTransformUtility.WorldToScreenPoint(Camera.main, derection);
 
             rotationVector = Camera.main.ScreenToWorldPoint(derection);
 
             gameObject.transform.position = rotationVector;
             
-            //gameObject.transform.rotation = playerobject.transform.rotation;
+
         }
 
         IEnumerator CheckPlayerLotate()

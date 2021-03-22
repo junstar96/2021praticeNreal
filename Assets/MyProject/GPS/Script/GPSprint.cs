@@ -12,6 +12,7 @@ namespace NRKernal.NRExamples
         private LocationInfo mygpsinfo;
         public Text lati;
         public Text longi;
+        public Text isconnecting;
         private GPScontroller gpscontroller;
 
         void Start()
@@ -21,12 +22,22 @@ namespace NRKernal.NRExamples
 
             lati.text = mygpsinfo.latitude.ToString();
             longi.text = mygpsinfo.longitude.ToString();
+
+            if(!Input.location.isEnabledByUser)
+            {
+                isconnecting.text = "not yet";
+            }
+            else
+            {
+                isconnecting.text = "connected";
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            lati.text = mygpsinfo.latitude.ToString();
+            longi.text = mygpsinfo.longitude.ToString();
         }
     }
 }

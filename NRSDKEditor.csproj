@@ -278,6 +278,27 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="MapboxAccountsUnity">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/Mapbox/MapboxAccounts/net35/MapboxAccountsUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.VectorTile.ExtensionMethods">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.VectorTile.Geometry">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.VectorTile.PbfReader">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.PbfReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.VectorTile.VectorTileReader">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.IO.Compression">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.Json">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/MapboxPackage/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/NRSDK/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
