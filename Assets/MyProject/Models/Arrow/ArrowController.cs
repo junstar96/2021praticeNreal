@@ -40,13 +40,10 @@ namespace NRKernal.NRExamples
 
             //이 두 개를 이용해서 회전시킬 수 있는 것인지 알아보자.
             private double distance;
-            private double degree;
+            //private double degree;
             public float checktime;
 
-            //public float checktime;
-
-            //임시방편으로 해당 오브젝트를 이동시키도록 하자. 
-            private float objectforward_z = 5.0f;
+            private bool setting_pos;
             
 
             //GPScontroller를 받아온다.
@@ -63,6 +60,7 @@ namespace NRKernal.NRExamples
 
             void Start()
             {
+                setting_pos = false;
                 gpscomtroller = GameObject.FindWithTag("GPS").GetComponent<GPScontroller>();
                 webmaploader = GameObject.FindWithTag("GPS").GetComponent<WebMapLoader>();
                 checktime = 0.0f;
@@ -127,22 +125,14 @@ namespace NRKernal.NRExamples
                
 
                 distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long) * 1000;
-                degree = gpscomtroller.bearingP1toP2(target_lat, target_long, company_lat, company_long);
+                //degree = gpscomtroller.bearingP1toP2(target_lat, target_long, company_lat, company_long);
 
-                while(degree >360.0)
-                {
-                    degree -= 360.0;
-                }
+                //while(degree >360.0)
+                //{
+                //    degree -= 360.0;
+                //}
 
-                Debug.Log("my lat :" + company_lat);
-                Debug.Log("my long : " + company_long);
-                Debug.Log("target lat :" + target_lat);
-                Debug.Log("target long : " + target_long);
-
-                Debug.Log("degree : " + degree);
-
-
-                Debug.Log("distance : " + distance);
+                
 
                 foreach(var target_follow in webmaploader.stagePoint)
                 {
@@ -153,16 +143,29 @@ namespace NRKernal.NRExamples
                         target_follow.SetActive(true);
                         target_follow.transform.GetChild(0).gameObject.SetActive(true);
 
-                        gameObject.transform.rotation = Quaternion.LookRotation(target_follow.transform.position, Vector3.forward);
-                        arrow.gameObject.transform.LookAt(target_follow.transform.position);
-
+                        Debug.Log("my lat : " + company_lat + ", my long :" + company_long);
+                        Debug.Log("lat : " + target_lat + ", long :" + target_long);
+                       
+                       
+                        
+                        //gameObject.transform.rotation = Quaternion.LookRotation(target_follow.transform.position, Vector3.forward);
+                        
+                        
+                        
+                        
+                            
                         double xx = GPScontroller.DistanceInKmBetweenEarthCoordinates(0, target_long, 0, company_long) * 1000,
-                            zz = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, 0, company_lat, 0) * 1000;
-                        Vector3 position = new Vector3((float)xx, 0, (float)zz) *(float)distance;
+                       zz = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, 0, company_lat, 0) * 1000;
+                        Vector3 position = new Vector3((float)xx, 0, (float)zz);
                         position.Normalize();
                         position = Quaternion.AngleAxis(Input.compass.trueHeading, Vector3.up) * position;
-                        Debug.Log("(x,y,z) : " + position.x + "," + position.y + "," + position.z);
-                        target_follow.transform.GetChild(0).gameObject.transform.position = position;
+                        //Debug.Log("(x,y,z) : " + position.x * (float)distance + "," + position.y + "," + position.z * (float)distance);
+                        target_follow.transform.GetChild(0).gameObject.transform.position = position * (float)distance;
+                       
+                        gameObject.transform.LookAt(target_follow.transform.GetChild(0).gameObject.transform.position);
+                        setting_pos = true;
+                        
+                       
 
                     }
                     else
@@ -190,7 +193,13 @@ namespace NRKernal.NRExamples
 
             public void GetLocation(string name, double lat, double longi)
             {
+                if(setting_pos == true && target_name != name)
+                {
+                    setting_pos = false;
+                }
+                   
                 target_name = name;
+                    
                 target_lat = lat;
                 target_long = longi;
             }

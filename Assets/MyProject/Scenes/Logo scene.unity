@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrefabDatabase: {fileID: 11400000, guid: d25877968f0bb53438526593d485f257, type: 2}
-  XmlDataFile: {fileID: 4900000, guid: d50301df178e78840b112b53c121fac7, type: 3}
+  XmlDataFile: {fileID: 4900000, guid: 3959eb6d9515fe241836c40c3d866a27, type: 3}
   DebugMode: 0
 --- !u!1 &531942665
 GameObject:

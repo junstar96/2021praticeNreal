@@ -47,43 +47,6 @@ public class GPScontroller : MonoBehaviour
         }
     }
 
-    //        void Start()
-    //        {
-    //#if UNITY_ANDROID
-    //            if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
-    //            {
-    //                Debug.Log("permission check");
-    //                Permission.RequestUserPermission(Permission.FineLocation);//이걸 해줘야 안드로이드에서 gps를 사용할 수 있다.
-
-    //            }
-
-
-
-    //            StartCoroutine(StartLocationService());
-    //            StartCoroutine(updateGPS());
-    //#elif PLATFORM_ANDROID
-    //                if(!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
-    //                {
-    //                           Debug.Log("permission check");
-    //                           Permission.RequestUserPermission(Permission.FineLocation);//이걸 해줘야 안드로이드에서 gps를 사용할 수 있다.
-    //                }
-
-    //                 if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
-    //                {
-    //                    Debug.Log("permission failed");
-
-    //                }
-
-    //                       StartCoroutine(StartLocationService());
-    //                       StartCoroutine(updateGPS());
-
-    //#else
-
-    //                StartCoroutine(StartLocationService());
-    //                StartCoroutine(updateGPS());
-
-    //#endif
-    //        }
     IEnumerator Start()
     {
         Debug.Log("get start");
@@ -113,26 +76,19 @@ public class GPScontroller : MonoBehaviour
        
 
 
-        int maxWait = 20;
-        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
-        {
-            yield return new WaitForSeconds(1);
-            maxWait--;
-        }
-        if (maxWait < 1)
-        {
-            isConnected = false;
-            Debug.Log("Timed out");
-            yield break;
-        }
+        //int maxWait = 20;
+        //while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+        //{
+        //    yield return new WaitForSeconds(1);
+        //    maxWait--;
+        //}
+        //if (maxWait < 1)
+        //{
+        //    isConnected = false;
+        //    Debug.Log("Timed out");
+        //    yield break;
+        //}
 
-        if(Input.location.status == LocationServiceStatus.Failed)
-        {
-            isConnected = false;
-            Debug.Log("Unable to determine device location");
-            yield break;
-        
-        }
 
 
         isConnected = true; 
@@ -170,7 +126,7 @@ public class GPScontroller : MonoBehaviour
         }
 
        
-        Input.location.Start();
+        Input.location.Start(0,0);
 
         int maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
@@ -200,39 +156,27 @@ public class GPScontroller : MonoBehaviour
 
     public IEnumerator updateGPS()
     {
-        float UPDATE_TIME = 1f;
+        float UPDATE_TIME = 1.0f;
         WaitForSeconds updateTime = new WaitForSeconds(UPDATE_TIME);
 
        
         while (true)
         {
             /* mapScript.Refresh();*/
-            longi = Input.location.lastData.longitude;
-            lat = Input.location.lastData.latitude;
-
-            Debug.Log("lat : " + lat);
-            Debug.Log("long : " + longi);
+            if(Input.location.isEnabledByUser == true)
+            {
+                longi = Input.location.lastData.longitude;
+                lat = Input.location.lastData.latitude;
+                currentGPSposition = Input.location.lastData;
+            }
+            else
+            {
+                Debug.Log("not connected");
+            }
 
             yield return updateTime;
         }
     }
-
-    //private void Update()
-    //{
-    //    if (!Input.location.isEnabledByUser)
-    //    {
-    //        Debug.Log("User has not enabled GPS");
-    //        return;
-    //    }
-
-
-    //    while (true)
-    //    {
-    //        /* mapScript.Refresh();*/
-    //        longi = Input.location.lastData.longitude;
-    //        lat = Input.location.lastData.latitude;
-    //    }
-    //}
 
     public static double ConvertDecimalDegreesToRadians(double deg)
     {

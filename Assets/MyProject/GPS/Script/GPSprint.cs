@@ -14,14 +14,15 @@ namespace NRKernal.NRExamples
         public Text longi;
         public Text isconnecting;
         private GPScontroller gpscontroller;
+        private float time = 0.0f;
 
         void Start()
         {
             gpscontroller = GetComponent<GPScontroller>();
-            mygpsinfo = gpscontroller.myGPSpos;
+            
 
-            lati.text = mygpsinfo.latitude.ToString();
-            longi.text = mygpsinfo.longitude.ToString();
+            
+           
 
             if(!Input.location.isEnabledByUser)
             {
@@ -36,8 +37,18 @@ namespace NRKernal.NRExamples
         // Update is called once per frame
         void Update()
         {
+            time += Time.deltaTime;
+            mygpsinfo = gpscontroller.myGPSpos;
             lati.text = mygpsinfo.latitude.ToString();
             longi.text = mygpsinfo.longitude.ToString();
+
+            
+            if (time > 1.0f)
+            {
+                Debug.Log("lati : " + Input.location.lastData.latitude + "," + mygpsinfo.latitude);
+                Debug.Log("longi : " + Input.location.lastData.longitude + "," + mygpsinfo.longitude);
+                time = 0.0f;
+            }
         }
     }
 }
