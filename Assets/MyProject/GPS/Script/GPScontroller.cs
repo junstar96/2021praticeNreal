@@ -12,6 +12,7 @@ public class GPScontroller : MonoBehaviour
     //private Vector2 deviceCoordinates;
 
 
+
     public bool gpsinit = false;
 
     // public GameObject prefeb;
@@ -204,6 +205,17 @@ public class GPScontroller : MonoBehaviour
         return earthRadiusKm * c;
     }
 
+    public static double CalculTheta(double target_lat, double target_longi, double my_lat, double my_longi)
+    {
+        var lat = target_lat - my_lat;
+        var longi = target_longi - my_longi;
+
+
+        double theta = Math.Atan(lat / longi);
+
+
+        return theta;
+    }
 
     //야드 계산
     public static double Calculate(double sLatitude, double sLongitude, double eLatitude,
@@ -231,24 +243,47 @@ public class GPScontroller : MonoBehaviour
     }
 
     
-    public short bearingP1toP2(double P1_latitude, double P1_longitude, double P2_latitude, double P2_longitude)
+    public double bearingP1toP2(double P1_latitude, double P1_longitude, double P2_latitude, double P2_longitude)
     {
         // 현재 위치 : 위도나 경도는 지구 중심을 기반으로 하는 각도이기 때문에 라디안 각도로 변환한다.
         double Cur_Lat_radian1 = ConvertDecimalDegreesToRadians(P1_latitude);
         double Cur_Lat_radian2 = ConvertDecimalDegreesToRadians(P2_latitude);
+        double Cur_Longi_radian1 = ConvertDecimalDegreesToRadians(P1_longitude);
+        double Cur_Longi_radian2 = ConvertDecimalDegreesToRadians(P2_longitude);
 
 
-        double lon_diff_rad = ConvertDecimalDegreesToRadians(P1_longitude - P2_longitude);
+        
 
-        double y = Math.Sin(lon_diff_rad) * Math.Cos(Cur_Lat_radian2);
-        double x = Math.Cos(Cur_Lat_radian1) * Math.Sin(Cur_Lat_radian2) - Math.Sin(Cur_Lat_radian1) * Math.Cos(Cur_Lat_radian2) * Math.Cos(lon_diff_rad);
+        double y = Math.Sin(Cur_Longi_radian2 - Cur_Longi_radian1) * Math.Cos(Cur_Lat_radian2);
+        double x = Math.Cos(Cur_Lat_radian1) * Math.Sin(Cur_Lat_radian2) - Math.Sin(Cur_Lat_radian1) * Math.Cos(Cur_Lat_radian2) * Math.Cos(Cur_Longi_radian2 - Cur_Longi_radian1);
+        double theta = Math.Atan2(y, x);
 
-        return ((short)ConvertRadiansToDecimalDegrees(Math.Atan2(y, x) + 360.0));
+        return (ConvertRadiansToDecimalDegrees(Math.Atan2(y, x) + 360.0)) % 360;
 
     }
+
+    //public double GPSradian(double target_lat, double target_longi, double my_lat, double my_longi)
+    //{
+    //    double radiusOfEarth = 6371.009;
+    //    double circumferenceOfEarth = 2 * Math.PI * radiusOfEarth;
+    //    double distancePerlat = circumferenceOfEarth / 360; //경도 당 거리(km)
+    //    double distancePerLongi = Math.Cos(target_longi * Math.PI / 360) * circumferenceOfEarth / 360;//위도당 거리
+
+
+
+    //    double lat = my_lat - target_lat;
+    //    double longi = my_longi - target_longi;
+
+    //    double theta = Math.Atan(lat / longi);
+
+
+
+
+
+
+
+    //}
     // */
-
-
 }
 
 

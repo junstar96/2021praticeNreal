@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using ARLocation;
 
 namespace NRKernal.NRExamples
@@ -40,7 +41,7 @@ namespace NRKernal.NRExamples
 
             //이 두 개를 이용해서 회전시킬 수 있는 것인지 알아보자.
             private double distance;
-            //private double degree;
+            private double degree;
             public float checktime;
 
             private bool setting_pos;
@@ -122,19 +123,15 @@ namespace NRKernal.NRExamples
             {
                 yield return new WaitForSeconds(0.1f);
 
-               
-
                 distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long) * 1000;
-                //degree = gpscomtroller.bearingP1toP2(target_lat, target_long, company_lat, company_long);
+                degree = gpscomtroller.bearingP1toP2(target_lat, target_long, company_lat, company_long);
+                degree = GPScontroller.ConvertDecimalDegreesToRadians(degree);
 
-                //while(degree >360.0)
-                //{
-                //    degree -= 360.0;
-                //}
 
-                
 
-                foreach(var target_follow in webmaploader.stagePoint)
+
+
+                foreach (var target_follow in webmaploader.stagePoint)
                 {
 
 
@@ -143,29 +140,41 @@ namespace NRKernal.NRExamples
                         target_follow.SetActive(true);
                         target_follow.transform.GetChild(0).gameObject.SetActive(true);
 
-                        Debug.Log("my lat : " + company_lat + ", my long :" + company_long);
-                        Debug.Log("lat : " + target_lat + ", long :" + target_long);
-                       
-                       
-                        
+                        Location location = ARLocationProvider.Instance.GetLocationForWorldPosition(Camera.main.transform.position);
+
+
+                        Debug.Log("location data " + location.Latitude + "," + location.Longitude);
+    
+
+                        //degree = degree * Mathf.PI / 360;
+
+
+
                         //gameObject.transform.rotation = Quaternion.LookRotation(target_follow.transform.position, Vector3.forward);
-                        
-                        
-                        
-                        
-                            
-                        double xx = GPScontroller.DistanceInKmBetweenEarthCoordinates(0, target_long, 0, company_long) * 1000,
-                       zz = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, 0, company_lat, 0) * 1000;
-                        Vector3 position = new Vector3((float)xx, 0, (float)zz);
-                        position.Normalize();
-                        position = Quaternion.AngleAxis(Input.compass.trueHeading, Vector3.up) * position;
-                        //Debug.Log("(x,y,z) : " + position.x * (float)distance + "," + position.y + "," + position.z * (float)distance);
-                        target_follow.transform.GetChild(0).gameObject.transform.position = position * (float)distance;
-                       
-                        gameObject.transform.LookAt(target_follow.transform.GetChild(0).gameObject.transform.position);
-                        setting_pos = true;
-                        
-                       
+
+
+                       double xx = GPScontroller.DistanceInKmBetweenEarthCoordinates(0, target_long, 0, company_long) * 1000,
+                      zz = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, 0, company_lat, 0) * 1000;
+                       //xx = xx * Mathf.Cos((float)degree) - zz * Mathf.Sin((float)degree);
+                       //zz = zz * Mathf.Cos((float)degree) + zz * Mathf.Sin((float)degree);
+
+                       Debug.Log("xx : " + xx + "zz : " + zz + "distance :" + distance); 
+                     
+                      
+
+                       Vector3 position = new Vector3((float)degree * Mathf.Cos((float)degree), 0.0f, (float)(degree * Math.Sin(degree)));
+
+
+                       position.Normalize();
+                       position = Quaternion.AngleAxis(Input.compass.trueHeading, Vector3.up) * position;
+                       //Debug.Log("(x,y,z) : " + position.x * (float)distance + "," + position.y + "," + position.z * (float)distance);
+                       target_follow.transform.GetChild(0).gameObject.transform.position = position * (float)distance;
+
+                       gameObject.transform.LookAt(target_follow.transform.GetChild(0).gameObject.transform.position);
+                       setting_pos = true;
+                     
+                     
+                     
 
                     }
                     else

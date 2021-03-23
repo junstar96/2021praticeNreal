@@ -19,4 +19,5 @@ MonoBehaviour:
   - MeshId: tower
     Prefab: {fileID: 1341636462457712, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
   - MeshId: train
-    Prefab: {fileID: 100086, guid: 6e0b48ec7f5348c42af7efe4859098eb, type: 3}
+    Prefab: {fileID: 2610591546250173276, guid: edc88edd49b83984dbbc688e401d189a,
+      type: 3}
