@@ -141,6 +141,7 @@
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\UserControlThirdPerson.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\Waypoint.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\WaypointController.cs" />
+    <Compile Include="Assets\MyProject\Scenes\script\DontDestroyNrealScene.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\Scenemanager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\ButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\CanvasSelect.cs" />
@@ -148,11 +149,13 @@
     <Compile Include="Assets\MyProject\UIcontrol\script\XMLButtonController.cs" />
     <None Include="Assets\ARLocation\Samples\Data\pois.xml" />
     <None Include="Assets\ARLocation\Data\data.xml" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\Check_Update.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\data_guro.xml" />
     <None Include="Assets\ARLocation\GO Map Integration\README.txt" />
     <None Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Read Me.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Update_xml.xml" />
     <None Include="Assets\ARLocation\Third-Party-Notices.txt" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\data (4).xml" />
     <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
     <None Include="Assets\ARLocation\Experimental\World Builder\Readme.txt" />
     <None Include="Assets\ARLocation\Materials\Shaders\ShadowDrawer.shader" />
@@ -714,9 +717,6 @@
     <Reference Include="Unity.XR.ARSubsystems.Editor">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.ARCore">
-      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.XR.ARFoundation.Editor">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
     </Reference>
@@ -728,9 +728,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARCore.Editor">
-      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>

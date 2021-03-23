@@ -669,9 +669,6 @@
     <Reference Include="Unity.XR.ARSubsystems.Editor">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.ARCore">
-      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.XR.ARFoundation.Editor">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
     </Reference>
@@ -683,9 +680,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARCore.Editor">
-      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>

@@ -50,10 +50,17 @@ namespace ARLocation {
         ///   If true, enable DebugMode on the `PlaceAtLocation` generated instances.
         /// </summary>
         public bool DebugMode;
+        
 
         private List<DataEntry> _dataEntries = new List<DataEntry>();
         private List<GameObject> _stages = new List<GameObject>();
         private List<PlaceAtLocation> _placeAtComponents = new List<PlaceAtLocation>();
+
+
+        /// <summary>
+        /// 생성이 끝났는지 확인한다.
+        /// </summary>
+        public bool MakeFinish = false;
 
         public List<DataEntry> XmlListForNreal
         {
@@ -107,7 +114,6 @@ namespace ARLocation {
                         Label = entry.name
                     };
 
-                Debug.Log("create");
                 var instance = PlaceAtLocation.CreatePlacedInstance(Prefab,
                                                                     location,
                                                                     PlacementOptions,
@@ -115,6 +121,8 @@ namespace ARLocation {
 
                 _stages.Add(instance);
             }
+
+            MakeFinish = true;
         }
 
         // Update is called once per frame
