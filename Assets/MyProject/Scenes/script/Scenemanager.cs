@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using NRKernal.NRExamples;
+using NRKernal;
 
 public class Scenemanager : MonoBehaviour
 {
@@ -47,6 +47,7 @@ public class Scenemanager : MonoBehaviour
 
         if (time > 3.0f && !ischanged)
         {
+            //NREmulatorManager.Instance?.NativeEmulatorApi?.SetHeadTrackingPose(new Vector3(0, 0, 0), Quaternion.Euler(0, -Input.compass.magneticHeading, 0));
             ischanged = true;
             //Debug.LogWarning("time over load scene");
             Debug.Log("3 sec ");

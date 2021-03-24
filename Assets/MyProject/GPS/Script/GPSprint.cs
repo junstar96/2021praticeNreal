@@ -41,12 +41,14 @@ namespace NRKernal.NRExamples
             mygpsinfo = gpscontroller.myGPSpos;
             lati.text = mygpsinfo.latitude.ToString();
             longi.text = mygpsinfo.longitude.ToString();
-
+            
             
             if (time > 1.0f)
             {
                 Debug.Log("lati : " + Input.location.lastData.latitude + "," + mygpsinfo.latitude);
                 Debug.Log("longi : " + Input.location.lastData.longitude + "," + mygpsinfo.longitude);
+                Debug.Log("headingaccuracy : " + Input.compass.headingAccuracy);
+                Debug.Log("margneticheading : " + Input.compass.magneticHeading);
                 time = 0.0f;
             }
         }

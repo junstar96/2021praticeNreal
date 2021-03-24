@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Android;
+using NRKernal;
 
 public class GPScontroller : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class GPScontroller : MonoBehaviour
     //private Vector2 targetCoordinates;
     //private Vector2 deviceCoordinates;
 
-
+    //나침반 방향을 확인해보자.
+    private Quaternion currentheading;
 
     public bool gpsinit = false;
 
@@ -61,6 +63,8 @@ public class GPScontroller : MonoBehaviour
         }
 
         Input.location.Start(0, 0);
+        Input.compass.enabled = true;
+
 
         yield return new WaitForSeconds(connectTime);
 
@@ -163,12 +167,16 @@ public class GPScontroller : MonoBehaviour
        
         while (true)
         {
+
             /* mapScript.Refresh();*/
             if(Input.location.isEnabledByUser == true)
             {
                 longi = Input.location.lastData.longitude;
                 lat = Input.location.lastData.latitude;
                 currentGPSposition = Input.location.lastData;
+
+
+              
             }
             else
             {
