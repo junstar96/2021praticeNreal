@@ -15,17 +15,37 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        
+        if (string.Equals(this.gameObject.tag, "GPS manu"))
+        {
+            if(NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
+            {
+                time += Time.deltaTime;
+                if (time > 3.0f)
+                {
+                    gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
+                    gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+                    time = 0.0f;
+                }
+                
+            }
 
-        if (time > 3.0f)
+            if(NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.TRIGGER))
+            {
+                time = 0.0f;
+            }
+            
+        }
+        else
         {
             gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-            time = 0.0f;
         }
+     
+
         //if (NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
         //{
-           
+
         //}
 
         //if (NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.TRIGGER))

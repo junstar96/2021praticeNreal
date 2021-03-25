@@ -227,9 +227,10 @@ namespace ARLocation
         {
             if (locationProvider.Provider == null || !locationProvider.Provider.IsCompassEnabled)
             {
+               
                 return;
             }
-
+           
             if (Mathf.Abs(transform.rotation.eulerAngles.y - targetAngle) <= 0.001f)
             {
                 if (isChangingOrientation)
@@ -239,7 +240,6 @@ namespace ARLocation
                 }
                 return;
             }
-
             var t = 1.0f - Mathf.Pow(MovementSmoothingFactor, Time.deltaTime);
             var value = Mathf.LerpAngle(transform.rotation.eulerAngles.y, targetAngle, t);
 

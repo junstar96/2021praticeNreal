@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Arrow
   - GPS
+  - GPS manu
   layers:
   - Default
   - TransparentFX
