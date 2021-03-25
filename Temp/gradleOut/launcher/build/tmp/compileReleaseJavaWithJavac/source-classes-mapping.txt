@@ -1,0 +1,2 @@
+com/dnsoft/GPStour/BuildConfig.java
+ com.dnsoft.GPStour.BuildConfig

@@ -146,6 +146,7 @@
     <Compile Include="Assets\MyProject\UIcontrol\script\ButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\CanvasSelect.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\LocationChange.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\Magnet_compass.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\NRCanvasFollowMove.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XMLButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\Xmltransport.cs" />
@@ -160,6 +161,8 @@
     <None Include="Assets\ARLocation\Third-Party-Notices.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\data (4).xml" />
     <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\yongsan_data.xml" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\popular_korean_tour_spot.xml" />
     <None Include="Assets\ARLocation\Experimental\World Builder\Readme.txt" />
     <None Include="Assets\ARLocation\Materials\Shaders\ShadowDrawer.shader" />
     <Reference Include="UnityEngine">

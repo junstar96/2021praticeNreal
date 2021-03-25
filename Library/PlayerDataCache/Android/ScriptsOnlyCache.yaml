@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - ARLocation.WebMapLoader
     - DontDestroyNrealScene
     - GPScontroller
+    - Magnet_compass
     - NRCanvasFollowMove
     - NRKernal.NRExamples.FollowPlayerPoint
     - NRKernal.NRExamples.MyArrowProject.ArrowController
@@ -240,13 +241,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14218}
     - Class: 114
-      Script: {instanceID: 14324}
-    - Class: 114
-      Script: {instanceID: 14380}
+      Script: {instanceID: 14326}
     - Class: 114
       Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14384}
+    - Class: 114
+      Script: {instanceID: 14408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -333,7 +334,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14302}
     - Class: 114
-      Script: {instanceID: 26606}
+      Script: {instanceID: 14304}
+    - Class: 114
+      Script: {instanceID: 19588}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1711,6 +1714,12 @@ ScriptsOnlyBuild:
     className: PrefabDatabase
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NRCanvasFollowMove
+  - hash:
+      serializedVersion: 2
       Hash: da05008bc6c1fc3f807981ed9f3d90c5
     assemblyName: NRSDK.dll
     namespaceName: NRKernal.NRExamples
@@ -1786,7 +1795,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: NRCanvasFollowMove
+    className: Magnet_compass
   platform: 13
   scenePathNames:
   - Assets/MyProject/Scenes/Logo scene.unity

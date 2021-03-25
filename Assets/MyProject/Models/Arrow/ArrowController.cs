@@ -131,13 +131,13 @@ namespace NRKernal.NRExamples
                 {
                     yield return new WaitForSeconds(0.1f);
 
-                    
+
                     //degree = gpscomtroller.bearingP1toP2(target_lat, target_long, company_lat, company_long);
                     //degree = GPScontroller.ConvertDecimalDegreesToRadians(degree);
 
 
-
-
+                    distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long);
+                    float magnet_radian = Input.location.isEnabledByUser ? Input.compass.magneticHeading * Mathf.PI / 360 : Mathf.PI / 2.0f;
 
                     foreach (var target_follow in webmaploader.stagePoint)
                     {
@@ -162,15 +162,12 @@ namespace NRKernal.NRExamples
                             if(string.Equals(hashtable[target_name], "false"))
                             {
                                 hashtable.Remove(target_name);
-                                float magnet_radian = Input.location.isEnabledByUser ? Input.compass.magneticHeading * Mathf.PI / 360 : Mathf.PI/2.0f;
-                                float true_radian = Input.location.isEnabledByUser ? Input.compass.trueHeading * Mathf.PI / 360 : Mathf.PI / 2.0f;
                                 Debug.Log("before location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
                                 target_follow.transform.position =
                                     new Vector3(target_follow.transform.position.x * Mathf.Cos(-magnet_radian) - target_follow.transform.position.z * Mathf.Sin(-magnet_radian),
                                     0,
                                     target_follow.transform.position.z * Mathf.Cos(-magnet_radian) + target_follow.transform.position.x * Mathf.Sin(-magnet_radian));
                                 Debug.Log("after location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
-                                Debug.Log("marget degree : " + Input.compass.magneticHeading);
                                 hashtable.Add(target_name, "true");
                             }
                            
@@ -203,7 +200,14 @@ namespace NRKernal.NRExamples
                             //target_follow.transform.GetChild(0).gameObject.transform.position = position * (float)distance;
 
                             arrow.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
-                            gameObject.transform.LookAt(target_follow.transform.position);
+                            if (distance < 10)
+                            {
+                                gameObject.transform.eulerAngles = new Vector3(180, 0, 0);
+                            }
+                            else
+                            {
+                                gameObject.transform.LookAt(target_follow.transform.position);
+                            }
                             setting_pos = true;
 
 

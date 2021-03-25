@@ -1,0 +1,177 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.unity3d.player"
+5    android:installLocation="preferExternal"
+6    android:versionCode="1"
+7    android:versionName="0.2" >
+8
+9    <uses-sdk
+9-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:3:3-61
+10        android:minSdkVersion="29"
+10-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:3:3-61
+11        android:targetSdkVersion="29"
+11-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:3:3-61
+12        tools:overrideLibrary="com.nreal.glasses_sdk" />
+12-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:3:13-58
+13
+14    <supports-screens
+14-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:4:3-163
+15        android:anyDensity="true"
+15-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:4:135-160
+16        android:largeScreens="true"
+16-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:4:78-105
+17        android:normalScreens="true"
+17-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:4:49-77
+18        android:smallScreens="true"
+18-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:4:21-48
+19        android:xlargeScreens="true" />
+19-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:4:106-134
+20
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:21:3-63
+21-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:21:20-60
+22    <uses-permission android:name="android.permission.BLUETOOTH" />
+22-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:22:3-66
+22-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:22:20-63
+23    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+23-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:23:3-72
+23-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:23:20-69
+24    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+24-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:24:3-75
+24-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:24:20-72
+25
+26    <uses-feature android:glEsVersion="0x00030000" />
+26-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:25:3-52
+26-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:25:17-49
+27
+28    <uses-permission android:name="android.permission.INTERNET" />
+28-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:26:3-65
+28-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:26:20-62
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:27:3-64
+29-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:27:20-61
+30    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+30-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:28:3-77
+30-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:28:20-74
+31
+32    <uses-feature
+32-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:29:3-89
+33        android:name="android.hardware.location.gps"
+33-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:29:17-61
+34        android:required="false" />
+34-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:29:62-86
+35    <uses-feature
+35-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:30:3-85
+36        android:name="android.hardware.location"
+36-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:30:17-57
+37        android:required="false" />
+37-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:30:58-82
+38
+39    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+39-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:31:3-79
+39-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:31:20-76
+40
+41    <uses-feature
+41-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:32:3-88
+42        android:name="android.hardware.touchscreen"
+42-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:32:17-60
+43        android:required="false" />
+43-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:32:61-85
+44    <uses-feature
+44-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:33:3-99
+45        android:name="android.hardware.touchscreen.multitouch"
+45-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:33:17-71
+46        android:required="false" />
+46-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:33:72-96
+47    <uses-feature
+47-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:34:3-108
+48        android:name="android.hardware.touchscreen.multitouch.distinct"
+48-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:34:17-80
+49        android:required="false" />
+49-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:34:81-105
+50
+51    <application
+51-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:5:3-20:17
+52        android:icon="@mipmap/app_icon"
+52-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:5:58-89
+53        android:label="@string/app_name"
+53-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:5:90-122
+54        android:theme="@style/UnityThemeSelector" >
+54-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:5:16-57
+55        <activity
+55-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:6:5-12:16
+56            android:name="com.unity3d.player.UnityPlayerActivity"
+56-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:6:15-68
+57            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+57-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:6:138-319
+58            android:hardwareAccelerated="false"
+58-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:6:320-355
+59            android:launchMode="singleTask"
+59-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:6:106-137
+60            android:screenOrientation="portrait" >
+60-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:6:69-105
+61            <intent-filter>
+61-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:7:7-10:23
+62                <action android:name="android.intent.action.MAIN" />
+62-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:8:9-61
+62-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:8:17-58
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:9:9-69
+64-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:9:19-66
+65            </intent-filter>
+66
+67            <meta-data
+67-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:11:7-78
+68                android:name="android.notch_support"
+68-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:11:18-54
+69                android:value="true" />
+69-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:11:55-75
+70        </activity>
+71
+72        <meta-data
+72-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:13:5-64
+73            android:name="nreal_sdk"
+73-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:13:16-40
+74            android:value="true" />
+74-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:13:41-61
+75        <meta-data
+75-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:14:5-73
+76            android:name="unity.tango-enable"
+76-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:14:16-49
+77            android:value="True" />
+77-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:14:50-70
+78        <meta-data
+78-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:15:5-88
+79            android:name="unityplayer.SkipPermissionsDialog"
+79-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:15:16-64
+80            android:value="true" />
+80-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:15:65-85
+81        <meta-data
+81-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:16:5-69
+82            android:name="unity.splash-mode"
+82-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:16:16-48
+83            android:value="0" />
+83-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:16:49-66
+84        <meta-data
+84-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:17:5-74
+85            android:name="unity.splash-enable"
+85-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:17:16-50
+86            android:value="True" />
+86-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:17:51-71
+87        <meta-data
+87-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:5-81
+88            android:name="notch.config"
+88-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:16-43
+89            android:value="portrait|landscape" />
+89-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:18:44-78
+90        <meta-data
+90-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:19:5-101
+91            android:name="unity.build-id"
+91-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:19:16-45
+92            android:value="9d34f945-22ff-47b2-be09-d8c1258bf1f4" />
+92-->C:\Users\dnsoft\Desktop\Practice\2021_practice\instant app\2021praticeNreal\Temp\gradleOut\unityLibrary\src\main\AndroidManifest.xml:19:46-98
+93    </application>
+94
+95</manifest>
