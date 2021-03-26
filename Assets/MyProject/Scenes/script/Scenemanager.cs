@@ -14,9 +14,9 @@ public class Scenemanager : MonoBehaviour
 
     
 
-    
 
-   
+
+
     void Start()
     {
         ischanged = false;

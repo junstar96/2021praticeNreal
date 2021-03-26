@@ -39,7 +39,7 @@ namespace NRKernal.NRExamples
 
             private Hashtable hashtable;
 
-
+            
 
             //이 두 개를 이용해서 회전시킬 수 있는 것인지 알아보자.
             private double distance;
@@ -59,9 +59,15 @@ namespace NRKernal.NRExamples
             //ARLocation 포함 함수들
             public WebMapLoader webmaploader;
 
+
+            //길목에 이정표 같은 오브젝트들을 만들어보자.
+            private List<GameObject> lerpmodeling;
+            public GameObject decoration;
+
+
             private void Awake()
             {
-                
+                lerpmodeling = new List<GameObject>();
                 player = GameObject.FindWithTag("Player").GetComponent<Transform>();
                 //gpscontroller = GameObject.FindWithTag("GPS").GetComponent<GPScontroller>();
 
@@ -90,7 +96,7 @@ namespace NRKernal.NRExamples
 
             private void PositionInitialize()
             {
-                distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long);
+               
                 float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
                     - Camera.main.transform.eulerAngles.y) * Mathf.PI / 180 : Mathf.PI / 2.0f;
 
@@ -105,6 +111,15 @@ namespace NRKernal.NRExamples
                     if (target_follow.GetComponent<PlaceAtLocation>().Location.Label == target_name)
                     {
                         target_follow.gameObject.SetActive(true);
+
+                        distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long);
+
+                        //double deco_distance = distance / 10;
+                        //for(int i = 1;i<deco_distance - 1;i++)
+                        //{
+                        //    var decorate = Instantiate(decoration, Vector3.Lerp(Camera.main.transform.position, target_follow.transform.position, 0.01f));
+                            
+                        //}
 
                         Debug.Log("location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
 
