@@ -133,7 +133,6 @@
     <Compile Include="Assets\MyProject\GPS\Script\GPSprint.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\MygpsTrans.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealPrefebdatabase.cs" />
-    <Compile Include="Assets\MyProject\GPS\Script\NrealWebMapLeader.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\FollowPlayerPoint.cs" />
     <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\CharacterControllerThirdPerson.cs" />

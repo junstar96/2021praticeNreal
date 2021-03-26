@@ -91,7 +91,7 @@ namespace NRKernal
                 yield break;
             }
 
-            
+
 
 
             //int maxWait = 20;
@@ -303,7 +303,4 @@ namespace NRKernal
         // */
     }
 }
-
-
-
 

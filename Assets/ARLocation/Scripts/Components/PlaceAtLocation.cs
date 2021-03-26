@@ -428,6 +428,7 @@ namespace ARLocation
 
             AddPlaceAtComponent(instance, location, options, useDebugMode);
 
+
             return instance;
         }
 

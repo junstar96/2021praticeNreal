@@ -9,12 +9,14 @@ namespace NRKernal.NRExamples
     {
         // Start is called before the first frame update
 
+
         private LocationInfo mygpsinfo;
         public Text lati;
         public Text longi;
         public Text isconnecting;
         private GPScontroller gpscontroller;
         private float time = 0.0f;
+        
 
         void Start()
         {
@@ -45,6 +47,9 @@ namespace NRKernal.NRExamples
             
             if (time > 1.0f)
             {
+               
+
+
                 Debug.Log("lati : " + Input.location.lastData.latitude + "," + mygpsinfo.latitude);
                 Debug.Log("longi : " + Input.location.lastData.longitude + "," + mygpsinfo.longitude);
                 Debug.Log("headingaccuracy : " + Input.compass.headingAccuracy);

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using NRKernal;
+using ARLocation;
 
 public class Scenemanager : MonoBehaviour
 {
@@ -34,6 +32,7 @@ public class Scenemanager : MonoBehaviour
             return;
         }
 
+        
         time += Time.deltaTime;
         
 
@@ -44,13 +43,14 @@ public class Scenemanager : MonoBehaviour
         //    SceneManager.LoadScene(1);
         //}
 
+        
 
-        if (time > 3.0f && !ischanged)
+        if (ARLocationProvider.Instance.HasStarted)
         {
             //NREmulatorManager.Instance?.NativeEmulatorApi?.SetHeadTrackingPose(new Vector3(0, 0, 0), Quaternion.Euler(0, -Input.compass.magneticHeading, 0));
             ischanged = true;
             //Debug.LogWarning("time over load scene");
-            Debug.Log("3 sec ");
+            Debug.Log("provider setting");
             SceneManager.LoadScene(1);
             return;
         }

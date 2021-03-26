@@ -61,6 +61,7 @@ namespace ARLocation
         /// Returns the current location provider.
         /// </summary>
         public ILocationProvider Provider { get; private set; }
+       
 
         /// <summary>
         /// If true, the location provider has received the first location data.
@@ -169,6 +170,9 @@ namespace ARLocation
 
         IEnumerator Start()
         {
+#if !UNITY_EDITOR
+            yield return new WaitUntil(() => Input.location.isEnabledByUser);
+#endif
             InitProviderEventListeners();
 
             Provider.Options = LocationProviderSettings;

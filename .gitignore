@@ -405,3 +405,4 @@ Library/il2cpp_android_arm64-v8a/il2cpp_cache/F66AC114F942ECDCFDA9C13EC22C20C2.o
 Library/il2cpp_android_arm64-v8a/il2cpp_cache/linkresult_89DAACE88C15843159DF2748A8F2E236/libil2cpp.dbg.so
 Library/il2cpp_android_arm64-v8a/il2cpp_cache/linkresult_89DAACE88C15843159DF2748A8F2E236/libil2cpp.so
 Library/il2cpp_android_arm64-v8a/il2cpp_cache/linkresult_89DAACE88C15843159DF2748A8F2E236/libil2cpp.sym.so
+*.o

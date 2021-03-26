@@ -15,8 +15,9 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (string.Equals(this.gameObject.tag, "GPS manu"))
+     
+
+        if (string.Equals(this.gameObject.name, "XMLLocationCanvas "))
         {
             if(NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
             {
@@ -36,9 +37,15 @@ public class NRCanvasFollowMove : MonoBehaviour
             }
             
         }
-        else
+        else if(string.Equals(this.gameObject.name, "compass"))
         {
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
+            
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
+            gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+        }
+        else if(string.Equals(this.gameObject.name, "convert_text"))
+        {
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 355f, 3.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
         }
      

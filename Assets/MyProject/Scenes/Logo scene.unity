@@ -470,7 +470,7 @@ MonoBehaviour:
   MockLocationData: {fileID: 0}
   MaxWaitTime: 200
   StartUpDelay: 0
-  DebugMode: 0
+  DebugMode: 1
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -517,8 +517,8 @@ MonoBehaviour:
   Camera: {fileID: 20880588623851702}
   WaitForARTrackingToStart: 1
   RestartWhenARTrackingIsRestored: 0
-  SetTargetFrameRateTo60Mhz: 1
-  DebugMode: 0
+  SetTargetFrameRateTo60Mhz: 0
+  DebugMode: 1
   OnTrackingStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -569,6 +569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610793780204690278, guid: 5a715e9de3e449a488fc1c688a1fddef,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7856455212123644788, guid: 5a715e9de3e449a488fc1c688a1fddef,
         type: 3}
@@ -625,7 +630,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7610793780204690278, guid: 5a715e9de3e449a488fc1c688a1fddef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a715e9de3e449a488fc1c688a1fddef, type: 3}
 --- !u!1001 &1534511256
 PrefabInstance:
@@ -638,6 +644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NRLogo
       objectReference: {fileID: 0}
+    - target: {fileID: 1341636462457712, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -648,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: -0.1499939
       objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -660,15 +670,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4131315785955196, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
