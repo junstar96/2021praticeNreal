@@ -799,6 +799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1470572936, guid: bd7b7c18398866d4796c2fd56407e38b, type: 3}
+    - {fileID: 1470572935, guid: bd7b7c18398866d4796c2fd56407e38b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd7b7c18398866d4796c2fd56407e38b, type: 3}
 --- !u!1001 &2486088293068962313
 PrefabInstance:
@@ -807,6 +808,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2486088291150312371, guid: 374bfcbdce80ed34fbe5e940fff7deae,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c77d2571a0734bbc8dc3d712e4c903b,
+        type: 3}
     - target: {fileID: 2486088291845022900, guid: 374bfcbdce80ed34fbe5e940fff7deae,
         type: 3}
       propertyPath: m_Pivot.x

@@ -37,7 +37,8 @@ namespace NRKernal.NRExamples
             private double company_lat =37.47948981441395;
             private double company_long = 126.88759920781672;
 
-            private Dictionary<string, bool> dictonary;
+            //private Dictionary<string, bool> dictonary;
+            private Hashtable hashtable;
 
           
 
@@ -47,31 +48,33 @@ namespace NRKernal.NRExamples
             public float checktime;
 
             private bool setting_pos;
-            public UnityEngine.UI.Text check_target_point;
+            //public UnityEngine.UI.Text check_target_point;
 
             //GPScontroller를 받아온다.
             //private GPScontroller gpscontroller;
 
             public Transform arrow;
 
-            public Transform player;
+            private Transform player;
 
             //ARLocation 포함 함수들
             public WebMapLoader webmaploader;
 
+            public BUSstationXML busStationXml;
+
 
             //길목에 이정표 같은 오브젝트들을 만들어보자.
-            private List<GameObject> lerpmodeling;
-            public GameObject decoration;
+            
 
 
             private void Awake()
             {
-                lerpmodeling = new List<GameObject>();
+                
                 player = GameObject.FindWithTag("Player").GetComponent<Transform>();
                 //gpscontroller = GameObject.FindWithTag("GPS").GetComponent<GPScontroller>();
 
-                dictonary = new Dictionary<string, bool>();
+                hashtable = new Hashtable();
+                //dictonary = new Dictionary<string, bool>();
             }
 
             private void OnEnable()
@@ -99,78 +102,148 @@ namespace NRKernal.NRExamples
                
                 float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
                     - Camera.main.transform.eulerAngles.y) * Mathf.PI / 180 : Mathf.PI / 2.0f;
-
-                foreach (var target_follow in webmaploader.stagePoint)
+                if(webmaploader != null)
                 {
-
-                    if(dictonary.ContainsKey(target_follow.GetComponent<PlaceAtLocation>().Location.Label))
+                    foreach (var target_follow in webmaploader.stagePoint)
                     {
-                        dictonary.Add(target_follow.GetComponent<PlaceAtLocation>().Location.Label, false);
-                    }
 
-                    if (target_follow.GetComponent<PlaceAtLocation>().Location.Label == target_name)
-                    {
-                        target_follow.gameObject.SetActive(true);
-
-                        distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long);
-
-                        //double deco_distance = distance / 10;
-                        //for(int i = 1;i<deco_distance - 1;i++)
-                        //{
-                        //    var decorate = Instantiate(decoration, Vector3.Lerp(Camera.main.transform.position, target_follow.transform.position, 0.01f));
-                            
-                        //}
-
-                        Debug.Log("location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
-
-                        //Debug.Log("location data " + location.Latitude + "," + location.Longitude);
-                        if (dictonary[target_name])
+                        if (hashtable.Contains(target_follow.GetComponent<PlaceAtLocation>().Location.Label))
                         {
-  
-                            Debug.Log("before location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
-                            target_follow.transform.position =
-                                new Vector3(target_follow.transform.position.x * Mathf.Cos(magnet_radian) - target_follow.transform.position.z * Mathf.Sin(magnet_radian),
-                                0,
-                                target_follow.transform.position.z * Mathf.Cos(magnet_radian) + target_follow.transform.position.x * Mathf.Sin(magnet_radian));
-                            Debug.Log("after location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
-                            dictonary[target_name] = true;
+                            hashtable.Add(target_follow.GetComponent<PlaceAtLocation>().Location.Label, "false");
                         }
-
-                        if (checktime > 1.0f)
-                        {
-                            distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long) * 1000;
-                            var check = target_follow.GetComponent<PlaceAtLocation>().SceneDistance;
-                            var rawgpsdistance = target_follow.GetComponent<PlaceAtLocation>().RawGpsDistance;
-                            ////degree = degree * Mathf.PI / 360;
-                            Debug.Log("target pos : " + target_follow.transform.position.x + "," + target_follow.transform.position.y + "," + target_follow.transform.position.z);
-                            Debug.Log("check : " + check + ", rawdistance : " + rawgpsdistance);
-                            Debug.Log("my distance : " + distance);
-                            Debug.Log("vector distance : " + Vector3.Distance(target_follow.transform.position, Camera.main.transform.position));
-                            Debug.Log("android magnet degree : " + Input.compass.magneticHeading);
-                            Debug.Log("arlocation magnet degree : " + ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading);
-                            checktime = 0.0f;
-                        }
-
-
 
                         if (target_follow.GetComponent<PlaceAtLocation>().Location.Label == target_name)
                         {
+                            target_follow.gameObject.SetActive(true);
 
+                            distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long);
+
+                            //double deco_distance = distance / 10;
+                            //for(int i = 1;i<deco_distance - 1;i++)
+                            //{
+                            //    var decorate = Instantiate(decoration, Vector3.Lerp(Camera.main.transform.position, target_follow.transform.position, 0.01f));
+
+                            //}
+
+                            Debug.Log("location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
+
+                            //Debug.Log("location data " + location.Latitude + "," + location.Longitude);
+                            if (string.Equals(hashtable[target_name], "false"))
+                            {
+                                hashtable.Remove(hashtable[target_name]);
+                                Debug.Log("before location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
+                                target_follow.transform.position =
+                                    new Vector3(target_follow.transform.position.x * Mathf.Cos(magnet_radian) - target_follow.transform.position.z * Mathf.Sin(magnet_radian),
+                                    0,
+                                    target_follow.transform.position.z * Mathf.Cos(magnet_radian) + target_follow.transform.position.x * Mathf.Sin(magnet_radian));
+                                Debug.Log("after location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
+                                hashtable.Add(target_name, "true");
+                            }
+
+                            if (checktime > 1.0f)
+                            {
+                                distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long) * 1000;
+                                var check = target_follow.GetComponent<PlaceAtLocation>().SceneDistance;
+                                var rawgpsdistance = target_follow.GetComponent<PlaceAtLocation>().RawGpsDistance;
+                                ////degree = degree * Mathf.PI / 360;
+                                Debug.Log("target pos : " + target_follow.transform.position.x + "," + target_follow.transform.position.y + "," + target_follow.transform.position.z);
+                                Debug.Log("check : " + check + ", rawdistance : " + rawgpsdistance);
+                                Debug.Log("my distance : " + distance);
+                                Debug.Log("vector distance : " + Vector3.Distance(target_follow.transform.position, Camera.main.transform.position));
+                                Debug.Log("android magnet degree : " + Input.compass.magneticHeading);
+                                Debug.Log("arlocation magnet degree : " + ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading);
+                                checktime = 0.0f;
+                            }
+
+
+
+                            if (target_follow.GetComponent<PlaceAtLocation>().Location.Label == target_name)
+                            {
+
+
+                                arrow.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
+
+                                gameObject.transform.LookAt(target_follow.transform.position);
+
+                                setting_pos = true;
+                            }
+
+
+                        }
+                        else
+                        {
+                            target_follow.SetActive(false);
+                        }
+                    }
+                }
+                else if(busStationXml != null)
+                {
+                    foreach (var target_follow in busStationXml.stagePoint)
+                    {
+
+                        if (hashtable.Contains(target_follow.GetComponent<PlaceAtLocation>().Location.Label))
+                        {
+                            hashtable.Add(target_follow.GetComponent<PlaceAtLocation>().Location.Label, "false");
+                        }
+
+                        if (target_follow.GetComponent<PlaceAtLocation>().Location.Label == target_name)
+                        {
+                            target_follow.gameObject.SetActive(true);
+
+                            distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long);
+
+                            //double deco_distance = distance / 10;
+                            //for(int i = 1;i<deco_distance - 1;i++)
+                            //{
+                            //    var decorate = Instantiate(decoration, Vector3.Lerp(Camera.main.transform.position, target_follow.transform.position, 0.01f));
+
+                            //}
+
+                            Debug.Log("location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
+
+                            //Debug.Log("location data " + location.Latitude + "," + location.Longitude);
+                            if (string.Equals(hashtable[target_name], "false"))
+                            {
+                                hashtable.Remove(hashtable[target_name]);
+                                Debug.Log("before location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
+                                target_follow.transform.position =
+                                    new Vector3(target_follow.transform.position.x * Mathf.Cos(magnet_radian) - target_follow.transform.position.z * Mathf.Sin(magnet_radian),
+                                    0,
+                                    target_follow.transform.position.z * Mathf.Cos(magnet_radian) + target_follow.transform.position.x * Mathf.Sin(magnet_radian));
+                                Debug.Log("after location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
+                                hashtable.Add(target_name, "true");
+                            }
+
+                            if (checktime > 1.0f)
+                            {
+                                distance = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lat, target_long, company_lat, company_long) * 1000;
+                                var check = target_follow.GetComponent<PlaceAtLocation>().SceneDistance;
+                                var rawgpsdistance = target_follow.GetComponent<PlaceAtLocation>().RawGpsDistance;
+                                ////degree = degree * Mathf.PI / 360;
+                                Debug.Log("target pos : " + target_follow.transform.position.x + "," + target_follow.transform.position.y + "," + target_follow.transform.position.z);
+                                Debug.Log("check : " + check + ", rawdistance : " + rawgpsdistance);
+                                Debug.Log("my distance : " + distance);
+                                Debug.Log("vector distance : " + Vector3.Distance(target_follow.transform.position, Camera.main.transform.position));
+                                Debug.Log("android magnet degree : " + Input.compass.magneticHeading);
+                                Debug.Log("arlocation magnet degree : " + ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading);
+                                checktime = 0.0f;
+                            }
 
                             arrow.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
 
                             gameObject.transform.LookAt(target_follow.transform.position);
 
                             setting_pos = true;
+
+
                         }
-
-
-                    }
-                    else
-                    {
-                        target_follow.SetActive(false);
+                        else
+                        {
+                            target_follow.SetActive(false);
+                        }
                     }
                 }
+
             }
 
             private void OnDisable()

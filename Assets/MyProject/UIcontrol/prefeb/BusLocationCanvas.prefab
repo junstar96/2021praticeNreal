@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3848310338801340049}
   - component: {fileID: 3848310338801340048}
   - component: {fileID: 3201204680969827847}
+  - component: {fileID: 1325455204}
   m_Layer: 5
   m_Name: BusLocationCanvas
   m_TagString: Untagged
@@ -188,6 +189,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
+--- !u!114 &1325455204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848310338801340051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc79162f9d6c8e14287c3a7953122a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3848310338954041386
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +213,7 @@ GameObject:
   - component: {fileID: 3848310338954041398}
   - component: {fileID: 3848310338954041385}
   - component: {fileID: 3848310338954041384}
-  - component: {fileID: 3201204680969827846}
+  - component: {fileID: 787647727}
   m_Layer: 5
   m_Name: Contents
   m_TagString: Untagged
@@ -289,7 +302,7 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 2
---- !u!114 &3201204680969827846
+--- !u!114 &787647727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,10 +311,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3848310338954041386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df3fde55d8e65140ab99f405a92e11c, type: 3}
+  m_Script: {fileID: 11500000, guid: b8856228eefe3c54e9f01c4e4aa760b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 5912188399275692155}
+  test_pos: {fileID: 0}
 --- !u!1 &3848310339534931510
 GameObject:
   m_ObjectHideFlags: 0
