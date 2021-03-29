@@ -37,9 +37,9 @@ namespace NRKernal.NRExamples
             private double company_lat =37.47948981441395;
             private double company_long = 126.88759920781672;
 
-            private Hashtable hashtable;
+            private Dictionary<string, bool> dictonary;
 
-            
+          
 
             //이 두 개를 이용해서 회전시킬 수 있는 것인지 알아보자.
             private double distance;
@@ -71,7 +71,7 @@ namespace NRKernal.NRExamples
                 player = GameObject.FindWithTag("Player").GetComponent<Transform>();
                 //gpscontroller = GameObject.FindWithTag("GPS").GetComponent<GPScontroller>();
 
-                hashtable = new Hashtable();
+                dictonary = new Dictionary<string, bool>();
             }
 
             private void OnEnable()
@@ -102,10 +102,10 @@ namespace NRKernal.NRExamples
 
                 foreach (var target_follow in webmaploader.stagePoint)
                 {
-                    if (!hashtable.Contains(target_follow.GetComponent<PlaceAtLocation>().Location.Label))
+
+                    if(dictonary.ContainsKey(target_follow.GetComponent<PlaceAtLocation>().Location.Label))
                     {
-                        hashtable.Add(target_follow.GetComponent<PlaceAtLocation>().Location.Label, "false");
-                        //Debug.Log("hash : " + hashtable[target_follow.GetComponent<PlaceAtLocation>().Location.Label]);
+                        dictonary.Add(target_follow.GetComponent<PlaceAtLocation>().Location.Label, false);
                     }
 
                     if (target_follow.GetComponent<PlaceAtLocation>().Location.Label == target_name)
@@ -124,16 +124,16 @@ namespace NRKernal.NRExamples
                         Debug.Log("location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
 
                         //Debug.Log("location data " + location.Latitude + "," + location.Longitude);
-                        if (string.Equals(hashtable[target_name], "false"))
+                        if (dictonary[target_name])
                         {
-                            hashtable.Remove(target_name);
+  
                             Debug.Log("before location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
                             target_follow.transform.position =
                                 new Vector3(target_follow.transform.position.x * Mathf.Cos(magnet_radian) - target_follow.transform.position.z * Mathf.Sin(magnet_radian),
                                 0,
                                 target_follow.transform.position.z * Mathf.Cos(magnet_radian) + target_follow.transform.position.x * Mathf.Sin(magnet_radian));
                             Debug.Log("after location : " + target_follow.transform.position.x + ", " + target_follow.transform.position.z);
-                            hashtable.Add(target_name, "true");
+                            dictonary[target_name] = true;
                         }
 
                         if (checktime > 1.0f)

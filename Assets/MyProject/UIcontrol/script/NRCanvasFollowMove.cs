@@ -22,7 +22,7 @@ public class NRCanvasFollowMove : MonoBehaviour
             if(NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
             {
                 time += Time.deltaTime;
-                if (time > 3.0f)
+                if (time > 2.0f)
                 {
                     gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
                     gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
@@ -43,11 +43,17 @@ public class NRCanvasFollowMove : MonoBehaviour
             gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
         }
-        else if(string.Equals(this.gameObject.name, "convert_text"))
+        else if(string.Equals(this.gameObject.name, "SceneChange"))
         {
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 355f, 3.0f));
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 3.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
         }
+        else if(string.Equals(this.gameObject.name, "BusLocationCanvas"))
+        {
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 3.0f));
+            gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+        }
+       
      
 
         //if (NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
