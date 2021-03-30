@@ -76,11 +76,6 @@
     <Compile Include="Assets\ARLocation\Editor\LocationPathInspector.cs" />
     <Compile Include="Assets\ARLocation\Editor\LocationPropertyDataDrawer.cs" />
     <Compile Include="Assets\ARLocation\Editor\OverrideAltitudeDataDrawer.cs" />
-    <Compile Include="Assets\MyProject\Models\ThirdPartyAssets\WoLfulus\LineEnding\Editor\Enums.cs" />
-    <Compile Include="Assets\MyProject\Models\ThirdPartyAssets\WoLfulus\LineEnding\Editor\FileMonitor.cs" />
-    <Compile Include="Assets\MyProject\Models\ThirdPartyAssets\WoLfulus\LineEnding\Editor\LogEntries.cs" />
-    <Compile Include="Assets\MyProject\Models\ThirdPartyAssets\WoLfulus\LineEnding\Editor\LogEntry.cs" />
-    <Compile Include="Assets\MyProject\Models\TurnTheGameOn\Arrow WayPointer\Scripts\Editor\Editor_WaypointController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -15,7 +15,7 @@ namespace NRKernal.NRExamples
             //이 부분을 xml 파일을 받아오는 걸로 대체해서 이 녀석으로 죄다 받아오도록 하자. 
             //public ARLocation.WebMapLoader test_pos;
 
-            public WebMapLoader test_pos;
+            public int child_count;
 
             
             //placeatlocation을 받아오면 안의 location 값을 받아올 수 있을 것 같다.
@@ -30,6 +30,7 @@ namespace NRKernal.NRExamples
             //}
             void Start()
             {
+                child_count = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.childCount;
 
                 ////var test_pos = gameobject.text
                 //test_pos = GameObject.FindWithTag("GPS").GetComponent<ARLocation.WebMapLoader>();
@@ -61,20 +62,20 @@ namespace NRKernal.NRExamples
                 Debug.Log("when called?");
             }
 
+
+
             IEnumerator UntilConnecting()
             {
-                while (!test_pos.MakeFinish)
+                Debug.Log("child count :" + child_count);
+                yield return new WaitForSeconds(0.5f);
+                for(int i = 0;i<child_count;i++)
                 {
-                    Debug.Log("not yet leading");
-                    yield return new WaitForSeconds(0.01f);
-                }
+                    var entity = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(i).GetComponent<PlaceAtLocation>();
 
-                foreach (var entity in test_pos.XmlListForNreal)
-                {
-                    button.adressPrint.text = entity.name;
-                    button.target_lati = entity.lat;
-                    button.target_longi = entity.lng;
-
+                    button.adressPrint.text = entity.Location.Label;
+                    button.target_lati = entity.Location.Latitude;
+                    button.target_longi = entity.Location.Longitude;
+                    button.target_transform = entity.transform;
 
                     var check = Instantiate(button, gameObject.transform);
 
@@ -83,7 +84,9 @@ namespace NRKernal.NRExamples
                         check.gameObject.SetActive(true);
                     }
                 }
-              
+                
+                
+
                 //else if(test_pos.GetComponent<BUSstationXML>() != null)
                 //{
                 //    int list_length = test_pos.GetComponent<BUSstationXML>().List_length;
@@ -109,11 +112,7 @@ namespace NRKernal.NRExamples
                 //}
             }
 
-            // Update is called once per frame
-            //void Update()
-            //{
-
-            //}
+            
         }
     }
 }

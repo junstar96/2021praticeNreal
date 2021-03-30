@@ -5,4 +5,6 @@ using UnityEngine;
 public interface MygpsTrans
 {
     void GetLocation(string name, double lat, double longi);
+
+    void GetTargetObject(Transform target);
 }

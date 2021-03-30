@@ -78,6 +78,14 @@ namespace ARLocation {
             }
         }
 
+        public List<PlaceAtLocation> PlaceAtComponents
+        {
+            get
+            {
+                return _placeAtComponents;
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -120,6 +128,7 @@ namespace ARLocation {
                                                                     DebugMode);
 
                 _stages.Add(instance);
+                _placeAtComponents.Add(instance.GetComponent<PlaceAtLocation>());
             }
 
             MakeFinish = true;

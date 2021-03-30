@@ -15,11 +15,11 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+
 
         if (string.Equals(this.gameObject.name, "XMLLocationCanvas "))
         {
-            if(NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
+            if (NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
             {
                 time += Time.deltaTime;
                 if (time > 2.0f)
@@ -28,27 +28,27 @@ public class NRCanvasFollowMove : MonoBehaviour
                     gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
                     time = 0.0f;
                 }
-                
+
             }
 
-            if(NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.TRIGGER))
+            if (NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.TRIGGER))
             {
                 time = 0.0f;
             }
-            
+
         }
-        else if(string.Equals(this.gameObject.name, "compass"))
+        else if (string.Equals(this.gameObject.name, "compass"))
         {
-            
+
             gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
         }
-        else if(string.Equals(this.gameObject.name, "SceneChange"))
+        else if (string.Equals(this.gameObject.name, "SceneChange"))
         {
             gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 3.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
         }
-        else if(string.Equals(this.gameObject.name, "BusLocationCanvas"))
+        else if (string.Equals(this.gameObject.name, "BusLocationCanvas"))
         {
             gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 3.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;

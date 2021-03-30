@@ -68,12 +68,16 @@ namespace NRKernal.NRExamples
             [HideInInspector]
             public string url = string.Empty;
 
-            /// <summary>
-            /// 현재 위치에서 총 몇 개의 리스트가 출력되느냐 숫자
-            /// </summary>
 
+
+
+            /// <summary>
+            /// 오브젝트들 리스트
+            /// </summary>
             private List<DataEntry> _dataEntries = new List<DataEntry>();
             private List<GameObject> _stages = new List<GameObject>();
+            private List<PlaceAtLocation> _placeAtComponents = new List<PlaceAtLocation>();
+
 
             public List<DataEntry> XmlListForNreal
             {
@@ -91,7 +95,15 @@ namespace NRKernal.NRExamples
                 }
             }
 
-           
+            public List<PlaceAtLocation> PlaceAtComponents
+            {
+                get
+                {
+                    return _placeAtComponents;
+                }
+            }
+
+
 
             //먼저 아이템 구분을 저장하도록 하고, 호출이 왔을 때 이 안에서 데이터를 나눠서 전달하도록 해보자. 
             //아직 수정 안 함.
@@ -236,39 +248,7 @@ namespace NRKernal.NRExamples
                 }
             }
 
-            //private void Update()
-            //{
-
-            //}//여기서 주기적으로 받는다.
-
-            IEnumerator GPSNextFollower()
-            {
-                foreach (string i in station_name)
-                {
-                    //if (i.Contains("<nodenm>"))
-                    //{
-                    //    Debug.Log("<nodenm> : " + i);
-                    //}
-
-
-                    if (i.Contains("<gpslati>"))
-                    {
-                        //Debug.Log("before" + current_lat);
-                        current_lat = float.Parse(i.Replace("<gpslati>", ""));
-                        //Debug.Log("after" + current_lat);
-                    }
-
-                    if (i.Contains("<gpslong>"))
-                    {
-                        //Debug.Log("before" + current_long);
-                        current_long = float.Parse(i.Replace("<gpslong>", ""));
-                        //Debug.Log(current_long);
-
-                        yield return new WaitUntil(() => NRInput.GetButtonDown(ControllerButton.TRIGGER));
-                    }
-
-                }
-            }
+    
 
             public GPSinfo ButtonInfo(int count)
             {
@@ -345,6 +325,7 @@ namespace NRKernal.NRExamples
                                                                         false);
 
                     _stages.Add(instance);
+                    _placeAtComponents.Add(instance.GetComponent<PlaceAtLocation>());
                 }
 
                 makefinish = true;
