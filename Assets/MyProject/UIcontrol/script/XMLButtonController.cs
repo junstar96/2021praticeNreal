@@ -67,7 +67,7 @@ namespace NRKernal.NRExamples
             IEnumerator UntilConnecting()
             {
                 Debug.Log("child count :" + child_count);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForEndOfFrame();
                 for(int i = 0;i<child_count;i++)
                 {
                     var entity = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(i).GetComponent<PlaceAtLocation>();
@@ -85,31 +85,6 @@ namespace NRKernal.NRExamples
                     }
                 }
                 
-                
-
-                //else if(test_pos.GetComponent<BUSstationXML>() != null)
-                //{
-                //    int list_length = test_pos.GetComponent<BUSstationXML>().List_length;
-                //    for (int i = 0; i < list_length; i++)
-                //    {
-                //        BUSstationXML.GPSinfo gpsinfo = test_pos.GetComponent<BUSstationXML>().ButtonInfo(i);
-
-                //        button.adressPrint.text = gpsinfo.name;
-                //        button.target_lati = gpsinfo.lati;
-                //        button.target_longi = gpsinfo.longi;
-
-                //        var check = Instantiate(button, gameObject.transform);
-
-                //        if (!check.gameObject.activeSelf)
-                //        {
-                //            check.gameObject.SetActive(true);
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    Debug.LogError("something connecting fail : xmlbuttoncontroller");
-                //}
             }
 
             

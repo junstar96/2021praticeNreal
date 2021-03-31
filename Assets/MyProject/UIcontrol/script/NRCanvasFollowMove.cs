@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using NRKernal;
 
 public class NRCanvasFollowMove : MonoBehaviour
 {
@@ -19,8 +17,9 @@ public class NRCanvasFollowMove : MonoBehaviour
 
         if (string.Equals(this.gameObject.name, "XMLLocationCanvas "))
         {
-            if (NRKernal.NRInput.GetButton(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButton(NRKernal.ControllerButton.TRIGGER))
+            if (NRInput.GetButton(ControllerButton.APP) || NRInput.GetButton(ControllerButton.TRIGGER))
             {
+                
                 time += Time.deltaTime;
                 if (time > 2.0f)
                 {
@@ -31,7 +30,7 @@ public class NRCanvasFollowMove : MonoBehaviour
 
             }
 
-            if (NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.APP) || NRKernal.NRInput.GetButtonUp(NRKernal.ControllerButton.TRIGGER))
+            if (NRInput.GetButtonUp(ControllerButton.APP) || NRInput.GetButtonUp(ControllerButton.TRIGGER))
             {
                 time = 0.0f;
             }

@@ -6,5 +6,5 @@ public interface MygpsTrans
 {
     void GetLocation(string name, double lat, double longi);
 
-    void GetTargetObject(Transform target);
+    void GetTargetObject(Vector3 target);
 }

@@ -53,7 +53,7 @@ namespace NRKernal.NRExamples
             {
                 Debug.Log("change target : " + adressPrint.text);
                 myGpsTrans.GetLocation(adressPrint.text, target_lati, target_longi);
-                myGpsTrans.GetTargetObject(target_transform);
+                myGpsTrans.GetTargetObject(target_transform.position);
 
             }
         }

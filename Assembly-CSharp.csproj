@@ -150,10 +150,9 @@
     <None Include="Assets\MyProject\GPS\Xml FILE\data_guro.xml" />
     <None Include="Assets\ARLocation\GO Map Integration\README.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Unity_test_gps.xml" />
-    <None Include="Assets\MyProject\GPS\Xml FILE\Update_xml.xml" />
     <None Include="Assets\ARLocation\Third-Party-Notices.txt" />
-    <None Include="Assets\MyProject\GPS\Xml FILE\data (4).xml" />
     <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\Update_Data.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\yongsan_data.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\popular_korean_tour_spot.xml" />
     <None Include="Assets\ARLocation\Experimental\World Builder\Readme.txt" />

@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: YUVTexture
   m_Shader: {fileID: 4800000, guid: 42e70d032e1e7404cb9c0704d5a6999d, type: 3}
   m_ShaderKeywords: 
