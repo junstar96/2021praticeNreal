@@ -128,6 +128,7 @@
     <Compile Include="Assets\ARLocation\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\ARLocation\Scripts\Utils\SmoothMove.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\BUSstationXML.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\Enemy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSChecker.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPScontroller.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSprint.cs" />
@@ -151,9 +152,12 @@
     <None Include="Assets\ARLocation\GO Map Integration\README.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Unity_test_gps.xml" />
     <None Include="Assets\ARLocation\Third-Party-Notices.txt" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\GameGoal.xml" />
     <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Update_Data.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\yongsan_data.xml" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\data (2).xml" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\AltitudeResetting.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\popular_korean_tour_spot.xml" />
     <None Include="Assets\ARLocation\Experimental\World Builder\Readme.txt" />
     <None Include="Assets\ARLocation\Materials\Shaders\ShadowDrawer.shader" />

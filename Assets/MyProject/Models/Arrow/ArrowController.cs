@@ -100,27 +100,52 @@ namespace NRKernal.NRExamples
             // Update is called once per frame
             void Update()
             {
-
-                if (isArrowview)
+                if (string.Equals(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "GameScene"))
                 {
-                    foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<AudioSource>())
-                    {
-                        if (string.Equals(worldobject.GetComponent<PlaceAtLocation>().Location.Label, target_name))
-                        {
-                            worldobject.Play();
-                        }
-                        else
-                        {
-                            worldobject.Stop();
-                        }
-
-                    }
-
-
+                    
+                    var worldobject = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(0).GetComponent<Transform>();
                     gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
                     gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-                    Quaternion looktarget = Quaternion.LookRotation(arrow_target, Vector3.up);
-                    arrow.transform.rotation = looktarget;
+                    Quaternion looktarget = Quaternion.LookRotation(worldobject.position, Vector3.up);
+                    looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
+                    arrow.transform.localRotation = looktarget;
+                }
+                else
+                {
+                    if (isArrowview)
+                    {
+
+                        foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<AudioSource>())
+                        {
+                            if (string.Equals(worldobject.GetComponent<PlaceAtLocation>().Location.Label, target_name))
+                            {
+                                if(!worldobject.isPlaying)
+                                {
+                                    worldobject.loop = true;
+                                    worldobject.time = 0;
+                                    worldobject.Play();
+                                    
+                                }
+                               
+                            }
+                            else
+                            {
+                                if(worldobject.isPlaying)
+                                {
+                                    worldobject.loop = false;
+                                    worldobject.Stop();
+                                }
+                               
+                            }
+
+                        }
+
+
+                        gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
+                        gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+                        Quaternion looktarget = Quaternion.LookRotation(arrow_target, Vector3.up);
+                        looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
+                        arrow.transform.localRotation = looktarget;
 
 
 #if !UNITY_EDITOR
@@ -132,16 +157,17 @@ namespace NRKernal.NRExamples
                         + "distance : " + det.ToString("N2");
 #endif
 
+                    }
+                    else
+                    {
+                        gameObject.transform.position = new Vector3(500, 500, 500);
+                    }
+
+                    PositionInitialize();
+
+
+
                 }
-                else
-                {
-                    gameObject.transform.position = new Vector3(500, 500, 500);
-                }
-
-                PositionInitialize();
-
-
-
             }
 
             //IEnumerator GPSArrowUpdate()

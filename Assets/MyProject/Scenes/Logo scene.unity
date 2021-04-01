@@ -1060,7 +1060,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1246721123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1295519700}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1913393264}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1246721123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406232319260624, guid: e0f440c4bb94be641af5dc113d3248f5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4279751068700536, guid: e0f440c4bb94be641af5dc113d3248f5, type: 3}
       propertyPath: m_RootOrder
@@ -1306,6 +1328,11 @@ PrefabInstance:
       objectReference: {fileID: 1463285105}
     - target: {fileID: 2023472776073126343, guid: 5a715e9de3e449a488fc1c688a1fddef,
         type: 3}
+      propertyPath: gamemaploader
+      value: 
+      objectReference: {fileID: 1970790498}
+    - target: {fileID: 2023472776073126343, guid: 5a715e9de3e449a488fc1c688a1fddef,
+        type: 3}
       propertyPath: backgroundsounds.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1464,6 +1491,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1295519697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1295519700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2023472776073126343, guid: 5a715e9de3e449a488fc1c688a1fddef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1295519697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113877291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e22ee739a9bd84ca5dacdb97839cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1347989113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrefabDatabase: {fileID: 11400000, guid: d25877968f0bb53438526593d485f257, type: 2}
-  XmlDataFile: {fileID: 4900000, guid: ab20e1e1f369fc94e81ac06a572ebdd3, type: 3}
+  XmlDataFile: {fileID: 4900000, guid: ac7e4d9ff71b35143b1d03b3d9eda1dc, type: 3}
   DebugMode: 0
   MakeFinish: 0
 --- !u!4 &1786237418
@@ -1831,7 +1870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1970790499
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,8 +1897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f3ff7c53dce541b94d22096a83d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabDatabase: {fileID: 0}
-  XmlDataFile: {fileID: 0}
+  PrefabDatabase: {fileID: 11400000, guid: 35d0a87aac1d45e49b8bf084db646a12, type: 2}
+  XmlDataFile: {fileID: 4900000, guid: 9a8c3b47a32838d419f7b5526c96e236, type: 3}
   DebugMode: 0
   MakeFinish: 0
 --- !u!1001 &2023533357

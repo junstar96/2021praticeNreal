@@ -18,6 +18,9 @@ public class Scenemanager : MonoBehaviour
     [Tooltip("버스정류장 씬에서 사용하게 될 오브젝트 생성기")]
     public GameObject busstationxml;
 
+    [Tooltip("게임 씬으로 넘어가기 위한 물건")]
+    public GameObject gamemaploader;
+
     [Tooltip("로딩 바")]
     public Slider slider;
 
@@ -70,9 +73,7 @@ public class Scenemanager : MonoBehaviour
                 check.maxDistance = 20;
                 check.minDistance = 1;
                 check.clip = backgroundsounds[Random.Range(0, backgroundsounds.Length)];
-                check.loop = true;
-                check.time = 0;
-                check.Play();
+                check.Stop();
 
                 PlaceAtLocation follow_target_data = follow_target.GetComponent<PlaceAtLocation>();
                 
@@ -124,7 +125,16 @@ public class Scenemanager : MonoBehaviour
 
     IEnumerator AsyncLoadScene(string name)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Main Scene");
+        AsyncOperation operation;
+        if (string.Equals(name, "GameScene"))
+        {
+            operation = SceneManager.LoadSceneAsync(name);
+        }
+        else
+        {
+            operation = SceneManager.LoadSceneAsync("Main Scene");
+        }
+    
 
         //loadingScene.SetActive(true);
         slider?.gameObject.SetActive(true);
@@ -159,6 +169,14 @@ public class Scenemanager : MonoBehaviour
             {
                 busstationxml.SetActive(true);
                 StartCoroutine(RotationObject(busstationxml));
+            }
+        }
+        else if(string.Equals(name, "GameScene"))
+        {
+            if(!gamemaploader.activeSelf)
+            {
+                gamemaploader.SetActive(true);
+                StartCoroutine(RotationObject(gamemaploader));
             }
         }
 
