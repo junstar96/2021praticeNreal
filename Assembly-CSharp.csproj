@@ -131,6 +131,7 @@
     <Compile Include="Assets\MyProject\GPS\Script\GPSChecker.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPScontroller.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSprint.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\LerpEnemyMake.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\MygpsTrans.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealPrefebdatabase.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
@@ -146,8 +147,7 @@
     <Compile Include="Assets\MyProject\UIcontrol\script\Xmltransport.cs" />
     <None Include="Assets\ARLocation\Samples\Data\pois.xml" />
     <None Include="Assets\ARLocation\Data\data.xml" />
-    <None Include="Assets\MyProject\GPS\Xml FILE\Check_Update.xml" />
-    <None Include="Assets\MyProject\GPS\Xml FILE\data_guro.xml" />
+    <None Include="Assets\Resources\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\ARLocation\GO Map Integration\README.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Unity_test_gps.xml" />
     <None Include="Assets\ARLocation\Third-Party-Notices.txt" />

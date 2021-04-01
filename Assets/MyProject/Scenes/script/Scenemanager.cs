@@ -84,7 +84,7 @@ public class Scenemanager : MonoBehaviour
                 
                 follow_target.transform.position =
                                     new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
-                                    0,
+                                    (float)follow_target_data.Location.Altitude,
                                     follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
 
                 follow_target.name = follow_target_data.Location.Label;

@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/MyProject/Scenes/Logo scene.unity
     guid: 1822800ec63cb6c4191ec0096ecba9c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/MyProject/Scenes/Main Scene.unity
     guid: a3d536e63fcfdd34a92178e0517ccea5
+  - enabled: 0
+    path: Assets/MyProject/Scenes/GameScene.unity
+    guid: 012a031eb239d3f4d81da7e3475f2cbd
+  - enabled: 1
+    path: Assets/MyProject/Scenes/TestScene.unity
+    guid: 169960632ae49624c9ed5d94dd151a25
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 16441134b1c1871408b81d95d23d4c9e,
       type: 2}

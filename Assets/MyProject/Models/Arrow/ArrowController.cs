@@ -58,6 +58,8 @@ namespace NRKernal.NRExamples
             private double target_longi;
             private string target_name;
 
+            //public GameObject test_target;
+
             private void Awake()
             {
                 arrowset = new UnityEvent();
@@ -98,9 +100,10 @@ namespace NRKernal.NRExamples
             // Update is called once per frame
             void Update()
             {
-                if(isArrowview)
+
+                if (isArrowview)
                 {
-                    foreach(var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<AudioSource>())
+                    foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<AudioSource>())
                     {
                         if (string.Equals(worldobject.GetComponent<PlaceAtLocation>().Location.Label, target_name))
                         {
@@ -110,13 +113,13 @@ namespace NRKernal.NRExamples
                         {
                             worldobject.Stop();
                         }
-                       
+
                     }
 
 
                     gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
                     gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-                    Quaternion looktarget = Quaternion.LookRotation(arrow_target, Vector3.back);
+                    Quaternion looktarget = Quaternion.LookRotation(arrow_target, Vector3.up);
                     arrow.transform.rotation = looktarget;
 
 
@@ -136,7 +139,7 @@ namespace NRKernal.NRExamples
                 }
 
                 PositionInitialize();
-               
+
 
 
             }
@@ -148,7 +151,7 @@ namespace NRKernal.NRExamples
             //        yield return new WaitForSeconds(0.1f);
 
             //        PositionInitialize();
-               
+
             //    }
 
             //}
@@ -156,7 +159,7 @@ namespace NRKernal.NRExamples
             public void GetLocation(string name, double lat, double longi)
             {
                 target_name = name;
-                Debug.Log("getlocation name ------------ "+target_name);
+                //Debug.Log("getlocation name ------------ "+target_name);
                 target_lati = lat;
                 target_longi = longi;
             }
