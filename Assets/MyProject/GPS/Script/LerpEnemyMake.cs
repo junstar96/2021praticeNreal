@@ -5,6 +5,9 @@ using ARLocation;
 
 public class LerpEnemyMake : MonoBehaviour
 {
+    Gyroscope gyroscope;
+
+
     public SphereCollider playerfollower;
     /// <summary> 10m 당 하나씩 소환할 거니까 해보자. </summary>
     private float distance;
@@ -19,7 +22,12 @@ public class LerpEnemyMake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+
+
         child_count = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.childCount;
+
+        
 
         for (int i = 0; i < child_count; i++)
         {

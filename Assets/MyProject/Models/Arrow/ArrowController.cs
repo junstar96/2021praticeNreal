@@ -123,6 +123,8 @@ namespace NRKernal.NRExamples
                                 {
                                     worldobject.loop = true;
                                     worldobject.time = 0;
+                                    worldobject.maxDistance = 20;
+                                    worldobject.minDistance = 1;
                                     worldobject.Play();
                                     
                                 }

@@ -118,7 +118,7 @@ namespace NRKernal.NRExamples
                 + "app button: " + NRInput.GetButton(m_CurrentDebugHand, ControllerButton.APP).ToString() + "\n"
                 + "grip button: " + NRInput.GetButton(m_CurrentDebugHand, ControllerButton.GRIP).ToString() + "\n"
                 + "touchpad button: " + NRInput.GetButton(m_CurrentDebugHand, ControllerButton.TOUCHPAD_BUTTON).ToString() + "\n"
-                + "gyro: " + NRInput.GetGyro(m_CurrentDebugHand).ToString("F3") + "\n"
+                + "gyro: " + (NRInput.GetGyro(m_CurrentDebugHand) * 180 / Mathf.PI).ToString("F3") + "\n"
                 + "accel: " + NRInput.GetAccel(m_CurrentDebugHand).ToString("F3") + "\n"
                 + "mag: " + NRInput.GetMag(m_CurrentDebugHand).ToString("F3") + "\n"
                 + "battery: " + NRInput.GetControllerBattery(m_CurrentDebugHand);

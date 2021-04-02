@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using ARLocation;
+using NRKernal;
 using NRKernal.NRExamples.MyArrowProject;
 
 public class Scenemanager : MonoBehaviour
@@ -29,6 +30,13 @@ public class Scenemanager : MonoBehaviour
 
     private bool isrotation = false;
 
+
+    /// <summary>
+    /// NRglass가 지원하는 것들을 이용하기 위한 핸들
+    /// </summary>
+    private NRKernal.ControllerHandEnum m_CurrentDebugHand = NRKernal.ControllerHandEnum.Right;
+    private Quaternion nrglassrotation;
+
     //영상 저장 확인을 위한 bool 값, 참이면 영상 시작, 거짓이면 영상 끝
     //private bool isrecord = false;
 
@@ -50,6 +58,27 @@ public class Scenemanager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void Update()
+    {
+        if (NRInput.GetAvailableControllersCount() < 2)
+        {
+            m_CurrentDebugHand = NRInput.DomainHand;
+        }
+        else
+        {
+            if (NRInput.GetButtonDown(ControllerHandEnum.Right, ControllerButton.TRIGGER))
+            {
+                m_CurrentDebugHand = ControllerHandEnum.Right;
+            }
+            else if (NRInput.GetButtonDown(ControllerHandEnum.Left, ControllerButton.TRIGGER))
+            {
+                m_CurrentDebugHand = ControllerHandEnum.Left;
+            }
+        }
+
+        nrglassrotation = NRInput.GetRotation(m_CurrentDebugHand);
+    }
+
     /// <summary>
     /// 회전변환을 일으키는 함수, 이 함수가 있어야지 제대로 배치가 되는 듯 하다.
     /// </summary>
@@ -58,9 +87,10 @@ public class Scenemanager : MonoBehaviour
     IEnumerator RotationObject(GameObject gameobject_base)
     {
         
+       
         float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
                    - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
-
+        
 
         
         if (gameobject_base.GetComponent<WebMapLoader>() != null)
@@ -76,18 +106,20 @@ public class Scenemanager : MonoBehaviour
                 check.Stop();
 
                 PlaceAtLocation follow_target_data = follow_target.GetComponent<PlaceAtLocation>();
-                
+
                 //if (!follow_target.activeSelf)
                 //{
                 //    follow_target.SetActive(true);
                 //}
-                
-                
+
+                Debug.Log("current degree : " + magnet_radian);
+                Debug.Log("current gps : " + ARLocationProvider.Instance.CurrentLocation.latitude + ", " + ARLocationProvider.Instance.CurrentLocation.longitude);
+                Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
                 follow_target.transform.position =
                                     new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
                                     (float)follow_target_data.Location.Altitude,
                                     follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
-
+                Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
                 follow_target.name = follow_target_data.Location.Label;
 
 
@@ -108,12 +140,12 @@ public class Scenemanager : MonoBehaviour
                     follow_target.SetActive(true);
                 }
                 Debug.Log("current degree : " + magnet_radian);
-                Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.z);
+                Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + ","  + follow_target.transform.position.z);
                 follow_target.transform.position =
                                     new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
                                     0,
                                     follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
-                Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.z);
+                Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
             }
         }
  

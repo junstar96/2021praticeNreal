@@ -130,6 +130,7 @@
     <Compile Include="Assets\MyProject\GPS\Script\BUSstationXML.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\Enemy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSChecker.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\GPSaccuacy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPScontroller.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSprint.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\LerpEnemyMake.cs" />
