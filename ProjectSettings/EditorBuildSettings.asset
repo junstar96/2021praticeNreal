@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/MyProject/Scenes/TestScene.unity
     guid: 169960632ae49624c9ed5d94dd151a25
-  - enabled: 0
-    path: Assets/NRSDK/Demos/Input-ControllerInfo.unity
-    guid: 6ef6276ed2b85294cac90487e2b5ee3d
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 16441134b1c1871408b81d95d23d4c9e,
       type: 2}

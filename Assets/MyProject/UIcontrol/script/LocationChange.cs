@@ -56,6 +56,11 @@ namespace NRKernal.NRExamples
                 myGpsTrans.GetTargetObject(target_transform.position);
 
             }
+
+            public void ChangeScene(string name)
+            {
+                Scenemanager.instance.ChangeScene(name);
+            }
         }
     }
 }

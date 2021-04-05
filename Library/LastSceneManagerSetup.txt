@@ -3,15 +3,15 @@ sceneSetups:
   isLoaded: 1
   isActive: 1
   isSubScene: 0
-- path: Assets/NRSDK/Demos/Input-ControllerInfo.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
 - path: Assets/MyProject/Scenes/Main Scene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
 - path: Assets/MyProject/Scenes/GameScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/MyProject/Scenes/TestScene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0

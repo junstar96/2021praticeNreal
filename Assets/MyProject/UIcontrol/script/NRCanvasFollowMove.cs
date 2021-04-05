@@ -13,11 +13,11 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
 
-
-        if (string.Equals(this.gameObject.name, "XMLLocationCanvas "))
+        if (string.Equals(this.gameObject.name, "XMLLocationCanvas"))
         {
-            if (NRInput.GetButton(ControllerButton.APP) || NRInput.GetButton(ControllerButton.TRIGGER))
+            if (NRInput.GetButton(ControllerButton.APP))
             {
                 
                 time += Time.deltaTime;
@@ -30,7 +30,7 @@ public class NRCanvasFollowMove : MonoBehaviour
 
             }
 
-            if (NRInput.GetButtonUp(ControllerButton.APP) || NRInput.GetButtonUp(ControllerButton.TRIGGER))
+            if (NRInput.GetButtonUp(ControllerButton.APP))
             {
                 time = 0.0f;
             }
@@ -39,7 +39,7 @@ public class NRCanvasFollowMove : MonoBehaviour
         else if (string.Equals(this.gameObject.name, "compass"))
         {
 
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(50.0f, 300f, 3.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
         }
         else if (string.Equals(this.gameObject.name, "SceneChange"))
