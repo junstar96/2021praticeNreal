@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Android;
-
 namespace NRKernal
 {
     public class GPScontroller : MonoBehaviour
@@ -42,6 +41,8 @@ namespace NRKernal
 
         }
 
+        public bool isGPSconnected => Input.location.isEnabledByUser;
+
 
         private float connectTime = 3.0f;
         public LocationInfo myGPSpos
@@ -64,7 +65,7 @@ namespace NRKernal
         IEnumerator Start()
         {
             m_instance = this;
-            Debug.Log("get start");
+            Debug.Log("immidiant gps start");
 
 
             if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
@@ -74,6 +75,7 @@ namespace NRKernal
 
             }
 
+            DontDestroyOnLoad(this);
             Input.location.Start(0, 0);
             Input.compass.enabled = true;
 

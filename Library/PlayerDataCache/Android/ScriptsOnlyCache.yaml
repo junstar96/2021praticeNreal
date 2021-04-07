@@ -5,50 +5,24 @@ ScriptsOnlyBuild:
     - ARLocation.ARLocationManager
     - ARLocation.ARLocationOrientation
     - ARLocation.ARLocationProvider
+    - ARLocation.Delay_ARlocation
     - ARLocation.PrefabDatabase
     - ARLocation.Utils.RotateObject
     - ARLocation.WebMapLoader
-    - DontDestroyNrealScene
-    - Enemy
-    - LerpEnemyMake
-    - Magnet_compass
-    - NRCanvasFollowMove
-    - NRKernal.NRExamples.MyArrowProject.ArrowController
-    - NRKernal.NRExamples.MyArrowProject.BUSstationXML
-    - NRKernal.NRExamples.MyArrowProject.LocationChange
-    - NRKernal.NRExamples.MyArrowProject.XMLButtonController
-    - Scenemanager
+    Google.XR.ARCoreExtensions.dll:
+    - Google.XR.ARCoreExtensions.ARCoreExtensions
     NRSDK.dll:
     - NRKernal.CanvasRaycastTarget
-    - NRKernal.ControllerAnchorsHelper
-    - NRKernal.ControllerTracker
     - NRKernal.FinchShiftControllerVisual
-    - NRKernal.GazeTracker
-    - NRKernal.MainThreadDispather
-    - NRKernal.MultiScreenController
-    - NRKernal.NRButton
     - NRKernal.NREmulatorController
     - NRKernal.NREmulatorHeadPose
     - NRKernal.NREmulatorManager
-    - NRKernal.NRExamples.AppManager
     - NRKernal.NRExamples.CameraSmoothFollow
     - NRKernal.NRExamples.NRHomeMenu
-    - NRKernal.NRExamples.VideoCapture2LocalExample
     - NRKernal.NRGlassesInitErrorTip
-    - NRKernal.NRHMDPoseTracker
-    - NRKernal.NRInput
-    - NRKernal.NRLaserReticle
-    - NRKernal.NRLaserVisual
-    - NRKernal.NRMultScrPointerRaycaster
-    - NRKernal.NRMultiDisplayManager
     - NRKernal.NRNotificationListener
     - NRKernal.NRNotificationWindow
     - NRKernal.NRPhoneControllerVisual
-    - NRKernal.NRPointerRaycaster
-    - NRKernal.NRSessionBehaviour
-    - NRKernal.NRSessionConfig
-    - NRKernal.NRTrackingImageDatabase
-    - NRKernal.NRVirtualDisplayer
     - NRKernal.NRVisualProfiler
     - NRKernal.NrealLightControllerVisual
     - NRKernal.Record.NRCameraInitializer
@@ -57,15 +31,21 @@ ScriptsOnlyBuild:
     - NRKernal.Record.NRRecordBehaviour
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.XR.ARCore.Editor.dll:
+    - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
     - UnityEngine.XR.ARFoundation.ARInputManager
+    - UnityEngine.XR.ARFoundation.ARPlane
+    - UnityEngine.XR.ARFoundation.ARPlaneManager
+    - UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer
+    - UnityEngine.XR.ARFoundation.ARPointCloud
+    - UnityEngine.XR.ARFoundation.ARPointCloudManager
+    - UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer
+    - UnityEngine.XR.ARFoundation.ARRaycastManager
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
-    Unity.XR.ARKit.dll:
-    - UnityEngine.XR.ARKit.ARKitLoader
-    - UnityEngine.XR.ARKit.ARKitLoaderSettings
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -89,91 +69,12 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
-    - UnityEngine.UI.ScrollRect
-    - UnityEngine.UI.Scrollbar
-    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/MyProject/Scenes/GameScene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11348}
-    - Class: 114
-      Script: {instanceID: 11350}
-    - Class: 114
-      Script: {instanceID: 11352}
-    - Class: 114
-      Script: {instanceID: 11354}
-    - Class: 114
-      Script: {instanceID: 12172}
-    - Class: 114
-      Script: {instanceID: 12518}
-    - Class: 114
-      Script: {instanceID: 12590}
-    - Class: 114
-      Script: {instanceID: 12858}
-    - Class: 114
-      Script: {instanceID: 14226}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 195
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 238
-      Script: {instanceID: 0}
-    Assets/MyProject/Scenes/Logo scene.unity:
+    Assets/MyProject/Scenes/TestScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -193,6 +94,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
@@ -215,20 +118,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 11348}
-    - Class: 114
-      Script: {instanceID: 11350}
-    - Class: 114
-      Script: {instanceID: 11352}
-    - Class: 114
-      Script: {instanceID: 11354}
-    - Class: 114
-      Script: {instanceID: 11356}
-    - Class: 114
-      Script: {instanceID: 11358}
-    - Class: 114
       Script: {instanceID: 11360}
     - Class: 114
       Script: {instanceID: 11362}
@@ -237,125 +126,103 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11810}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11948}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 11792}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 12234}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12260}
+      Script: {instanceID: 12090}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12518}
+      Script: {instanceID: 12324}
     - Class: 114
-      Script: {instanceID: 12572}
+      Script: {instanceID: 12356}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12382}
+    - Class: 114
+      Script: {instanceID: 12400}
     - Class: 114
       Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 12760}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 12764}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 13028}
     - Class: 114
-      Script: {instanceID: 12818}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 13344}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 13434}
     - Class: 114
-      Script: {instanceID: 13130}
-    - Class: 114
-      Script: {instanceID: 13204}
-    - Class: 114
-      Script: {instanceID: 13244}
-    - Class: 114
-      Script: {instanceID: 13270}
+      Script: {instanceID: 13486}
     - Class: 114
       Script: {instanceID: 13516}
     - Class: 114
-      Script: {instanceID: 13602}
+      Script: {instanceID: 13780}
     - Class: 114
-      Script: {instanceID: 13686}
+      Script: {instanceID: 13886}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 13716}
+      Script: {instanceID: 13986}
     - Class: 114
-      Script: {instanceID: 13732}
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 13796}
+      Script: {instanceID: 14160}
     - Class: 114
-      Script: {instanceID: 13858}
+      Script: {instanceID: 14242}
     - Class: 114
-      Script: {instanceID: 13932}
+      Script: {instanceID: 14296}
     - Class: 114
-      Script: {instanceID: 13962}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 13978}
+      Script: {instanceID: 14344}
     - Class: 114
-      Script: {instanceID: 13992}
+      Script: {instanceID: 14366}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 14424}
     - Class: 114
-      Script: {instanceID: 14042}
+      Script: {instanceID: 14432}
     - Class: 114
-      Script: {instanceID: 14098}
+      Script: {instanceID: 14468}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 14470}
     - Class: 114
-      Script: {instanceID: 14138}
+      Script: {instanceID: 14544}
     - Class: 114
-      Script: {instanceID: 14144}
+      Script: {instanceID: 14568}
     - Class: 114
-      Script: {instanceID: 14200}
-    - Class: 114
-      Script: {instanceID: 14224}
-    - Class: 114
-      Script: {instanceID: 14226}
-    - Class: 114
-      Script: {instanceID: 14248}
-    - Class: 114
-      Script: {instanceID: 14292}
-    - Class: 114
-      Script: {instanceID: 14302}
-    - Class: 114
-      Script: {instanceID: 14304}
-    - Class: 114
-      Script: {instanceID: 14328}
-    - Class: 114
-      Script: {instanceID: 15694}
-    - Class: 114
-      Script: {instanceID: 21186}
+      Script: {instanceID: 18758}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -370,78 +237,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/MyProject/Scenes/Main Scene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11346}
-    - Class: 114
-      Script: {instanceID: 11348}
-    - Class: 114
-      Script: {instanceID: 11350}
-    - Class: 114
-      Script: {instanceID: 11352}
-    - Class: 114
-      Script: {instanceID: 11354}
-    - Class: 114
-      Script: {instanceID: 11358}
-    - Class: 114
-      Script: {instanceID: 11634}
-    - Class: 114
-      Script: {instanceID: 11828}
-    - Class: 114
-      Script: {instanceID: 12122}
-    - Class: 114
-      Script: {instanceID: 12452}
-    - Class: 114
-      Script: {instanceID: 12486}
-    - Class: 114
-      Script: {instanceID: 12518}
-    - Class: 114
-      Script: {instanceID: 12590}
-    - Class: 114
-      Script: {instanceID: 12618}
-    - Class: 114
-      Script: {instanceID: 12740}
-    - Class: 114
-      Script: {instanceID: 14226}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -520,6 +320,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 7072231382eb3c4871b3dd75ad0227e1
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
       Hash: f29327003ac7bd2964f63175c4a1593b
     assemblyName: Assembly-CSharp.dll
     namespaceName: ARLocation.Utils
@@ -592,6 +398,12 @@ ScriptsOnlyBuild:
     className: MoveWithCamera
   - hash:
       serializedVersion: 2
+      Hash: 5bd9a19c7b5f76c563418e28f48a561b
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkLobbyPlayer
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -652,6 +464,12 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
+      Hash: eafb77726b67b7571818a7210a3ce11e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkIdentity
+  - hash:
+      serializedVersion: 2
       Hash: ba6cc41d708cb598506ddca7c2d12114
     assemblyName: Assembly-CSharp.dll
     namespaceName: ARLocation
@@ -700,10 +518,16 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c1aa24dc179be0cb7c6d49f66fc0db8a
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARRaycastManager
+  - hash:
+      serializedVersion: 2
+      Hash: ad9173d3a69d99153f38ed4b62226129
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransform
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -778,6 +602,12 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 3f0b469d844365c00a63de0437c9b29e
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkProximityChecker
+  - hash:
+      serializedVersion: 2
       Hash: 9ae03dac5ddb6765b5813d23e2b4bd3e
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
@@ -823,7 +653,7 @@ ScriptsOnlyBuild:
       Hash: 290afc8da8e459e0b8dc7444bfaf5e35
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
-    className: ARReferencePoint
+    className: ARAnchor
   - hash:
       serializedVersion: 2
       Hash: 52bcb9c2a78bdd8d98a59e915c346e75
@@ -1001,6 +831,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARCore.dll
+    namespaceName: UnityEngine.XR.ARCore
+    className: ARCoreLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: NRSDK.dll
     namespaceName: NRKernal.NRExamples
     className: CubeInteractiveTest
@@ -1012,10 +848,22 @@ ScriptsOnlyBuild:
     className: LocationChange
   - hash:
       serializedVersion: 2
-      Hash: 8f1e591808db709cb76cb7d85cb9a8d7
+      Hash: 1268406d3f2e4b2c2b670b560b6db769
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: AREnvironmentProbeManager
+  - hash:
+      serializedVersion: 2
+      Hash: 265cf27ba050d55ff33a8acab4ded6c0
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkLobbyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5887ef1bc706b22b773d253fd443ceef
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
       Hash: 7e179b9018b32a9e1052910ca06b410a
@@ -1042,7 +890,7 @@ ScriptsOnlyBuild:
     className: OrientationInfo
   - hash:
       serializedVersion: 2
-      Hash: 1da8b05317cdada1a6b0504d22964fd4
+      Hash: e86a65d03b33066922756af3e2a665b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Magnet_compass
@@ -1064,12 +912,6 @@ ScriptsOnlyBuild:
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
     className: NRInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.XR.ARKit.dll
-    namespaceName: UnityEngine.XR.ARKit
-    className: ARKitLoader
   - hash:
       serializedVersion: 2
       Hash: 465e2da0ca75ef5bc4b39f2dcda7238d
@@ -1102,6 +944,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARCore.dll
+    namespaceName: UnityEngine.XR.ARCore
+    className: ARCoreLoaderSettings
+  - hash:
+      serializedVersion: 2
       Hash: 80b0dd76d9bcf5ab9a2a5baa2a1a4204
     assemblyName: NRSDK.dll
     namespaceName: NRKernal.NRExamples
@@ -1120,6 +968,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkCallbacks
+  - hash:
+      serializedVersion: 2
       Hash: 3894de3c0e1a351c6eab1967f8598095
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
@@ -1130,6 +984,12 @@ ScriptsOnlyBuild:
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
     className: CanvasRaycastTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 21e871d89bbce53c038fc75ad1b7c7f3
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1174,7 +1034,7 @@ ScriptsOnlyBuild:
     className: ARPointCloud
   - hash:
       serializedVersion: 2
-      Hash: ae702a766b27251a24baee8025e55904
+      Hash: e804a8526aeb2c525aa66ef5ef255838
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Scenemanager
@@ -1306,6 +1166,12 @@ ScriptsOnlyBuild:
     className: ARLocationManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
       Hash: 7ce70aef7e6f0155f2e2426434f28186
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
@@ -1324,7 +1190,7 @@ ScriptsOnlyBuild:
     className: FPSCounter
   - hash:
       serializedVersion: 2
-      Hash: 982acebdb29318e47aa2d3c2cb7e1539
+      Hash: 0535c7e7c34dd1cdfc5b1f8ffce1aebe
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARTrackedImageManager
@@ -1366,7 +1232,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 840e65a413cc46ebbbbf200f4362a70c
+      Hash: 625e4fd6f88b90d1ee9e7c089c3f450d
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARSession
@@ -1414,6 +1280,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 318c6c13a19c9fac98135ae14889de1b
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkMigrationManager
+  - hash:
+      serializedVersion: 2
       Hash: 00bc00bc45f5c75c6634b8afd58b351c
     assemblyName: Assembly-CSharp.dll
     namespaceName: ARLocation.UI
@@ -1432,10 +1304,10 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: fcc7ae5ff1b0c9cad5865d5b6cee016a
+      Hash: 1d9b53318825332126b0fd6da2d962fb
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
-    className: ARReferencePointManager
+    className: ARAnchorManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1462,7 +1334,7 @@ ScriptsOnlyBuild:
     className: NRKernalUpdater
   - hash:
       serializedVersion: 2
-      Hash: ca2a58dd7363525cbd2f65b2a150b41b
+      Hash: 37a13922678947e6d144f41a7195154a
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARCameraManager
@@ -1474,7 +1346,13 @@ ScriptsOnlyBuild:
     className: CameraOffset
   - hash:
       serializedVersion: 2
-      Hash: d0976f085ee327327a35839ca3cb80f1
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: d39905ff8fda75afed4d688761c322e1
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARFaceManager
@@ -1570,12 +1448,6 @@ ScriptsOnlyBuild:
     className: FPSDisplay
   - hash:
       serializedVersion: 2
-      Hash: 4632a1062ac8865f91f6bdfe3c0ff90c
-    assemblyName: Unity.XR.ARKit.dll
-    namespaceName: UnityEngine.XR.ARKit
-    className: ARKitLoaderSettings
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -1598,6 +1470,12 @@ ScriptsOnlyBuild:
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
     className: NRGlassesInitErrorTip
+  - hash:
+      serializedVersion: 2
+      Hash: 1dcb82730d983b77cec736c6ef19f814
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkDiscovery
   - hash:
       serializedVersion: 2
       Hash: 893dbdbfe611d62e230a686ea89f1efd
@@ -1654,6 +1532,12 @@ ScriptsOnlyBuild:
     className: BUSstationXML
   - hash:
       serializedVersion: 2
+      Hash: e6ae40841db498b6e673877ac45ad208
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
       Hash: 3549430525fa27e050a5b34455627bc1
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
@@ -1702,7 +1586,7 @@ ScriptsOnlyBuild:
     className: RotateObject
   - hash:
       serializedVersion: 2
-      Hash: 20d20168517d1c0e098918311aa95bbb
+      Hash: cbe6deff75fc0987595a61e9510f7917
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARCameraBackground
@@ -1732,10 +1616,22 @@ ScriptsOnlyBuild:
     className: ExamplesHub
   - hash:
       serializedVersion: 2
+      Hash: 9561577777c3205ce52c86d104a9bbfd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ARLocation
+    className: Delay_ARlocation
+  - hash:
+      serializedVersion: 2
       Hash: 53e4b18631f723486d155d3440a12fc0
     assemblyName: NRSDK.dll
     namespaceName: NRKernal
     className: NRNotificationWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 9b895dcabbc1faf095c000c32d471fd0
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransformChild
   - hash:
       serializedVersion: 2
       Hash: c0c0ec5ed3ac2e9d2a7de0033c16d709
@@ -1748,6 +1644,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: e0ee4b3d4e27318934cc940a969d3d96
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkManagerHUD
   - hash:
       serializedVersion: 2
       Hash: 01473135d671a71d740e507b04eb93da
@@ -1810,7 +1712,7 @@ ScriptsOnlyBuild:
     className: PrefabDatabase
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 03dc5220a2cbd7273586039c71a12e40
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NRCanvasFollowMove
@@ -1838,12 +1740,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
-  - hash:
-      serializedVersion: 2
-      Hash: 7072231382eb3c4871b3dd75ad0227e1
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
   - hash:
       serializedVersion: 2
       Hash: d7ef427815a2bcee014988403a851f81
@@ -1880,9 +1776,115 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPoseDriver
+  - hash:
+      serializedVersion: 2
+      Hash: 9b6303c7164a38e06044ec2036c18b6b
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARParticipantManager
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARParticipant
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions
+    className: ARCloudReferencePoint
+  - hash:
+      serializedVersion: 2
+      Hash: ef705ae677d649d6c0ff3b4060963abd
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARTrackedObjectManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARBackgroundRendererFeature
+  - hash:
+      serializedVersion: 2
+      Hash: 0b69e0da970de9b8af6a66494b3b1beb
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions.Internal
+    className: RuntimeConfig
+  - hash:
+      serializedVersion: 2
+      Hash: df07edae52f0d5f453ea40e56a6bfb8f
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions
+    className: ARCoreRecordingConfig
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARHumanBody
+  - hash:
+      serializedVersion: 2
+      Hash: 0c5108545fb925730d4d5887ebcdd20c
+    assemblyName: Unity.XR.ARSubsystems.dll
+    namespaceName: UnityEngine.XR.ARSubsystems
+    className: XRReferenceObjectLibrary
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARRaycast
+  - hash:
+      serializedVersion: 2
+      Hash: 7790bd47c2f2de6f0e66851342fe95f1
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions
+    className: ARCoreExtensionsConfig
+  - hash:
+      serializedVersion: 2
+      Hash: fe52c2703fa853b207fa35e04b9e35d8
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions
+    className: ARCoreExtensionsCameraConfigFilter
+  - hash:
+      serializedVersion: 2
+      Hash: 6f195866f841a74edf8609a710343f67
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: AROcclusionManager
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARTrackedObject
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions
+    className: ARCloudAnchor
+  - hash:
+      serializedVersion: 2
+      Hash: 524a8f7c9b60f50a1c6bbe7185c0207e
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARHumanBodyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1cda2d67628228f575120c220ac26158
+    assemblyName: Google.XR.ARCoreExtensions.dll
+    namespaceName: Google.XR.ARCoreExtensions
+    className: ARCoreExtensions
   platform: 13
   scenePathNames:
-  - Assets/MyProject/Scenes/Logo scene.unity
-  - Assets/MyProject/Scenes/Main Scene.unity
-  - Assets/MyProject/Scenes/GameScene.unity
-  playerPath: C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Test.apk
+  - Assets/MyProject/Scenes/TestScene.unity
+  playerPath: C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/ARtest.apk

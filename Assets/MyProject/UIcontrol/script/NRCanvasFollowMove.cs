@@ -4,53 +4,50 @@ using NRKernal;
 public class NRCanvasFollowMove : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float time;
+   
+    public bool islotationChange = false;
     void Start()
     {
-        time = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
 
         if (string.Equals(this.gameObject.name, "XMLLocationCanvas"))
         {
+            if(islotationChange)
+            {
+                islotationChange = false;
+                gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
+                gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+            }
+
             if (NRInput.GetButton(ControllerButton.APP))
             {
-                
-                time += Time.deltaTime;
-                if (time > 2.0f)
-                {
-                    gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
-                    gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-                    time = 0.0f;
-                }
-
+                islotationChange = true;
             }
-
-            if (NRInput.GetButtonUp(ControllerButton.APP))
-            {
-                time = 0.0f;
-            }
-
         }
         else if (string.Equals(this.gameObject.name, "compass"))
         {
-
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(50.0f, 300f, 3.0f));
+#if UNITY_EDITOR
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 360f, 4.5f));
+            gameObject.transform.rotation = Camera.main.transform.rotation;
+#else
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(90.0f, 300f, 3.0f));
             gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+#endif
         }
         else if (string.Equals(this.gameObject.name, "SceneChange"))
         {
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 3.0f));
-            gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 6.0f));
+            gameObject.transform.rotation = Camera.main.transform.rotation;
         }
         else if (string.Equals(this.gameObject.name, "BusLocationCanvas"))
         {
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 3.0f));
-            gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 4.5f));
+            gameObject.transform.rotation = Camera.main.transform.rotation;
         }
        
      
@@ -64,5 +61,10 @@ public class NRCanvasFollowMove : MonoBehaviour
         //{
         //    time = 0.0f;
         //}
+    }
+
+    public void SetIsLotationChange(bool check)
+    {
+        islotationChange = check;
     }
 }

@@ -26,6 +26,8 @@ public class Scenemanager : MonoBehaviour
     [Tooltip("로딩 바")]
     public Slider slider;
 
+    public Slider oneSecondbar;
+
     [Tooltip("가까이 가면 소리가 나도록 해보자")]
     public AudioClip[] backgroundsounds;
 
@@ -34,9 +36,14 @@ public class Scenemanager : MonoBehaviour
     [HideInInspector]
     public string scenename;
 
+    //초반에 각도를 받아오는 값
+    public bool isFixingCanvas;
+    public float first_magnetic;
+
     private DateTime datetime;
     /// <summary>배치 후 오브젝트가 제대로 된 위치에 보정이 되는가를 확인하기 위한 bool값</summary>
     private bool isrotation = false;
+   
 
     private static Scenemanager m_instance;
 
@@ -56,10 +63,9 @@ public class Scenemanager : MonoBehaviour
     /// NRglass가 지원하는 것들을 이용하기 위한 핸들
     /// </summary>
     private NRKernal.ControllerHandEnum m_CurrentDebugHand = NRKernal.ControllerHandEnum.Right;
-    public Quaternion nrglassrotation;
+    public Quaternion smartphonerotation;
 
     
-
     //영상 저장 확인을 위한 bool 값, 참이면 영상 시작, 거짓이면 영상 끝
     //private bool isrecord = false;
 
@@ -78,6 +84,9 @@ public class Scenemanager : MonoBehaviour
 
     public void Start()
     {
+        Input.gyro.enabled = true;
+        isFixingCanvas = false;
+        first_magnetic = 0.0f;
         loadingScene.SetActive(false);
         datetime = DateTime.Now;
         Debug.Log("GPStour start : " +  datetime);
@@ -87,6 +96,8 @@ public class Scenemanager : MonoBehaviour
 
     private void Update()
     {
+        gameObject.transform.position = Camera.main.transform.position;
+        gameObject.transform.eulerAngles = Camera.main.transform.eulerAngles;
         scenename = SceneManager.GetActiveScene().name;
         if (NRInput.GetAvailableControllersCount() < 2)
         {
@@ -104,7 +115,66 @@ public class Scenemanager : MonoBehaviour
             }
         }
 
-        nrglassrotation = NRInput.GetRotation(m_CurrentDebugHand);
+        smartphonerotation = NRInput.GetRotation(m_CurrentDebugHand);
+
+
+        OneSecondBarControll();
+
+        
+
+    }
+
+    private void OneSecondBarControll()
+    {
+        if(Input.gyro.attitude.x >= 0.0f)
+        {
+            if(ARLocationProvider.Instance.CurrentHeading.magneticHeading < 2.0f && ARLocationProvider.Instance.CurrentHeading.magneticHeading > -2.0f
+                && ARLocationProvider.Instance.CurrentHeading.isMagneticHeadingAvailable && !isFixingCanvas)
+            {
+                //oneSecondbar.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(150.0f, 150f, 3.0f));
+                //oneSecondbar.transform.eulerAngles = Camera.main.transform.eulerAngles;
+                oneSecondbar.gameObject.SetActive(true);
+                oneSecondbar.value += Time.deltaTime;
+                oneSecondbar.transform.localPosition = new Vector3(0, 0, 0);
+                if (oneSecondbar.value >= 0.999f)
+                {
+                    oneSecondbar.gameObject.SetActive(false);
+                    isFixingCanvas = true;
+                    first_magnetic = (float)ARLocationProvider.Instance.CurrentHeading.magneticHeading;
+                    loadingScene.SetActive(true);
+                    //loadingScene.transform.rotation = Camera.main.transform.rotation;
+                }
+            }
+            else
+            {
+                oneSecondbar.value = 0.0f;
+                oneSecondbar.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            if(ARLocationProvider.Instance.CurrentHeading.magneticHeading < 182.0f && ARLocationProvider.Instance.CurrentHeading.magneticHeading > 178.0f
+                && ARLocationProvider.Instance.CurrentHeading.isMagneticHeadingAvailable && !isFixingCanvas)
+            {
+                oneSecondbar.gameObject.SetActive(true);
+                oneSecondbar.value += Time.deltaTime;
+                oneSecondbar.transform.localPosition = new Vector3(0, 0, 0);
+                if (oneSecondbar.value >= 0.999f)
+                {
+                    oneSecondbar.gameObject.SetActive(false);
+                    isFixingCanvas = true;
+                    first_magnetic = (float)ARLocationProvider.Instance.CurrentHeading.magneticHeading;
+                    loadingScene.SetActive(true);
+                }
+            }
+            else
+            {
+                oneSecondbar.value = 0.0f;
+                oneSecondbar.gameObject.SetActive(false);
+            }
+        }
+
+      
     }
 
 
@@ -115,16 +185,20 @@ public class Scenemanager : MonoBehaviour
     /// <param name="name"></param>
     IEnumerator RotationObject(GameObject gameobject_base)
     {
-        nrglassrotation = NRInput.GetRotation(ControllerHandEnum.Right);
+        smartphonerotation = NRInput.GetRotation(ControllerHandEnum.Right);
 
-        float magnet_radian = - nrglassrotation.eulerAngles.y * Mathf.PI / 180;
+        float camera_accuracy = Camera.main.transform.eulerAngles.y < 180 ?
+            Camera.main.transform.eulerAngles.y : -(360.0f - Camera.main.transform.eulerAngles.y);
+
+
+        float magnet_radian = (-camera_accuracy) * Mathf.PI / 180;
         //float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
-        //           /*- Camera.main.transform.eulerAngles.y - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
+        //           - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
 
-        
 
-        
-        
+
+
+
         if (gameobject_base.GetComponent<WebMapLoader>() != null)
         {
             yield return new WaitUntil(() => gameobject_base.GetComponent<WebMapLoader>().MakeFinish);
@@ -136,6 +210,7 @@ public class Scenemanager : MonoBehaviour
                 check.minDistance = 1;
                 check.clip = backgroundsounds[UnityEngine.Random.Range(0, backgroundsounds.Length)];
                 check.Stop();
+                
 
                 PlaceAtLocation follow_target_data = follow_target.GetComponent<PlaceAtLocation>();
 
@@ -251,7 +326,8 @@ public class Scenemanager : MonoBehaviour
         slider.gameObject.SetActive(false);
         loadingScene.SetActive(false);
         operation.allowSceneActivation = true;
-
+       
+       
     }
    
 }

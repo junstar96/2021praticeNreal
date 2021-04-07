@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using UnityEngine.Android;
 // ReSharper disable UnusedMember.Global
 
 
@@ -123,7 +124,7 @@ namespace ARLocation
 
 #if UNITY_EDITOR
             Provider = new MockLocationProvider();
-
+            Debug.Log("provider : " + Provider);
             if (MockLocationData != null)
             {
                 Logger.LogFromMethod("ARLocationProvider", "Awake", $"Using mock location {MockLocationData}", DebugMode);
@@ -133,8 +134,10 @@ namespace ARLocation
         // If you want to use a custom location provider, add 'ARGPS_CUSTOM_PROVIDER' to the define symbols in the Player
         // settings, create a implementation of ILocationProvider, and instantiate it in the line below.
         Provider = new ARGpsCustomLocationProvider();
+        Debug.Log("provider : " + Provider);
 #else
         Provider = new UnityLocationProvider();
+        Debug.Log("provider : " + Provider);
 #endif
             Logger.LogFromMethod("ARLocationProvider", "Awake",": Using provider " + Provider.Name, DebugMode);
         }
@@ -171,6 +174,12 @@ namespace ARLocation
         IEnumerator Start()
         {
 #if !UNITY_EDITOR
+            if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+            {
+                Debug.Log("permission check");
+                Permission.RequestUserPermission(Permission.FineLocation);//이걸 해줘야 안드로이드에서 gps를 사용할 수 있다.
+
+            }
             yield return new WaitUntil(() => Input.location.isEnabledByUser);
 #endif
             InitProviderEventListeners();
