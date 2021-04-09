@@ -4,7 +4,6 @@ using System;
 using System.Globalization;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using ARLocation;
 using NRKernal;
 using NRKernal.NRExamples.MyArrowProject;
 
@@ -35,6 +34,8 @@ public class Scenemanager : MonoBehaviour
     //씬의 이름을 받아오도록 하자.
     [HideInInspector]
     public string scenename;
+
+    public string scenemode;
 
     //초반에 각도를 받아오는 값
     public bool isFixingCanvas;
@@ -96,8 +97,6 @@ public class Scenemanager : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.position = Camera.main.transform.position;
-        gameObject.transform.eulerAngles = Camera.main.transform.eulerAngles;
         scenename = SceneManager.GetActiveScene().name;
         if (NRInput.GetAvailableControllersCount() < 2)
         {
@@ -126,10 +125,9 @@ public class Scenemanager : MonoBehaviour
 
     private void OneSecondBarControll()
     {
-        if(Input.gyro.attitude.x >= 0.0f)
+        if(Input.gyro.attitude.eulerAngles.x < 10 && Input.gyro.attitude.eulerAngles.x > - 10 && Input.gyro.attitude.w > 0.9 && Input.gyro.attitude.z < 0.1)
         {
-            if(ARLocationProvider.Instance.CurrentHeading.magneticHeading < 2.0f && ARLocationProvider.Instance.CurrentHeading.magneticHeading > -2.0f
-                && ARLocationProvider.Instance.CurrentHeading.isMagneticHeadingAvailable && !isFixingCanvas)
+            if(!isFixingCanvas)
             {
                 //oneSecondbar.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(150.0f, 150f, 3.0f));
                 //oneSecondbar.transform.eulerAngles = Camera.main.transform.eulerAngles;
@@ -140,31 +138,9 @@ public class Scenemanager : MonoBehaviour
                 {
                     oneSecondbar.gameObject.SetActive(false);
                     isFixingCanvas = true;
-                    first_magnetic = (float)ARLocationProvider.Instance.CurrentHeading.magneticHeading;
+                    first_magnetic = Input.compass.magneticHeading;
                     loadingScene.SetActive(true);
                     //loadingScene.transform.rotation = Camera.main.transform.rotation;
-                }
-            }
-            else
-            {
-                oneSecondbar.value = 0.0f;
-                oneSecondbar.gameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            if(ARLocationProvider.Instance.CurrentHeading.magneticHeading < 182.0f && ARLocationProvider.Instance.CurrentHeading.magneticHeading > 178.0f
-                && ARLocationProvider.Instance.CurrentHeading.isMagneticHeadingAvailable && !isFixingCanvas)
-            {
-                oneSecondbar.gameObject.SetActive(true);
-                oneSecondbar.value += Time.deltaTime;
-                oneSecondbar.transform.localPosition = new Vector3(0, 0, 0);
-                if (oneSecondbar.value >= 0.999f)
-                {
-                    oneSecondbar.gameObject.SetActive(false);
-                    isFixingCanvas = true;
-                    first_magnetic = (float)ARLocationProvider.Instance.CurrentHeading.magneticHeading;
-                    loadingScene.SetActive(true);
                 }
             }
             else
@@ -187,8 +163,8 @@ public class Scenemanager : MonoBehaviour
     {
         smartphonerotation = NRInput.GetRotation(ControllerHandEnum.Right);
 
-        float camera_accuracy = Camera.main.transform.eulerAngles.y < 180 ?
-            Camera.main.transform.eulerAngles.y : -(360.0f - Camera.main.transform.eulerAngles.y);
+        float camera_accuracy = NRInput.CameraCenter.eulerAngles.y < 180 ?
+            NRInput.CameraCenter.eulerAngles.y : -(360.0f - NRInput.CameraCenter.eulerAngles.y);
 
 
         float magnet_radian = (-camera_accuracy) * Mathf.PI / 180;
@@ -210,9 +186,6 @@ public class Scenemanager : MonoBehaviour
                 check.minDistance = 1;
                 check.clip = backgroundsounds[UnityEngine.Random.Range(0, backgroundsounds.Length)];
                 check.Stop();
-                
-
-                PlaceAtLocation follow_target_data = follow_target.GetComponent<PlaceAtLocation>();
 
                 //if (!follow_target.activeSelf)
                 //{
@@ -220,21 +193,20 @@ public class Scenemanager : MonoBehaviour
                 //}
 
                 Debug.Log("current degree : " + magnet_radian);
-                Debug.Log("current gps : " + ARLocationProvider.Instance.CurrentLocation.latitude + ", " + ARLocationProvider.Instance.CurrentLocation.longitude);
+                Debug.Log("current gps : " + Input.location.lastData.latitude + ", " +Input.location.lastData.longitude);
                 Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
                 follow_target.transform.position =
                                     new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
-                                    (float)follow_target_data.Location.Altitude + follow_target.transform.position.y,
+                                    follow_target.transform.position.y,
                                     follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
                 Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
 
 
-                follow_target.name = follow_target_data.Location.Label;
+                
 
-
-                follow_target.transform.localScale = new Vector3(Mathf.Sqrt(Mathf.Abs((float)follow_target_data.Location.Altitude)) + 1.0f,
-                    Mathf.Sqrt(Mathf.Abs((float)follow_target_data.Location.Altitude)) + 1.0f,
-                    Mathf.Sqrt(Mathf.Abs((float)follow_target_data.Location.Altitude)) + 1.0f);
+                //follow_target.transform.localScale = new Vector3(Mathf.Sqrt(Mathf.Abs((float)follow_target_data.Location.Altitude)) + 1.0f,
+                //    Mathf.Sqrt(Mathf.Abs((float)follow_target_data.Location.Altitude)) + 1.0f,
+                //    Mathf.Sqrt(Mathf.Abs((float)follow_target_data.Location.Altitude)) + 1.0f);
                 //follow_target.GetComponent<PlaceAtLocation>().Location.Altitude;
             }
         }
@@ -275,7 +247,8 @@ public class Scenemanager : MonoBehaviour
         {
             operation = SceneManager.LoadSceneAsync("Main Scene");
         }
-    
+
+        scenemode = name;
 
         //loadingScene.SetActive(true);
         slider?.gameObject.SetActive(true);
@@ -284,15 +257,16 @@ public class Scenemanager : MonoBehaviour
         do
         {
             operation.allowSceneActivation = false;
-            float progress = operation.progress;
-            float arlocationprogress = ARLocationProvider.Instance.HasStarted ? 0.1f : 0.0f;
-            slider.value = progress + arlocationprogress;
+            float progress = Mathf.Clamp01(operation.progress);
+            Debug.Log("progress :" + progress);
+            slider.value = progress;
+            
             //Debug.Log(ARLocationProvider.Instance.HasStarted);
             
         } while (operation.progress < 0.9f);
 
         Debug.Log("operation is done");
-        yield return new WaitUntil(() => ARLocationProvider.Instance.HasStarted);
+        //yield return new WaitUntil(() => Input.compass.enabled);
         Debug.Log("arlocation data lead");
 
         if (string.Equals(name, "Main Scene"))

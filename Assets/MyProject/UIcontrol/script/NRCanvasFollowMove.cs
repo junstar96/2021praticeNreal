@@ -6,6 +6,7 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Start is called before the first frame update
    
     public bool islotationChange = false;
+    
     void Start()
     {
         
@@ -14,14 +15,16 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Transform accuracy_camera = NRInput.CameraCenter;
         if (string.Equals(this.gameObject.name, "XMLLocationCanvas"))
         {
             if(islotationChange)
             {
+               
                 islotationChange = false;
-                gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(290.0f, 350f, 4.0f));
-                gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+                gameObject.transform.position = accuracy_camera.position + new Vector3(3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) -3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI/180),
+                    0, 3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) + 3*Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180));
+                gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
             }
 
             if (NRInput.GetButton(ControllerButton.APP))
@@ -31,23 +34,22 @@ public class NRCanvasFollowMove : MonoBehaviour
         }
         else if (string.Equals(this.gameObject.name, "compass"))
         {
-#if UNITY_EDITOR
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 360f, 4.5f));
-            gameObject.transform.rotation = Camera.main.transform.rotation;
-#else
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(90.0f, 300f, 3.0f));
-            gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-#endif
+            gameObject.transform.position = accuracy_camera.position + new Vector3(/*3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180)*/ - 3 * Mathf.Sin(-accuracy_camera.eulerAngles.y * Mathf.PI / 180),
+                    0, 3 * Mathf.Cos(-accuracy_camera.eulerAngles.y * Mathf.PI / 180)/* + 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180)*/);
+            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
+
         }
         else if (string.Equals(this.gameObject.name, "SceneChange"))
         {
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 6.0f));
-            gameObject.transform.rotation = Camera.main.transform.rotation;
+            gameObject.transform.position = accuracy_camera.position + new Vector3(3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) - 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180),
+                   0, 3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) + 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180));
+            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
         }
         else if (string.Equals(this.gameObject.name, "BusLocationCanvas"))
         {
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 300f, 4.5f));
-            gameObject.transform.rotation = Camera.main.transform.rotation;
+            gameObject.transform.position = accuracy_camera.position + new Vector3(3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) - 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180),
+                    0, 3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) + 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180));
+            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
         }
        
      

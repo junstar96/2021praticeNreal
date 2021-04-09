@@ -26,8 +26,8 @@ namespace NRKernal
         [HideInInspector]
         public bool isUpdated = false;
 
-        public static float lat;
-        public static float longi;
+        public float lat;
+        public float longi;
 
         private static GPScontroller m_instance;
 
@@ -122,6 +122,8 @@ namespace NRKernal
 
             //Stop service if there is no need to query location updates continuously
             //Input.location.Stop();
+
+            
         }
 
         private void OnEnable()

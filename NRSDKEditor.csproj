@@ -284,24 +284,6 @@
     <Reference Include="LitJSON">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/NRSDK/Plugins/LitJSON.dll</HintPath>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.162.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.162.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.JarResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.162.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.162.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandler">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/Scripts/Internal/Analytics/Google.Protobuf.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

@@ -64,78 +64,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ARLocation\Experimental\World Builder\WorldBuilder.cs" />
-    <Compile Include="Assets\ARLocation\Experimental\World Builder\WorldBuilderApplicationController.cs" />
-    <Compile Include="Assets\ARLocation\Experimental\World Voxel Craft\WorldVoxelController.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ARLocation.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ARSession\ARFoundationSessionManager.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ARSession\IARSessionManager.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ARSession\VuforiaSessionManager.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\ARLocationManager.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\ARLocationOrientation.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\ARLocationProvider.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\GroundHeight.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\Hotspot.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\MoveAlongPath.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\PlaceAlongPath.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\PlaceAtLocation.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\PlaceAtLocations.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\RenderPathLine.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\UI\ARTrackingInfo.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\UI\DebugDistance.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\UI\DebugInfoOverlay.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\UI\LoadingBar.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\UI\LocationProviderInfo.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\UI\OrientationInfo.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Components\WebMapEditor\WebMapLoader.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\AbstractLocationProvider.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\AndroidMagneticDeclination.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\AndroidNativeCompass.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\HeadingReading.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\ILocationProvider.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\Location.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\LocationReading.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\MockLocationProvider.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Location\UnityLocationProvider.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\AngleLowPassFilter.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\CatmullRomCurve.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\CatmullRomSpline.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\Curve.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\DVector2.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\DVector3.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\Line.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\LinearSpline.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\LowPassFilter.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\MathUtils.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Math\Spline.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ScriptableObjects\ARLocationConfig.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ScriptableObjects\LocationData.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ScriptableObjects\LocationPath.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\ScriptableObjects\PrefabDatabase.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\ConditionalPropertyAttribute.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\CreatePointOfInterestTextMeshes.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\DebugCanvas.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\DevCameraController.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\FaceCamera.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\FadeOutTextMesh.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\FollowCameraPosition.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\Logger.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\Misc.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\MovingAveragePosition.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\RotateObject.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\SelectScene.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\ShowHideSelfOnPointerClick.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\Singleton.cs" />
-    <Compile Include="Assets\ARLocation\Scripts\Utils\SmoothMove.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\BUSstationXML.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\Enemy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSChecker.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\GPSInfoContainer.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\GPSLocationConverter.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSaccuacy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPScontroller.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSprint.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\LerpEnemyMake.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\MygpsTrans.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealPrefebdatabase.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\NrealVectorSerialiable.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\WebMapLoader.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\FollowPlayerPoint.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\Delay_ARlocation.cs" />
@@ -147,13 +88,8 @@
     <Compile Include="Assets\MyProject\UIcontrol\script\NRCanvasFollowMove.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XMLButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XmlBusButtonController.cs" />
-    <Compile Include="Assets\MyProject\UIcontrol\script\Xmltransport.cs" />
-    <None Include="Assets\ARLocation\Samples\Data\pois.xml" />
-    <None Include="Assets\ARLocation\Data\data.xml" />
     <None Include="Assets\Resources\Plugins\Android\AndroidManifest.xml" />
-    <None Include="Assets\ARLocation\GO Map Integration\README.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Unity_test_gps.xml" />
-    <None Include="Assets\ARLocation\Third-Party-Notices.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\GameGoal.xml" />
     <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Update_Data.xml" />
@@ -161,8 +97,6 @@
     <None Include="Assets\MyProject\GPS\Xml FILE\data (2).xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\AltitudeResetting.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\popular_korean_tour_spot.xml" />
-    <None Include="Assets\ARLocation\Experimental\World Builder\Readme.txt" />
-    <None Include="Assets\ARLocation\Materials\Shaders\ShadowDrawer.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -706,6 +640,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.ARKit">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Subsystem.Registration">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
@@ -732,6 +669,9 @@
     </Reference>
     <Reference Include="Unity.XR.ARFoundation">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -769,6 +709,9 @@
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.ARKit.Editor">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARKit.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -784,14 +727,6 @@
     <ProjectReference Include="NRSDK.csproj">
       <Project>{14DF942C-24D8-C169-691B-E06942BC213C}</Project>
       <Name>NRSDK</Name>
-    </ProjectReference>
-    <ProjectReference Include="Google.XR.ARCoreExtensions.csproj">
-      <Project>{5765FFB8-6185-8DAD-9D5B-9DAD45E4A197}</Project>
-      <Name>Google.XR.ARCoreExtensions</Name>
-    </ProjectReference>
-    <ProjectReference Include="Google.XR.ARCoreExtensions.Editor.csproj">
-      <Project>{4A81837C-18D8-5E7B-7A4E-AB8815A1CE4D}</Project>
-      <Name>Google.XR.ARCoreExtensions.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

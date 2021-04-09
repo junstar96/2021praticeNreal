@@ -117,7 +117,7 @@ namespace NRKernal.NRExamples
 
                         foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<AudioSource>())
                         {
-                            if (string.Equals(worldobject.GetComponent<PlaceAtLocation>().Location.Label, target_name))
+                            if (string.Equals(worldobject.name, target_name))
                             {
                                 if(!worldobject.isPlaying)
                                 {

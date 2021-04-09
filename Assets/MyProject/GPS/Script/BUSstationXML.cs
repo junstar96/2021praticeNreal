@@ -4,10 +4,19 @@ using System.Collections.Generic;
 using System.Net;
 using System.IO;
 using UnityEngine;
-using ARLocation;
+
 
 namespace NRKernal.NRExamples
 {
+    public enum AltitudeMode
+    {
+        GroundRelative,
+        DeviceRelative,
+        Absolute,
+        Ignore
+    };
+
+
     namespace MyArrowProject
     {
         using System.Xml;
@@ -58,7 +67,7 @@ namespace NRKernal.NRExamples
                 public double longi;
             }
 
-            public PrefabDatabase prefebdatabase;
+            public NrealPrefebdatabase prefebdatabase;
 
             //받아온 api를 이용하여 관광에 도움을 줄 수 있는 버스 정보를 알아보자.
             //gpsLati : 위도좌표
@@ -76,7 +85,7 @@ namespace NRKernal.NRExamples
             /// </summary>
             private List<DataEntry> _dataEntries = new List<DataEntry>();
             private List<GameObject> _stages = new List<GameObject>();
-            private List<PlaceAtLocation> _placeAtComponents = new List<PlaceAtLocation>();
+            //private List<PlaceAtLocation> _placeAtComponents = new List<PlaceAtLocation>();
 
 
             public List<DataEntry> XmlListForNreal
@@ -95,13 +104,13 @@ namespace NRKernal.NRExamples
                 }
             }
 
-            public List<PlaceAtLocation> PlaceAtComponents
-            {
-                get
-                {
-                    return _placeAtComponents;
-                }
-            }
+            //public List<PlaceAtLocation> PlaceAtComponents
+            //{
+            //    get
+            //    {
+            //        return _placeAtComponents;
+            //    }
+            //}
 
 
 
@@ -132,7 +141,7 @@ namespace NRKernal.NRExamples
             private void Awake()
             {
                 
-
+               
 
 
                 //byte[] byteforencoding = Encoding.UTF8.GetBytes("4954u%2BzYV4y%2F5BRah3wXrxdhkbCaLFoKjzT7dLDNPzn44g%2BUeL30JEGzj2MitqPY9PMyqdb8yW4%2F8eo4xB1xYw%3D%3D");
@@ -240,15 +249,28 @@ namespace NRKernal.NRExamples
                         };
 
                         _dataEntries.Add(entry);
-
-                        Debug.Log($"{id}, {lat}, {lng}, {altitude}, {altitudeMode}, {name}, {meshId}, {movementSmoothing}, {maxNumberOfLocationUpdates}, {useMovingAverage}, {hideObjectUtilItIsPlaced}");
+                        //CheckConvertGPS(lat, lng);
+                        Debug.Log(GPSConvertWorldPos(current_lat, current_long, lat, lng));
+                        //Debug.Log($"{id}, {lat}, {lng}, {altitude}, {altitudeMode}, {name}, {meshId}, {movementSmoothing}, {maxNumberOfLocationUpdates}, {useMovingAverage}, {hideObjectUtilItIsPlaced}");
 
 
                     }
                 }
             }
 
-    
+            private void Update()
+            {
+#if UNITY_EDITOR
+                current_lat = 37.478892238702564;
+                current_long = 126.88646609599695;
+#else
+                current_lat = Input.location.lastData.latitude;
+                current_long = Input.location.lastData.longitude;
+
+#endif
+            }
+
+
 
             public GPSinfo ButtonInfo(int count)
             {
@@ -302,30 +324,42 @@ namespace NRKernal.NRExamples
                         continue;
                     }
 
-                    var PlacementOptions = new PlaceAtLocation.PlaceAtOptions()
-                    {
-                        MovementSmoothing = entry.movementSmoothing,
-                        MaxNumberOfLocationUpdates = entry.maxNumberOfLocationUpdates,
-                        UseMovingAverage = entry.useMovingAverage,
-                        HideObjectUntilItIsPlaced = entry.hideObjectUtilItIsPlaced
-                    };
+                    //var PlacementOptions = new PlaceAtLocation.PlaceAtOptions()
+                    //{
+                    //    MovementSmoothing = entry.movementSmoothing,
+                    //    MaxNumberOfLocationUpdates = entry.maxNumberOfLocationUpdates,
+                    //    UseMovingAverage = entry.useMovingAverage,
+                    //    HideObjectUntilItIsPlaced = entry.hideObjectUtilItIsPlaced
+                    //};
 
-                    var location = new Location()
-                    {
-                        Latitude = entry.lat,
-                        Longitude = entry.lng,
-                        Altitude = entry.altitude,
-                        AltitudeMode = entry.getAltitudeMode(),
-                        Label = entry.name
-                    };
+                    //var location = new Location()
+                    //{
+                    //    Latitude = entry.lat,
+                    //    Longitude = entry.lng,
+                    //    Altitude = entry.altitude,
+                    //    AltitudeMode = entry.getAltitudeMode(),
+                    //    Label = entry.name
+                    //};
 
-                    var instance = PlaceAtLocation.CreatePlacedInstance(Prefab,
-                                                                        location,
-                                                                        PlacementOptions,
-                                                                        false);
+                    var Latitude = entry.lat;
+                    var Longitude = entry.lng;
+                    var Altitude = entry.altitude;
+                    var AltitudeMode = entry.getAltitudeMode();
+                    var Label = entry.name;
+
+                    //var instance = PlaceAtLocation.CreatePlacedInstance(Prefab,
+                    //                                                    location,
+                    //                                                    PlacementOptions,
+                    //                                                    false);
+
+                    var convertgps = GPSConvertWorldPos(current_lat, current_long, Latitude, Longitude);
+                    var instance = Instantiate(Prefab, new Vector3(convertgps.y, (float)Altitude, convertgps.x), Quaternion.identity, gameObject.transform);
+                    
+                    instance.name = Label;
+
 
                     _stages.Add(instance);
-                    _placeAtComponents.Add(instance.GetComponent<PlaceAtLocation>());
+                   // _placeAtComponents.Add(instance.GetComponent<PlaceAtLocation>());
                 }
 
                 makefinish = true;
@@ -346,6 +380,45 @@ namespace NRKernal.NRExamples
             }
 
             
+
+            static public Vector3 CheckConvertGPS(double latitude, double longitude)
+            {
+                var rad = Math.PI / 180;
+
+                var lat = latitude * rad;
+                var lon = longitude * rad;
+                var a = 6378.137 * 1000;
+                var e2 = 0.00669437999014;
+                var N = a / Math.Sqrt(1 - e2 * Math.Pow(Math.Sin(lat), 2));
+
+                var x = N * Math.Cos(lat) * Math.Cos(lon);
+                var y = N * Math.Cos(lat) * Math.Sin(lon);
+                var z = (1 - e2) * N * Math.Sin(lat);
+
+                return new Vector3((float)x, (float)y, (float)z);
+            }
+
+            static public Vector2 GPSConvertWorldPos(double player_lat, double player_lng, double target_lat, double target_lng)
+            {
+                var rad = Math.PI / 180;
+                var lat = player_lat * rad;
+                var lon = player_lng * rad;
+                var p1 = CheckConvertGPS(player_lat, player_lng);
+                var p2 = CheckConvertGPS(target_lat, target_lng);
+                var delta = p2 - p1;
+
+                var slat = Math.Sin(lat);
+                var clat = Math.Cos(lat);
+                var slon = Math.Sin(lon);
+                var clon = Math.Cos(lon);
+
+                var e = -slon * delta.x + clon * delta.y;
+                var n = -clon * slat * delta.x - slat * slon * delta.y + clat * delta.z;
+
+                Debug.Log("custom pos : " + new Vector3((float)e, 0, (float)n));
+
+                return new Vector2((float)n, (float)e);
+            }
         }
     }
 }

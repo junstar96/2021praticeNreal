@@ -4,13 +4,14 @@ using System;
 
 public class Magnet_compass : MonoBehaviour
 {
-    
+    private float time;
     private RectTransform recttransform;
     public Text post;
 
     // Start is called before the first frame update
     void Start()
     {
+        time = 0.0f;
         recttransform = GetComponent<RectTransform>();
     }
 
@@ -30,22 +31,25 @@ public class Magnet_compass : MonoBehaviour
         //float magnetCorrection = (float)ARLocation.ARLocationProvider.Instance.CurrentHeading.magneticHeading;
 
         //- cameraCorrection;
-        post.text = "location : " + Scenemanager.instance.smartphonerotation.eulerAngles.ToString("F3") + "\n"
-           + "magnetic :" + ARLocation.ARLocationProvider.Instance.CurrentHeading.magneticHeading + "\n"
-           + "arlocation bool :" + ARLocation.ARLocationProvider.Instance.CurrentHeading.isMagneticHeadingAvailable + "\n"
+        post.text = "magnetic :" + Input.compass.magneticHeading + "\n"
+           + "arlocation bool :" + Input.compass.enabled + "\n"
             + "gyro euler : " + Input.gyro.attitude.eulerAngles + "\n"
              + "gyro : " + Input.gyro.attitude + "\n"
-            + "camera location :" + Camera.main.transform.eulerAngles;
+            + "camera location :" + NRKernal.NRInput.CameraCenter.eulerAngles;
+
+
+      
+        time += Time.deltaTime;
+        if (time > 1.0f)
+        {
+            Debug.Log("gyro euler : (" + Input.gyro.attitude.eulerAngles.x + "," + Input.gyro.attitude.eulerAngles.y + "," +Input.gyro.attitude.eulerAngles.z + ")");
+            Debug.Log("gyro attitude : (" + Input.gyro.attitude.x + "," + Input.gyro.attitude.y + "," + Input.gyro.attitude.z + "," + Input.gyro.attitude.w + ")");
+            Debug.Log("magnetic value : " + Input.compass.magneticHeading);
+            time = 0.0f;
+        }
 
 
 
-        Debug.Log("gyro euler : " + Input.gyro.attitude.eulerAngles);
-        Debug.Log("gyro attitude :" + Input.gyro.attitude);
-        Debug.Log("magnetic value : " + ARLocation.ARLocationProvider.Instance.CurrentHeading.magneticHeading);
-
-
-
-
-        recttransform.localEulerAngles = new Vector3(0, 0, (float)ARLocation.ARLocationProvider.Instance.CurrentHeading.magneticHeading) ;
+        recttransform.localEulerAngles = new Vector3(0, 0, Input.compass.magneticHeading) ;
     }
 }

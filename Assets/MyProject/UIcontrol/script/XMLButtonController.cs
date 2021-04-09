@@ -30,7 +30,13 @@ namespace NRKernal.NRExamples
             //}
             void Start()
             {
-                child_count = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.childCount;
+                Debug.Log("scenename : " + Scenemanager.instance.scenemode);
+                if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
+                {
+                    Debug.Log("scenename : " + Scenemanager.instance.scenename);
+                    child_count = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").childCount;
+                }
+                
 
                 ////var test_pos = gameobject.text
                 //test_pos = GameObject.FindWithTag("GPS").GetComponent<ARLocation.WebMapLoader>();
@@ -70,19 +76,40 @@ namespace NRKernal.NRExamples
                 yield return new WaitForEndOfFrame();
                 for(int i = 0;i<child_count;i++)
                 {
-                    var entity = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(i).GetComponent<PlaceAtLocation>();
-
-                    button.adressPrint.text = entity.Location.Label;
-                    button.target_lati = entity.Location.Latitude;
-                    button.target_longi = entity.Location.Longitude;
-                    button.target_transform = entity.transform;
-
-                    var check = Instantiate(button, gameObject.transform);
-
-                    if (!check.gameObject.activeSelf)
+                    
+                    if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
                     {
-                        check.gameObject.SetActive(true);
+                        var entity = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").transform.GetChild(i);
+                        button.adressPrint.text = entity.name;
+                        button.target_lati = 0.0;
+                        button.target_longi = 0.0;
+                        button.target_transform = entity.transform;
+
+                        var check = Instantiate(button, gameObject.transform);
+
+                        if (!check.gameObject.activeSelf)
+                        {
+                            check.gameObject.SetActive(true);
+                        }
                     }
+                    else if(string.Equals(Scenemanager.instance.scenemode, "Main Scene"))
+                    {
+                        var entity = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").transform.GetChild(i);
+                        button.adressPrint.text = entity.name;
+                        button.target_lati = 0.0;
+                        button.target_longi = 0.0;
+                        button.target_transform = entity.transform;
+
+                        var check = Instantiate(button, gameObject.transform);
+
+                        if (!check.gameObject.activeSelf)
+                        {
+                            check.gameObject.SetActive(true);
+                        }
+                    }
+                   
+
+                    
                 }
                 
             }

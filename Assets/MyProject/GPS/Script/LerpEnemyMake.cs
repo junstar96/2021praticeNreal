@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using ARLocation;
 
 
 
@@ -25,27 +24,27 @@ public class LerpEnemyMake : MonoBehaviour
        
 
 
-        child_count = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.childCount;
+        //child_count = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.childCount;
 
         
 
         for (int i = 0; i < child_count; i++)
         {
 
-            foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<PlaceAtLocation>())
-            {
-                var currentlotation = ARLocationProvider.Instance.CurrentLocation;
-                distance = (float)NRKernal.GPScontroller.DistanceInKmBetweenEarthCoordinates(worldobject.Location.Latitude, worldobject.Location.Longitude, currentlotation.latitude, currentlotation.longitude);
-                distance = distance / 10;
-                Debug.Log("distance :" + distance);
-                for (int lerpdistance = 0; lerpdistance < 10; lerpdistance++)
-                {
-                    var zombiemake = Instantiate(zombie, Vector3.Lerp(gameObject.transform.position, worldobject.transform.position, 0.1f * lerpdistance), gameObject.transform.rotation);
-                    zombiemake.SetActive(true);
-                    zombiemake.name = worldobject.Location.Label + "number : " + lerpdistance;
-                }
+            //foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<PlaceAtLocation>())
+            //{
+            //    var currentlotation = Input.location.lastData;
+            //    distance = (float)NRKernal.GPScontroller.DistanceInKmBetweenEarthCoordinates(worldobject.Location.Latitude, worldobject.Location.Longitude, currentlotation.latitude, currentlotation.longitude);
+            //    distance = distance / 10;
+            //    Debug.Log("distance :" + distance);
+            //    for (int lerpdistance = 0; lerpdistance < 10; lerpdistance++)
+            //    {
+            //        var zombiemake = Instantiate(zombie, Vector3.Lerp(gameObject.transform.position, worldobject.transform.position, 0.1f * lerpdistance), gameObject.transform.rotation);
+            //        zombiemake.SetActive(true);
+            //        zombiemake.name = worldobject.Location.Label + "number : " + lerpdistance;
+            //    }
 
-            }
+            //}
         }
     }
 
