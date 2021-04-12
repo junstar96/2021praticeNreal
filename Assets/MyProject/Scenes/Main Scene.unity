@@ -555,6 +555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: arrowPivot
       objectReference: {fileID: 0}
+    - target: {fileID: 2965254563883420189, guid: 53f2340d89ef08c44becdc7f7bf8a191,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f2340d89ef08c44becdc7f7bf8a191, type: 3}
 --- !u!114 &1637185439 stripped

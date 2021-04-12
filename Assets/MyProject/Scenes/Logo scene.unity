@@ -2222,7 +2222,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1295519697}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2123280697}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3e22ee739a9bd84ca5dacdb97839cea, type: 3}
@@ -2398,7 +2398,7 @@ PrefabInstance:
         type: 3}
       propertyPath: loadingScene
       value: 
-      objectReference: {fileID: 1812977430}
+      objectReference: {fileID: 961577398}
     - target: {fileID: 2023472776073126343, guid: 5a715e9de3e449a488fc1c688a1fddef,
         type: 3}
       propertyPath: oneSecondbar
@@ -2943,6 +2943,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913802947}
   m_CullTransparentMesh: 0
+--- !u!1 &2123280697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6595988186193016278, guid: 5a715e9de3e449a488fc1c688a1fddef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1295519697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2123280698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123280697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2808874a8df43e4aab45def7eb613e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectedPlanePrefab: {fileID: 1027744598515304, guid: 484172a328164874f9cc052dd9702481,
+    type: 3}
+--- !u!114 &2123280699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123280697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb63ddaea92337d418bcb3ff088a519c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackableName: 
+  m_PreserveChildSize: 0
+  m_InitializedInEditor: 0
+  m_DatabaseIndex: -1
 --- !u!20 &20880588623851702 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2956934304164302491, guid: 16057109e8734064f9079f67fd8121ff,
@@ -2959,7 +2995,7 @@ PrefabInstance:
     - target: {fileID: 2974113958423615901, guid: 16057109e8734064f9079f67fd8121ff,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 2974318989974180659, guid: 16057109e8734064f9079f67fd8121ff,
         type: 3}

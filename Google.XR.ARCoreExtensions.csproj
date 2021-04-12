@@ -64,54 +64,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARAnchorManagerExtensions.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARCloudAnchor.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARCloudReferencePoint.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARCoreExtensions.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARCoreExtensionsCameraConfigFilter.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARCoreExtensionsConfig.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARCoreRecordingConfig.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARPlaybackManager.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\ARRecordingManager.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CameraConfigDepthSensorUsage.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CameraConfigFacingDirection.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CameraConfigStereoCameraUsage.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CameraConfigTargetFps.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CloudAnchorMode.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CloudAnchorState.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\CloudReferenceState.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\FeatureMapQuality.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\ARCoreHandles\ARCoreHandleExtensions.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\AndroidPermissionsManager.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\ApiConstants.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\CachedData.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Helpers\DllImportNoop.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Helpers\Translators.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\IOSSupportManager.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\PropertyAttributes\DynamicHelpAttribute.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\PropertyAttributes\EnumFlagsAttribute.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\PropertyAttributes\HelpAttribute.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\RuntimeConfig.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiArStatus.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiCloudAnchorMode.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiCloudAnchorState.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiPlaybackStatus.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiPose.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiRecordingStatus.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Types\ApiTrackingState.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Wrappers\AnchorApi.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Wrappers\CameraConfigApi.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Wrappers\CameraConfigFilterApi.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Wrappers\PoseApi.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Wrappers\RecordingConfigApi.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\Internal\Wrappers\SessionApi.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\PlaybackResult.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\PlaybackStatus.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\RecordingResult.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\RecordingStatus.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\VersionInfo.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Runtime\Scripts\XRCameraConfigurationExtensions.cs" />
-    <None Include="C:\Users\dnsoft\Downloads\package\Runtime\Google.XR.ARCoreExtensions.asmdef" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARAnchorManagerExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARCloudAnchor.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARCloudReferencePoint.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARCoreExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARCoreExtensionsCameraConfigFilter.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARCoreExtensionsConfig.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARCoreRecordingConfig.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARPlaybackManager.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\ARRecordingManager.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CameraConfigDepthSensorUsage.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CameraConfigFacingDirection.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CameraConfigStereoCameraUsage.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CameraConfigTargetFps.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CloudAnchorMode.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CloudAnchorState.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\CloudReferenceState.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\FeatureMapQuality.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\ARCoreHandles\ARCoreHandleExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\AndroidPermissionsManager.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\ApiConstants.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\CachedData.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Helpers\DllImportNoop.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Helpers\Translators.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\IOSSupportManager.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\PropertyAttributes\DynamicHelpAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\PropertyAttributes\EnumFlagsAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\PropertyAttributes\HelpAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\RuntimeConfig.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiArStatus.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiCloudAnchorMode.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiCloudAnchorState.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiPlaybackStatus.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiPose.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiRecordingStatus.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Types\ApiTrackingState.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Wrappers\AnchorApi.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Wrappers\CameraConfigApi.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Wrappers\CameraConfigFilterApi.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Wrappers\PoseApi.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Wrappers\RecordingConfigApi.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\Internal\Wrappers\SessionApi.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\PlaybackResult.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\PlaybackStatus.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\RecordingResult.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\RecordingStatus.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\VersionInfo.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Scripts\XRCameraConfigurationExtensions.cs" />
+    <None Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Runtime\Google.XR.ARCoreExtensions.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -311,22 +311,22 @@
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/NRSDK/Plugins/LitJSON.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/Scripts/Internal/Analytics/Google.Protobuf.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/Scripts/Internal/Analytics/Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -691,11 +691,11 @@
     <Reference Include="Unity.XR.ARCore">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

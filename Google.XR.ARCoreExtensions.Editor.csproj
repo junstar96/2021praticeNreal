@@ -64,38 +64,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ARCoreAnalytics.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ARCoreAnalyticsGUI.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ARCoreAnalyticsProvider.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ARCoreExtensionsProjectSettings.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ARCoreExtensionsProjectSettingsGUI.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ARCoreExtensionsProjectSettingsProvider.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\Analytics\ArcoreClearcut.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\Analytics\ArcoreSdkLog.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\AndroidDependenciesHelper.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\AndroidKeylessPreprocessBuild.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\AndroidManifestMerger.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\AndroidSupportPreprocessBuild.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\AssetHelper.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\CloudAnchorPreprocessBuild.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\CustomizedManifestInjection.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\DependentModules\DependentModuleBase.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\DependentModules\DependentModulesManager.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\DependentModules\IDependentModule.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\DependentModules\KeylessModule.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\IOSSupportHelper.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\IOSSupportPreprocessBuild.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\LogRequestUtils.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ProguardInjectionPreprocessBuild.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\PropertyDrawers\DynamicHelpAttributeDrawer.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\PropertyDrawers\EnumFlagsAttributeDrawer.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\PropertyDrawers\HelpAttributeDrawer.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\SceneUtils.cs" />
-    <Compile Include="C:\Users\dnsoft\Downloads\package\Editor\Scripts\Internal\ShellHelper.cs" />
-    <None Include="C:\Users\dnsoft\Downloads\package\Editor\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.162_manifest.txt" />
-    <None Include="C:\Users\dnsoft\Downloads\package\Editor\BuildResources\ARCoreiOSDependencies.template" />
-    <None Include="C:\Users\dnsoft\Downloads\package\Editor\Google.XR.ARCoreExtensions.Editor.asmdef" />
-    <None Include="C:\Users\dnsoft\Downloads\package\Editor\BuildResources\ARCoreAndroidKeylessDependencies.template" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ARCoreAnalytics.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ARCoreAnalyticsGUI.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ARCoreAnalyticsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ARCoreExtensionsProjectSettings.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ARCoreExtensionsProjectSettingsGUI.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ARCoreExtensionsProjectSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\Analytics\ArcoreClearcut.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\Analytics\ArcoreSdkLog.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\AndroidDependenciesHelper.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\AndroidKeylessPreprocessBuild.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\AndroidManifestMerger.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\AndroidSupportPreprocessBuild.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\AssetHelper.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\CloudAnchorPreprocessBuild.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\CustomizedManifestInjection.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\DependentModules\DependentModuleBase.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\DependentModules\DependentModulesManager.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\DependentModules\IDependentModule.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\DependentModules\KeylessModule.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\IOSSupportHelper.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\IOSSupportPreprocessBuild.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\LogRequestUtils.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ProguardInjectionPreprocessBuild.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\PropertyDrawers\DynamicHelpAttributeDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\PropertyDrawers\EnumFlagsAttributeDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\PropertyDrawers\HelpAttributeDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\SceneUtils.cs" />
+    <Compile Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Scripts\Internal\ShellHelper.cs" />
+    <None Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.162_manifest.txt" />
+    <None Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\BuildResources\ARCoreiOSDependencies.template" />
+    <None Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\Google.XR.ARCoreExtensions.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871\Editor\BuildResources\ARCoreAndroidKeylessDependencies.template" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -301,22 +301,22 @@
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Assets/NRSDK/Plugins/LitJSON.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.162">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.162.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.162.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>C:/Users/dnsoft/Downloads/package/Editor/Scripts/Internal/Analytics/Google.Protobuf.dll</HintPath>
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.google.ar.core.arfoundation.extensions@9002aed72c38-1617785914871/Editor/Scripts/Internal/Analytics/Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -684,11 +684,11 @@
     <Reference Include="Unity.XR.ARCore">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

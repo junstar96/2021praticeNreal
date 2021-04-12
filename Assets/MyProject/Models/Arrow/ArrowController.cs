@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using ARLocation;
 
 namespace NRKernal.NRExamples
 {
@@ -56,7 +55,7 @@ namespace NRKernal.NRExamples
 
             private double target_lati;
             private double target_longi;
-            private string target_name;
+            private string target_name = string.Empty;
 
             //public GameObject test_target;
 
@@ -100,76 +99,27 @@ namespace NRKernal.NRExamples
             // Update is called once per frame
             void Update()
             {
-                if (string.Equals(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, "GameScene"))
+                if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene")&& target_name != string.Empty)
                 {
-                    
-                    var worldobject = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(0).GetComponent<Transform>();
+                    //var worldobject = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(0).GetComponent<Transform>();
+                    var entity = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").transform.Find(target_name);
                     gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
                     gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-                    Quaternion looktarget = Quaternion.LookRotation(worldobject.position, Vector3.up);
+                    Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
                     looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
                     arrow.transform.localRotation = looktarget;
                 }
-                else
+                else if (string.Equals(Scenemanager.instance.scenemode, "Main Scene") && target_name != string.Empty)
                 {
-                    if (isArrowview)
-                    {
 
-                        foreach (var worldobject in GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetComponentsInChildren<AudioSource>())
-                        {
-                            if (string.Equals(worldobject.name, target_name))
-                            {
-                                if(!worldobject.isPlaying)
-                                {
-                                    worldobject.loop = true;
-                                    worldobject.time = 0;
-                                    worldobject.maxDistance = 20;
-                                    worldobject.minDistance = 1;
-                                    worldobject.Play();
-                                    
-                                }
-                               
-                            }
-                            else
-                            {
-                                if(worldobject.isPlaying)
-                                {
-                                    worldobject.loop = false;
-                                    worldobject.Stop();
-                                }
-                               
-                            }
-
-                        }
-
-
-                        gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
-                        gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
-                        Quaternion looktarget = Quaternion.LookRotation(arrow_target, Vector3.up);
-                        looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
-                        arrow.transform.localRotation = looktarget;
-
-
-#if !UNITY_EDITOR
-                    double det = GPScontroller.DistanceInKmBetweenEarthCoordinates(target_lati, target_longi,
-                        ARLocationProvider.Instance.CurrentLocation.latitude, ARLocationProvider.Instance.CurrentLocation.longitude) * 1000.0;
-                    distance.text = "last location : " + "\n" + ARLocationProvider.Instance.LastLocation.latitude + "\n" + ARLocationProvider.Instance.LastLocation.longitude + "\n"
-                        + "current location : " + "\n" + ARLocationProvider.Instance.CurrentLocation.latitude + "\n" + ARLocationProvider.Instance.CurrentLocation.longitude + "\n"
-                        + "input.location :" + "\n" + Input.location.lastData.latitude + "\n" + Input.location.lastData.longitude + "\n"
-                        + "distance : " + det.ToString("N2");
-#endif
-
-                    }
-                    else
-                    {
-                        gameObject.transform.position = new Vector3(500, 500, 500);
-                    }
-
-                    PositionInitialize();
-
-
-
+                    var entity = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").transform.Find(target_name);
+                    gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
+                    gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
+                    Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
+                    looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
+                    arrow.transform.localRotation = looktarget;
                 }
+                PositionInitialize();
             }
 
             //IEnumerator GPSArrowUpdate()

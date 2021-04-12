@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ARLocation;
 
 namespace NRKernal.NRExamples
 {
@@ -36,7 +35,13 @@ namespace NRKernal.NRExamples
                     Debug.Log("scenename : " + Scenemanager.instance.scenename);
                     child_count = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").childCount;
                 }
-                
+
+                if (string.Equals(Scenemanager.instance.scenemode, "Main Scene"))
+                {
+                    Debug.Log("scenename : " + Scenemanager.instance.scenename);
+                    child_count = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").childCount;
+                }
+
 
                 ////var test_pos = gameobject.text
                 //test_pos = GameObject.FindWithTag("GPS").GetComponent<ARLocation.WebMapLoader>();

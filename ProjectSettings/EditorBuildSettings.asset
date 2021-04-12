@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/MyProject/Scenes/ARanchor_Nreal_test.unity
     guid: 2f78e05d1475a034cbcfa88c161f7102
+  - enabled: 0
+    path: Assets/NRSDK/Demos/HelloMR.unity
+    guid: dd74f1c9685ef48499229d4957b58000
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8d8355fefa586f5498825bca503db1bb,
       type: 2}

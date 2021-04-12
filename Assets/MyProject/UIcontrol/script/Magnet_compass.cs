@@ -4,14 +4,12 @@ using System;
 
 public class Magnet_compass : MonoBehaviour
 {
-    private float time;
     private RectTransform recttransform;
     public Text post;
 
     // Start is called before the first frame update
     void Start()
     {
-        time = 0.0f;
         recttransform = GetComponent<RectTransform>();
     }
 
@@ -39,14 +37,7 @@ public class Magnet_compass : MonoBehaviour
 
 
       
-        time += Time.deltaTime;
-        if (time > 1.0f)
-        {
-            Debug.Log("gyro euler : (" + Input.gyro.attitude.eulerAngles.x + "," + Input.gyro.attitude.eulerAngles.y + "," +Input.gyro.attitude.eulerAngles.z + ")");
-            Debug.Log("gyro attitude : (" + Input.gyro.attitude.x + "," + Input.gyro.attitude.y + "," + Input.gyro.attitude.z + "," + Input.gyro.attitude.w + ")");
-            Debug.Log("magnetic value : " + Input.compass.magneticHeading);
-            time = 0.0f;
-        }
+        
 
 
 

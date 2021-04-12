@@ -133,14 +133,14 @@ public class Scenemanager : MonoBehaviour
                 //oneSecondbar.transform.eulerAngles = Camera.main.transform.eulerAngles;
                 oneSecondbar.gameObject.SetActive(true);
                 oneSecondbar.value += Time.deltaTime;
-                oneSecondbar.transform.localPosition = new Vector3(0, 0, 0);
+                oneSecondbar.transform.localPosition = NRInput.CameraCenter.position;
                 if (oneSecondbar.value >= 0.999f)
                 {
                     oneSecondbar.gameObject.SetActive(false);
                     isFixingCanvas = true;
                     first_magnetic = Input.compass.magneticHeading;
                     loadingScene.SetActive(true);
-                    //loadingScene.transform.rotation = Camera.main.transform.rotation;
+                    loadingScene.transform.localRotation = Camera.main.transform.rotation;
                 }
             }
             else

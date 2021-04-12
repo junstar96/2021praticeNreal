@@ -130,7 +130,6 @@ namespace NRKernal.NRExamples
                 }
             }
 
-
             private double current_lat = 37.478892238702564;
             private double current_long = 126.88646609599695;
 
@@ -169,13 +168,11 @@ namespace NRKernal.NRExamples
 
             public void MyLocationFound()
             {
-#if !UNITY_EDITOR
-                current_lat = ARLocationProvider.Instance.Provider.CurrentLocation.latitude;
-                current_long = ARLocationProvider.Instance.Provider.CurrentLocation.longitude;
-#else
+
+         
+                
                 current_lat = 37.478892238702564;
                 current_long = 126.88646609599695;
-#endif
                 //Debug.Log("url found");
 
                 url = "";
@@ -260,14 +257,16 @@ namespace NRKernal.NRExamples
 
             private void Update()
             {
-#if UNITY_EDITOR
-                current_lat = 37.478892238702564;
-                current_long = 126.88646609599695;
-#else
-                current_lat = Input.location.lastData.latitude;
-                current_long = Input.location.lastData.longitude;
-
-#endif
+                if(!Input.location.isEnabledByUser)
+                {
+                    current_lat = 37.478892238702564;
+                    current_long = 126.88646609599695;
+                }
+                else
+                {
+                    current_lat = Input.location.lastData.latitude;
+                    current_long = Input.location.lastData.longitude;
+                }
             }
 
 
