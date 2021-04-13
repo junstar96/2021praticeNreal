@@ -28,12 +28,31 @@ public class Magnet_compass : MonoBehaviour
         //}
         //float magnetCorrection = (float)ARLocation.ARLocationProvider.Instance.CurrentHeading.magneticHeading;
 
+
+        if(!Scenemanager.instance.isFixingCanvas)
+        {
+            post.text = "북쪽을 바라봐 주세요." + "\n"
+                + "gps connect : " + Input.location.isEnabledByUser + "\n"
+                + "gyro y degree : " + Input.gyro.attitude.w * 180 + "\n"
+                + "magnetic degree : " + Input.compass.magneticHeading + "\n"
+                + "camera rotation : " + NRKernal.NRInput.CameraCenter.eulerAngles.y;
+        }
+        else
+        {
+#if !UNITY_EDITOR
+            post.text = "magnetic :" + Input.compass.magneticHeading + "\n"
+         + "arlocation bool :" + Input.compass.enabled + "\n"
+          + "gyro euler : " + Input.gyro.attitude.eulerAngles + "\n"
+           + "gyro : " + Input.gyro.attitude + "\n"
+          + "camera location :" + NRKernal.NRInput.CameraCenter.eulerAngles + "\n"
+          + "current_gps : (" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + ")";
+#else
+            post.text = "camera location :" + NRKernal.NRInput.CameraCenter.eulerAngles + "\n"
+                + "current_gps : (" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + ")";
+#endif
+        }
         //- cameraCorrection;
-        post.text = "magnetic :" + Input.compass.magneticHeading + "\n"
-           + "arlocation bool :" + Input.compass.enabled + "\n"
-            + "gyro euler : " + Input.gyro.attitude.eulerAngles + "\n"
-             + "gyro : " + Input.gyro.attitude + "\n"
-            + "camera location :" + NRKernal.NRInput.CameraCenter.eulerAngles;
+      
 
 
       

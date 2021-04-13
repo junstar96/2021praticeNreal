@@ -61,6 +61,7 @@ namespace NRKernal.NRExamples
 
             private void Awake()
             {
+                
                 arrowset = new UnityEvent();
                 //player = GameObject.FindWithTag("Player").GetComponent<Transform>();
                 arrowset.AddListener(SetArrow);
@@ -99,45 +100,51 @@ namespace NRKernal.NRExamples
             // Update is called once per frame
             void Update()
             {
-                if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene")&& target_name != string.Empty)
+                if(target_name == string.Empty)
                 {
-                    //var worldobject = GameObject.FindWithTag("GPS manu").transform.Find("ARLocationRoot").transform.GetChild(0).GetComponent<Transform>();
+                    arrow.SetActive(false);
+                    distance.gameObject.SetActive(false);
+                    return;
+                }
+
+                if(!distance.gameObject.activeSelf)
+                {
+                    distance.gameObject.SetActive(true);
+                }
+
+
+                if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
+                {
+
                     var entity = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").transform.Find(target_name);
-                    gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
-                    gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
                     Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
                     looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
                     arrow.transform.localRotation = looktarget;
+                    distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
                 }
-                else if (string.Equals(Scenemanager.instance.scenemode, "Main Scene") && target_name != string.Empty)
+                else if (string.Equals(Scenemanager.instance.scenemode, "Main Scene"))
                 {
 
                     var entity = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").transform.Find(target_name);
-                    gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(220.0f, 275f, 2.0f));
-                    gameObject.transform.eulerAngles = Camera.main.transform.rotation.eulerAngles;
                     Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
                     looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
                     arrow.transform.localRotation = looktarget;
+                    distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
                 }
+
+               
                 PositionInitialize();
             }
 
-            //IEnumerator GPSArrowUpdate()
-            //{
-            //    while(true)
-            //    {
-            //        yield return new WaitForSeconds(0.1f);
-
-            //        PositionInitialize();
-
-            //    }
-
-            //}
+           
 
             public void GetLocation(string name, double lat, double longi)
             {
                 target_name = name;
-                //Debug.Log("getlocation name ------------ "+target_name);
+                if(!arrow.activeSelf)
+                {
+                    arrow.SetActive(true);
+                }
                 target_lati = lat;
                 target_longi = longi;
             }

@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: compass
       objectReference: {fileID: 0}
+    - target: {fileID: 2486088291845022920, guid: 374bfcbdce80ed34fbe5e940fff7deae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374bfcbdce80ed34fbe5e940fff7deae, type: 3}
 --- !u!1 &11043196
@@ -1292,6 +1297,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466987884}
   m_CullTransparentMesh: 0
+--- !u!1 &525089276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2486088291845022901, guid: 374bfcbdce80ed34fbe5e940fff7deae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2594269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &525089277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525089276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7906c48f0cd94393196c6c9f7cab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anchor: 7
+  FollowSpeed: 5
+  Offset: {x: 0.1, y: 0.1}
+--- !u!224 &525089282 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2486088291845022900, guid: 374bfcbdce80ed34fbe5e940fff7deae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2594269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &531942665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1670,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7947478225695525807, guid: 4b1b4a47a563ea14b9dd764a82cfc2a5,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947478225695525807, guid: 4b1b4a47a563ea14b9dd764a82cfc2a5,
+        type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -1645,6 +1682,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: oneSecondvar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947478226050519014, guid: 4b1b4a47a563ea14b9dd764a82cfc2a5,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7947478226050519015, guid: 4b1b4a47a563ea14b9dd764a82cfc2a5,
         type: 3}
@@ -2016,7 +2058,6 @@ RectTransform:
   m_Children:
   - {fileID: 11043198}
   - {fileID: 61469485}
-  - {fileID: 1601013527}
   m_Father: {fileID: 1812977435}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2332,6 +2373,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1786237417, guid: 5a715e9de3e449a488fc1c688a1fddef, type: 3}
+      propertyPath: XmlDataFile
+      value: 
+      objectReference: {fileID: 4900000, guid: ac7e4d9ff71b35143b1d03b3d9eda1dc, type: 3}
+    - target: {fileID: 1786237417, guid: 5a715e9de3e449a488fc1c688a1fddef, type: 3}
       propertyPath: PrefabDatabase
       value: 
       objectReference: {fileID: 11400000, guid: c0bbd174b955619439ac50bfeec30fa6,
@@ -2398,7 +2443,7 @@ PrefabInstance:
         type: 3}
       propertyPath: loadingScene
       value: 
-      objectReference: {fileID: 961577398}
+      objectReference: {fileID: 1812977430}
     - target: {fileID: 2023472776073126343, guid: 5a715e9de3e449a488fc1c688a1fddef,
         type: 3}
       propertyPath: oneSecondbar
@@ -2517,12 +2562,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601013526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children:
   - {fileID: 124223454}
-  m_Father: {fileID: 961577399}
-  m_RootOrder: 2
+  m_Father: {fileID: 525089282}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1601013528
 MonoBehaviour:
@@ -2756,6 +2801,7 @@ GameObject:
   - component: {fileID: 1812977432}
   - component: {fileID: 1812977431}
   - component: {fileID: 1812977436}
+  - component: {fileID: 1812977437}
   m_Layer: 0
   m_Name: 'SceneChange '
   m_TagString: Untagged
@@ -2869,6 +2915,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fca0d9429a0e74583ee2f4f86e595e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1812977437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812977430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c7906c48f0cd94393196c6c9f7cab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anchor: 7
+  FollowSpeed: 5
+  Offset: {x: 0.1, y: 0.1}
 --- !u!1 &1913802947
 GameObject:
   m_ObjectHideFlags: 0

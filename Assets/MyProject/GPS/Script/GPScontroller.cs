@@ -76,8 +76,9 @@ namespace NRKernal
             }
 
             DontDestroyOnLoad(this);
-            Input.location.Start(0, 0);
+            Input.location.Start(3.0f, 0);
             Input.compass.enabled = true;
+            Input.gyro.enabled = true;
 
 
 
