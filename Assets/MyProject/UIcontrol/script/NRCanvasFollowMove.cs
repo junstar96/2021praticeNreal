@@ -36,6 +36,8 @@ public class NRCanvasFollowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
         if (NRInput.GetButton(ControllerButton.APP))
             {
                 islotationChange = true;

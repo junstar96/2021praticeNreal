@@ -12,6 +12,7 @@ namespace NRKernal.NRExamples
         {
             // Start is called before the first frame update
 
+            
 
 
             public MygpsTrans myGpsTrans;
@@ -22,6 +23,7 @@ namespace NRKernal.NRExamples
             public double target_longi;
             public Transform target_transform;
             private Button yourButton;
+            
 
             private void Awake()
             {
@@ -38,16 +40,6 @@ namespace NRKernal.NRExamples
                 Debug.Log("text name : " + adressPrint.text);
             }
 
-            private void Start()
-            {
-
-            }
-
-            // Update is called once per frame
-            //void Update()
-            //{
-
-            //}
 
             public void ChangeTargetGPS()
             {

@@ -138,7 +138,7 @@ namespace NRKernal.NRExamples.MyArrowProject
                 var AltitudeMode = entry.getAltitudeMode();
                 var Label = entry.name;
 
-                var convertgps = BUSstationXML.GPSConvertWorldPos(GPScontroller.Instance.lat, GPScontroller.Instance.longi, Latitude, Longitude);
+                var convertgps = ObjectPositionSetting.GPSConvertWorldPos(GPScontroller.Instance.lat, GPScontroller.Instance.longi, Latitude, Longitude);
                 var instance = Instantiate(Prefab, new Vector3(convertgps.y, (float)Altitude, convertgps.x), Quaternion.identity, gameObject.transform);
 
                 instance.name = Label;

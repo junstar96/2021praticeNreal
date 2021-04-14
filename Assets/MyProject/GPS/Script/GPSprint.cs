@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace NRKernal.NRExamples
+namespace NRKernal.NRExamples.MyArrowProject
 {
     public class GPSprint : MonoBehaviour
     {

@@ -2,18 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - DontDestroyNrealScene
-    - Enemy
-    - LerpEnemyMake
     - Magnet_compass
     - NRCanvasFollowMove
-    - NRKernal.GPScontroller
     - NRKernal.NRExamples.MyArrowProject.ArrowController
     - NRKernal.NRExamples.MyArrowProject.BUSstationXML
+    - NRKernal.NRExamples.MyArrowProject.GPScontroller
     - NRKernal.NRExamples.MyArrowProject.LocationChange
+    - NRKernal.NRExamples.MyArrowProject.Scenemanager
     - NRKernal.NRExamples.MyArrowProject.WebMapLoader
     - NRKernal.NRExamples.MyArrowProject.XMLButtonController
     - NrealPrefebdatabase
-    - Scenemanager
     NRSDK.dll:
     - NRKernal.CanvasRaycastTarget
     - NRKernal.ControllerAnchorsHelper
@@ -122,18 +120,12 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 12056}
-    - Class: 114
       Script: {instanceID: 12396}
-    - Class: 114
-      Script: {instanceID: 12614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -301,9 +293,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13848}
     - Class: 114
-      Script: {instanceID: 17950}
+      Script: {instanceID: 19464}
     - Class: 114
-      Script: {instanceID: 17952}
+      Script: {instanceID: 19466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -910,15 +902,15 @@ ScriptsOnlyBuild:
     className: NRRenderer
   - hash:
       serializedVersion: 2
-      Hash: b5a8b2acbb2d36eb0fcd0b35fe533f16
+      Hash: fca7c5df58104eef037cbd4a05766bd2
     assemblyName: Assembly-CSharp.dll
     namespaceName: NRKernal.NRExamples.MyArrowProject
     className: ArrowController
   - hash:
       serializedVersion: 2
-      Hash: 9275802c3bcd6b53315e3c733b9efbd0
+      Hash: dfe87293e929f89607e09d1c2af8b00c
     assemblyName: Assembly-CSharp.dll
-    namespaceName: NRKernal
+    namespaceName: NRKernal.NRExamples.MyArrowProject
     className: GPScontroller
   - hash:
       serializedVersion: 2
@@ -982,9 +974,9 @@ ScriptsOnlyBuild:
     className: NREmulatorHeadPose
   - hash:
       serializedVersion: 2
-      Hash: 793bda338b1fc009e1c757e195adfafa
+      Hash: 83df7ce89026d32ea48ea3da1ec1d769
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: NRKernal.NRExamples.MyArrowProject
     className: Scenemanager
   - hash:
       serializedVersion: 2
@@ -1188,7 +1180,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 93f937f35674b786e9913db1ec8a0165
     assemblyName: Assembly-CSharp.dll
-    namespaceName: NRKernal.NRExamples
+    namespaceName: NRKernal.NRExamples.MyArrowProject
     className: GPSprint
   - hash:
       serializedVersion: 2
@@ -1466,6 +1458,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: NRKernal.NRExamples.MyArrowProject
+    className: ObjectPositionSetting
   platform: 13
   scenePathNames:
   - Assets/MyProject/Scenes/Logo scene.unity

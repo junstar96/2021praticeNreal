@@ -53,16 +53,17 @@ namespace NRKernal.NRExamples
             private Vector3 arrow_target = new Vector3(100,100,100);
             //public double first_magnetic_degree;
 
-            private double target_lati;
-            private double target_longi;
+            public double target_lati;
+            public double target_longi;
             private string target_name = string.Empty;
+
+            //public static System.Action<string, double, double> statechanged;
 
             //public GameObject test_target;
 
             private void Awake()
             {
-                
-                arrowset = new UnityEvent();
+                //arrowset = new UnityEvent();
                 //player = GameObject.FindWithTag("Player").GetComponent<Transform>();
                 arrowset.AddListener(SetArrow);
             }

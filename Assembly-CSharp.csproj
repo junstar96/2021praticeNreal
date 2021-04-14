@@ -76,6 +76,7 @@
     <Compile Include="Assets\MyProject\GPS\Script\MygpsTrans.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealPrefebdatabase.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealVectorSerialiable.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\ObjectPositionSetting.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\WebMapLoader.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\FollowPlayerPoint.cs" />

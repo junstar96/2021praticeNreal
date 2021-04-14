@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+using NRKernal.NRExamples.MyArrowProject;
 
 public class Magnet_compass : MonoBehaviour
 {
@@ -28,14 +29,15 @@ public class Magnet_compass : MonoBehaviour
         //}
         //float magnetCorrection = (float)ARLocation.ARLocationProvider.Instance.CurrentHeading.magneticHeading;
 
-
-        if(!Scenemanager.instance.isFixingCanvas)
+        float gyro_degree = Input.gyro.attitude.z < 0 ? 180 - Input.gyro.attitude.w * 180 : Input.gyro.attitude.w * 180 + 180;
+        if (!Scenemanager.instance.isFixingCanvas)
         {
             post.text = "북쪽을 바라봐 주세요." + "\n"
                 + "gps connect : " + Input.location.isEnabledByUser + "\n"
-                + "gyro y degree : " + Input.gyro.attitude.w * 180 + "\n"
+                + "gyro y degree : " + gyro_degree + "\n"
                 + "magnetic degree : " + Input.compass.magneticHeading + "\n"
-                + "camera rotation : " + NRKernal.NRInput.CameraCenter.eulerAngles.y;
+                + "camera rotation : " + NRKernal.NRInput.CameraCenter.eulerAngles.y + "\n"
+                + "gps connected : " + GPScontroller.Instance.isGPSconnected;
         }
         else
         {
@@ -60,6 +62,6 @@ public class Magnet_compass : MonoBehaviour
 
 
 
-        recttransform.localEulerAngles = new Vector3(0, 0, Input.compass.magneticHeading) ;
+        recttransform.localEulerAngles = new Vector3(0, 0, gyro_degree) ;
     }
 }
