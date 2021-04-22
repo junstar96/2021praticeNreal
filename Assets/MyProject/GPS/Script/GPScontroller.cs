@@ -81,10 +81,6 @@ namespace NRKernal.NRExamples.MyArrowProject
                 Permission.RequestUserPermission(Permission.FineLocation);//이걸 해줘야 안드로이드에서 gps를 사용할 수 있다.
 
             }
-
-           
-
-            DontDestroyOnLoad(this);
             Input.location.Start(3.0f, 0);
             Input.compass.enabled = true;
             Input.gyro.enabled = true;
@@ -172,7 +168,7 @@ namespace NRKernal.NRExamples.MyArrowProject
 
 
                 }
-                if(!sceneChange.activeSelf && !Scenemanager.instance.isFixingCanvas)
+                if(!sceneChange.activeSelf)
                 {
                     sceneChange.SetActive(true);
                 }

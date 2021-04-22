@@ -81,11 +81,13 @@
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\FollowPlayerPoint.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\DontDestroyNrealScene.cs" />
+    <Compile Include="Assets\MyProject\Scenes\script\SceneChanger.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\Scenemanager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\CanvasSelect.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\Level_View.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\LocationChange.cs" />
-    <Compile Include="Assets\MyProject\UIcontrol\script\Magnet_compass.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\NRCanvasFollowMove.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\SpawnManager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XMLButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XmlBusButtonController.cs" />
     <None Include="Assets\Resources\Plugins\Android\AndroidManifest.xml" />

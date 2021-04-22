@@ -11,26 +11,12 @@ namespace NRKernal.NRExamples.MyArrowProject
     using UnityEngine.UI;
     public class Scenemanager : MonoBehaviour
     {
-        [Tooltip("현재 사용 가능한 기능들")]
+        
         public GameObject loadingScene;
 
-        [Tooltip("관광 씬에서 사용하게 될 오브젝트 생성기")]
-        public GameObject webmaploader;
-
-
-        [Tooltip("버스정류장 씬에서 사용하게 될 오브젝트 생성기")]
-        public GameObject busstationxml;
-
-        [Tooltip("게임 씬으로 넘어가기 위한 물건")]
-        public GameObject gamemaploader;
-
-        [Tooltip("로딩 바")]
         public Slider slider;
 
         //public Slider oneSecondbar;
-
-        [Tooltip("가까이 가면 소리가 나도록 해보자")]
-        public AudioClip[] backgroundsounds;
 
         //private CameraSmoothFollow camerafollower;
 
@@ -41,13 +27,10 @@ namespace NRKernal.NRExamples.MyArrowProject
         [HideInInspector]
         public string scenemode;
 
-        //초반에 각도를 받아오는 값
-        public bool isFixingCanvas;
-        public float first_magnetic;
+   
 
         private DateTime datetime;
         /// <summary>배치 후 오브젝트가 제대로 된 위치에 보정이 되는가를 확인하기 위한 bool값</summary>
-        private bool isrotation = false;
 
 
         private static Scenemanager m_instance;
@@ -56,10 +39,6 @@ namespace NRKernal.NRExamples.MyArrowProject
         {
             get
             {
-                if (m_instance == null)
-                {
-                    m_instance = new Scenemanager();
-                }
                 return m_instance;
             }
         }
@@ -78,21 +57,34 @@ namespace NRKernal.NRExamples.MyArrowProject
             StartCoroutine(AsyncLoadScene(name));
         }
 
-        public void Start()
+        public void Awake()
         {
             //Input.gyro.enabled = true;
-            isFixingCanvas = false;
-            first_magnetic = 0.0f;
             //loadingScene.transform.Find("Panel").gameObject.SetActive(false);
             datetime = DateTime.Now;
             Debug.Log("GPStour start : " + datetime);
-            m_instance = this;
+            
             //oneSecondbar.value = 0.0f;
-            DontDestroyOnLoad(this);
+            var check = FindObjectsOfType<Scenemanager>();
+
+            Debug.Log("check :" + check.Length);
+            if(check.Length == 1)
+            {
+                m_instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void Update()
         {
+            if(loadingScene == null)
+            {
+                return;
+            }
             scenename = SceneManager.GetActiveScene().name;
             if (NRInput.GetAvailableControllersCount() < 2)
             {
@@ -111,45 +103,11 @@ namespace NRKernal.NRExamples.MyArrowProject
             }
 
             smartphonerotation = NRInput.GetRotation(m_CurrentDebugHand);
-
-
             //OneSecondBarControll();
 
 
 
         }
-
-        //private void OneSecondBarControll()
-        //{
-        //    if ((360 - Input.gyro.attitude.w * 360) < 0.8)
-        //    {
-        //        if (oneSecondbar.value <= 0.999f && !isFixingCanvas)
-        //        {
-
-        //            CameraSmoothFollow camerafollow = loadingScene.GetComponent<CameraSmoothFollow>();
-        //            camerafollow.enabled = false;
-        //            //oneSecondbar.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(150.0f, 150f, 3.0f));
-        //            //oneSecondbar.transform.eulerAngles = Camera.main.transform.eulerAngles;
-        //            oneSecondbar.gameObject.SetActive(true);
-        //            oneSecondbar.value += Time.deltaTime;
-        //            oneSecondbar.transform.localPosition = NRInput.CameraCenter.position;
-        //            if (oneSecondbar.value >= 0.999f)
-        //            {
-        //                isFixingCanvas = true;
-
-        //                oneSecondbar.gameObject.SetActive(false);
-
-        //                first_magnetic = Input.compass.magneticHeading;
-        //                loadingScene.transform.Find("Panel").gameObject.SetActive(true);
-        //                loadingScene.transform.position = NRInput.CameraCenter.position + new Vector3(-4.0f * Mathf.Sin(NRInput.CameraCenter.eulerAngles.y * Mathf.PI / 180),
-        //                    0, 4.0f * Mathf.Cos(NRInput.CameraCenter.eulerAngles.y * Mathf.PI / 180));
-        //                loadingScene.transform.rotation = NRInput.CameraCenter.rotation;
-        //            }
-        //        }
-        //    }
-
-
-        //}
 
 
         /// <summary>
@@ -157,99 +115,27 @@ namespace NRKernal.NRExamples.MyArrowProject
         /// </summary>
         /// <param name="gameobject_base"></param>
         /// <param name="name"></param>
-        IEnumerator RotationObject(GameObject gameobject_base)
-        {
-            Debug.Log("gameobject_base name : " + gameobject_base.name);
-
-
-            isFixingCanvas = true;
-            smartphonerotation = NRInput.GetRotation(ControllerHandEnum.Right);
-
-            float camera_accuracy = ObjectPositionSetting.CameraDegree();
-            Debug.Log("camera_accuracy : " + camera_accuracy);
-            float gyro_degree = ObjectPositionSetting.GyroDegree();
-            float magnet_radian = (gyro_degree - camera_accuracy) * Mathf.PI / 180;
-            //float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
-            //           - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
-
-            Debug.Log("gameobject name : " + gameobject_base.gameObject.name);
-
-            if (gameobject_base.GetComponent<WebMapLoader>() != null)
-            {
-                yield return new WaitUntil(() => gameobject_base.GetComponent<WebMapLoader>().MakeFinish);
-
-                foreach (var follow_target in gameobject_base.GetComponent<WebMapLoader>().stagePoint)
-                {
-                    AudioSource check = follow_target.AddComponent<AudioSource>() as AudioSource;
-                    check.maxDistance = 20;
-                    check.minDistance = 1;
-                    check.clip = backgroundsounds[UnityEngine.Random.Range(0, backgroundsounds.Length)];
-                    check.Stop();
-
-                    //if (!follow_target.activeSelf)
-                    //{
-                    //    follow_target.SetActive(true);
-                    //}
-
-                    Debug.Log("current degree : " + magnet_radian * 180 / Mathf.PI);
-                    Debug.Log("current gps : " + Input.location.lastData.latitude + ", " + Input.location.lastData.longitude);
-                    Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-                    follow_target.transform.position =
-                                        new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
-                                        follow_target.transform.position.y,
-                                        follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
-                    Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-
-
-
-
-                    follow_target.transform.localScale = new Vector3(Mathf.Sqrt(Mathf.Abs(follow_target.transform.position.y)) + 1.0f,
-                        Mathf.Sqrt(Mathf.Abs(follow_target.transform.position.y)) + 1.0f,
-                        Mathf.Sqrt(Mathf.Abs(follow_target.transform.position.y)) + 1.0f);
-                    //follow_target.GetComponent<PlaceAtLocation>().Location.Altitude;
-                }
-            }
-            else if (gameobject_base.GetComponent<BUSstationXML>() != null)
-            {
-                yield return new WaitUntil(() => gameobject_base.GetComponent<BUSstationXML>().makefinish);
-                foreach (var follow_target in gameobject_base.GetComponent<BUSstationXML>().stagePoint)
-                {
-                    if (!follow_target.activeSelf)
-                    {
-                        follow_target.SetActive(true);
-                    }
-                    Debug.Log("current degree : " + magnet_radian);
-                    Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-                    follow_target.transform.position =
-                                        new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
-                                        0,
-                                        follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
-                    Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-                }
-            }
-
-
-
-            isrotation = true;
-        }
+       
 
 
         IEnumerator AsyncLoadScene(string name)
         {
+
             AsyncOperation operation;
-            if (string.Equals(name, "GameScene"))
-            {
-                operation = SceneManager.LoadSceneAsync(name);
-            }
-            else
+            if (string.Equals(SceneManager.GetActiveScene().name, "Logo scene"))
             {
                 operation = SceneManager.LoadSceneAsync("Main Scene");
             }
+            else
+            {
+                operation = SceneManager.LoadSceneAsync("Logo scene");
+            }
 
             scenemode = name;
+            Debug.Log("scenemode : " + scenemode);
 
             //loadingScene.SetActive(true);
-            slider?.gameObject.SetActive(true);
+            slider.gameObject.SetActive(true);
 
 
             do
@@ -262,42 +148,32 @@ namespace NRKernal.NRExamples.MyArrowProject
 
             } while (operation.progress < 0.9f);
 
+            
             Debug.Log("operation is done");
             //yield return new WaitUntil(() => Input.compass.enabled);
-            Debug.Log("arlocation data lead");
 
-            if (string.Equals(name, "Main Scene"))
+           
+            
+            if (string.Equals(name, "Logo scene"))
             {
-                if (!webmaploader.activeSelf)
-                {
-                    webmaploader.SetActive(true);
-                    StartCoroutine(RotationObject(webmaploader));
+                //생겨났던 오브젝트들을 모두 제거하고 
+                //그 다음 씬을 바꾸는 것이다. 
 
-                }
-            }
-            else if (string.Equals(name, "BusStationScene"))
-            {
-                if (!busstationxml.activeSelf)
-                {
-                    busstationxml.SetActive(true);
-                    StartCoroutine(RotationObject(busstationxml));
-                }
-            }
-            else if (string.Equals(name, "GameScene"))
-            {
-                if (!gamemaploader.activeSelf)
-                {
-                    gamemaploader.SetActive(true);
-                    StartCoroutine(RotationObject(gamemaploader));
-                }
+                slider.value = 0.0f;
+                loadingScene.SetActive(true);
+                slider.gameObject.SetActive(true);
+                operation.allowSceneActivation = true;
+                yield break;
             }
 
-
-            yield return new WaitUntil(() => isrotation);
+#if !UNITY_EDITOR
+            yield return new WaitUntil(() => Input.location.isEnabledByUser);
+#else
+            yield return new WaitForSeconds(1);
+#endif
             slider.gameObject.SetActive(false);
             loadingScene.SetActive(false);
             operation.allowSceneActivation = true;
-
 
         }
 

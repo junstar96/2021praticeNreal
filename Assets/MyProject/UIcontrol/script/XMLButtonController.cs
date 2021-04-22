@@ -11,6 +11,10 @@ namespace NRKernal.NRExamples
             // Start is called before the first frame update
             public LocationChange button;
 
+
+            [Header("object spawn point")]
+            public SpawnManager spawnmanager;
+
             //이 부분을 xml 파일을 받아오는 걸로 대체해서 이 녀석으로 죄다 받아오도록 하자. 
             //public ARLocation.WebMapLoader test_pos;
 
@@ -27,41 +31,24 @@ namespace NRKernal.NRExamples
 
               
             //}
-            void Start()
+            
+
+            private IEnumerator Start()
             {
-                Debug.Log("scenename : " + Scenemanager.instance.scenemode);
                 if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
                 {
                     Debug.Log("scenename : " + Scenemanager.instance.scenename);
-                    child_count = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").childCount;
+                    yield return new WaitUntil(() => spawnmanager.busstationxml.makefinish);
+                    child_count = GameObject.Find("TargetCreater").transform.Find("BusStationXML").childCount;
                 }
 
-                if (string.Equals(Scenemanager.instance.scenemode, "Main Scene"))
+                if (string.Equals(Scenemanager.instance.scenemode, "Webmaploader"))
                 {
                     Debug.Log("scenename : " + Scenemanager.instance.scenename);
-                    child_count = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").childCount;
+                    yield return new WaitUntil(() => spawnmanager.webmaploader.MakeFinish);
+                    //child_count = GameObject.Find("TargetCreater").transform.Find("Webmaploader").childCount;
+                    child_count = spawnmanager.gameObject.transform.Find("Webmaploader").childCount;
                 }
-
-
-                ////var test_pos = gameobject.text
-                //test_pos = GameObject.FindWithTag("GPS").GetComponent<ARLocation.WebMapLoader>();
-
-
-                //foreach(var entity in test_pos.XmlListForNreal)
-                //{
-                //    button.count = entity.id;
-                //    button.adressPrint.text = entity.name;
-                //    button.target_lati = entity.lat;
-                //    button.target_longi = entity.lng;
-
-
-                //    var check = Instantiate(button, gameObject.transform);
-
-                //    if(!check.gameObject.activeSelf)
-                //    {
-                //        check.gameObject.SetActive(true);
-                //    }
-                //}
 
 
                 StartCoroutine(UntilConnecting());
@@ -84,7 +71,7 @@ namespace NRKernal.NRExamples
                     
                     if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
                     {
-                        var entity = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").transform.GetChild(i);
+                        var entity = spawnmanager.gameObject.transform.Find("BusStationXML").GetChild(i);
                         button.adressPrint.text = entity.name;
                         button.target_lati = 0.0;
                         button.target_longi = 0.0;
@@ -97,9 +84,9 @@ namespace NRKernal.NRExamples
                             check.gameObject.SetActive(true);
                         }
                     }
-                    else if(string.Equals(Scenemanager.instance.scenemode, "Main Scene"))
+                    else if(string.Equals(Scenemanager.instance.scenemode, "Webmaploader"))
                     {
-                        var entity = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").transform.GetChild(i);
+                        var entity = spawnmanager.gameObject.transform.Find("Webmaploader").GetChild(i);
                         button.adressPrint.text = entity.name;
                         button.target_lati = 0.0;
                         button.target_longi = 0.0;

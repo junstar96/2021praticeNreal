@@ -99,8 +99,14 @@ namespace NRKernal.NRExamples.MyArrowProject
         // Start is called before the first frame update
         void Start()
         {
+            Debug.Log("scenemode  :  " + Scenemanager.instance.scenemode);
             LoadXmlFile();
             BuildGameObjects();
+        }
+
+        private void OnDisable()
+        {
+            
         }
 
         void BuildGameObjects()
@@ -138,6 +144,7 @@ namespace NRKernal.NRExamples.MyArrowProject
                 var AltitudeMode = entry.getAltitudeMode();
                 var Label = entry.name;
 
+              
                 var convertgps = ObjectPositionSetting.GPSConvertWorldPos(GPScontroller.Instance.lat, GPScontroller.Instance.longi, Latitude, Longitude);
                 var instance = Instantiate(Prefab, new Vector3(convertgps.y, (float)Altitude, convertgps.x), Quaternion.identity, gameObject.transform);
 

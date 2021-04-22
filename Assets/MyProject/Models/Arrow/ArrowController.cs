@@ -68,15 +68,6 @@ namespace NRKernal.NRExamples
                 arrowset.AddListener(SetArrow);
             }
 
-            private void OnEnable()
-            {
-
-
-
-                //checktime = 0.0f;
-
-                //StartCoroutine(GPSArrowUpdate());
-            }
 
             public void SetArrow()
             {
@@ -117,16 +108,16 @@ namespace NRKernal.NRExamples
                 if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
                 {
 
-                    var entity = GameObject.FindWithTag("SceneManager").transform.Find("BusStationXML").transform.Find(target_name);
+                    var entity = GameObject.Find("TargetCreater").transform.Find("BusStationXML").transform.Find(target_name);
                     Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
                     looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
                     arrow.transform.localRotation = looktarget;
                     distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
                 }
-                else if (string.Equals(Scenemanager.instance.scenemode, "Main Scene"))
+                else if (string.Equals(Scenemanager.instance.scenemode, "Webmaploader"))
                 {
 
-                    var entity = GameObject.FindWithTag("SceneManager").transform.Find("Webmaploader").transform.Find(target_name);
+                    var entity = GameObject.Find("TargetCreater").transform.Find("Webmaploader").transform.Find(target_name);
                     Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
                     looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
                     arrow.transform.localRotation = looktarget;

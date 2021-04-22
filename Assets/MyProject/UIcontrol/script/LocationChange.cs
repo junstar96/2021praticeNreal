@@ -49,9 +49,10 @@ namespace NRKernal.NRExamples
 
             }
 
-            public void ChangeScene(string name)
+            public void ChangeScene()
             {
-                Scenemanager.instance.ChangeScene(name);
+                Debug.Log("Click");
+                Scenemanager.instance.ChangeScene("Logo scene");
             }
         }
     }

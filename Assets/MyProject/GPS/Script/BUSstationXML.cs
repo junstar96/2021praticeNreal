@@ -40,7 +40,7 @@ namespace NRKernal.NRExamples
                 public bool useMovingAverage;
                 public bool hideObjectUtilItIsPlaced;
 
-                public AltitudeMode getAltitudeMode()
+                public AltitudeMode GetAltitudeMode()
                 {
                     if (altitudeMode == "GroundRelative")
                     {
@@ -141,7 +141,8 @@ namespace NRKernal.NRExamples
 
             private void Awake()
             {
-                
+                current_lat = GPScontroller.Instance.lat;
+                current_long = GPScontroller.Instance.longi;
                
                
 
@@ -275,8 +276,8 @@ namespace NRKernal.NRExamples
                 }
                 else
                 {
-                    current_lat = Input.location.lastData.latitude;
-                    current_long = Input.location.lastData.longitude;
+                    current_lat = GPScontroller.Instance.lat;
+                    current_long = GPScontroller.Instance.longi;
                 }
             }
 
@@ -339,7 +340,7 @@ namespace NRKernal.NRExamples
                     var Latitude = entry.lat;
                     var Longitude = entry.lng;
                     var Altitude = entry.altitude;
-                    var AltitudeMode = entry.getAltitudeMode();
+                    var AltitudeMode = entry.GetAltitudeMode();
                     var Label = entry.name;
 
                    
