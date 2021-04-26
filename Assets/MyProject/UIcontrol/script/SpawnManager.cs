@@ -21,33 +21,26 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         private void OnEnable()
         {
-            if (Scenemanager.instance.scenemode == "Webmaploader")
+
+            if (Scenemanager.Instance.scenemode == "Webmaploader")
             {
                 if (!webmaploader.gameObject.activeSelf)
                 {
                     webmaploader.gameObject.SetActive(true);
                     StartCoroutine(RotationObject(webmaploader.gameObject));
-
                 }
             }
-            else if (Scenemanager.instance.scenemode == "BusStationScene")
+            else if (Scenemanager.Instance.scenemode == "BusStationScene")
             {
                 if (!busstationxml.gameObject.activeSelf)
                 {
-                    busstationxml.gameObject.SetActive(false);
+                    busstationxml.gameObject.SetActive(true);
                     StartCoroutine(RotationObject(busstationxml.gameObject));
                 }
             }
         }
 
         // Update is called once per frame
-        void Update()
-        {
-            //scene mode 이름으로 대조하자.
-
-            
-
-        }
 
         IEnumerator RotationObject(GameObject gameobject_base)
         {

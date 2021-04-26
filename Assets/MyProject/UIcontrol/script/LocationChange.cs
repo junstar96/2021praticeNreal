@@ -52,7 +52,7 @@ namespace NRKernal.NRExamples
             public void ChangeScene()
             {
                 Debug.Log("Click");
-                Scenemanager.instance.ChangeScene("Logo scene");
+                Scenemanager.Instance.ChangeScene("Logo scene");
             }
         }
     }

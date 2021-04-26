@@ -35,7 +35,7 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         private static Scenemanager m_instance;
 
-        public static Scenemanager instance
+        public static Scenemanager Instance
         {
             get
             {
@@ -59,24 +59,26 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         public void Awake()
         {
-            //Input.gyro.enabled = true;
-            //loadingScene.transform.Find("Panel").gameObject.SetActive(false);
-            datetime = DateTime.Now;
-            Debug.Log("GPStour start : " + datetime);
-            
             //oneSecondbar.value = 0.0f;
             var check = FindObjectsOfType<Scenemanager>();
 
-            Debug.Log("check :" + check.Length);
+            Debug.Log("check : " + check.Length);
             if(check.Length == 1)
             {
                 m_instance = this;
                 DontDestroyOnLoad(gameObject);
+                datetime = DateTime.Now;
+                Debug.Log("GPStour start : " + datetime);
             }
-            else
+            else if(check.Length > 1)
             {
+                Debug.Log("check");
                 Destroy(gameObject);
             }
+
+            //Input.gyro.enabled = true;
+            //loadingScene.transform.Find("Panel").gameObject.SetActive(false);
+            
         }
 
         private void Update()
@@ -120,6 +122,9 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         IEnumerator AsyncLoadScene(string name)
         {
+            slider.value = 0.0f;
+            loadingScene.SetActive(true);
+
 
             AsyncOperation operation;
             if (string.Equals(SceneManager.GetActiveScene().name, "Logo scene"))
@@ -129,6 +134,7 @@ namespace NRKernal.NRExamples.MyArrowProject
             else
             {
                 operation = SceneManager.LoadSceneAsync("Logo scene");
+
             }
 
             scenemode = name;
@@ -137,47 +143,39 @@ namespace NRKernal.NRExamples.MyArrowProject
             //loadingScene.SetActive(true);
             slider.gameObject.SetActive(true);
 
+#if !UNITY_EDITOR
+            yield return new WaitUntil(() => GPScontroller.Instance.isConnected);
+            Debug.Log("HEEEEEEE");
+#endif
 
             do
             {
                 operation.allowSceneActivation = false;
-                float progress = Mathf.Clamp01(operation.progress);
+                float progress = Mathf.Clamp(operation.progress, 0, 1);
                 slider.value = progress;
-
+                Debug.Log("slider value :" + slider.value);
                 //Debug.Log(ARLocationProvider.Instance.HasStarted);
 
-            } while (operation.progress < 0.9f);
+
+                yield return null;
+            } while (slider.value < 0.9);
+            
 
             
+
+            slider.gameObject.SetActive(false);
+            loadingScene.SetActive(false);
+
             Debug.Log("operation is done");
             //yield return new WaitUntil(() => Input.compass.enabled);
 
-           
-            
-            if (string.Equals(name, "Logo scene"))
-            {
-                //생겨났던 오브젝트들을 모두 제거하고 
-                //그 다음 씬을 바꾸는 것이다. 
-
-                slider.value = 0.0f;
-                loadingScene.SetActive(true);
-                slider.gameObject.SetActive(true);
-                operation.allowSceneActivation = true;
-                yield break;
-            }
-
-#if !UNITY_EDITOR
-            yield return new WaitUntil(() => Input.location.isEnabledByUser);
-#else
-            yield return new WaitForSeconds(1);
-#endif
-            slider.gameObject.SetActive(false);
-            loadingScene.SetActive(false);
-            operation.allowSceneActivation = true;
 
         }
 
+
+       
     }
+
 }
 
 

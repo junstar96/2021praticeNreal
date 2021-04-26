@@ -23,7 +23,7 @@ public class SceneChanger : MonoBehaviour
     {
         if(!buttonclick)
         {
-            Scenemanager.instance.ChangeScene("Logo scene");
+            Scenemanager.Instance.ChangeScene("Logo scene");
             buttonclick = true;
         }
         

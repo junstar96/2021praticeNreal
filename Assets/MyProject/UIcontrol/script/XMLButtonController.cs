@@ -35,16 +35,21 @@ namespace NRKernal.NRExamples
 
             private IEnumerator Start()
             {
-                if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
+              
+
+                if (string.Equals(Scenemanager.Instance.scenemode, "BusStationScene"))
                 {
-                    Debug.Log("scenename : " + Scenemanager.instance.scenename);
+                    yield return new WaitUntil(() => string.Equals(Scenemanager.Instance.scenename, "Main Scene"));
+                    Debug.Log("scenename : " + Scenemanager.Instance.scenename);
                     yield return new WaitUntil(() => spawnmanager.busstationxml.makefinish);
-                    child_count = GameObject.Find("TargetCreater").transform.Find("BusStationXML").childCount;
+
+                    
+                    child_count = spawnmanager.gameObject.transform.Find("BusStationXML").childCount;
                 }
 
-                if (string.Equals(Scenemanager.instance.scenemode, "Webmaploader"))
+                if (string.Equals(Scenemanager.Instance.scenemode, "Webmaploader"))
                 {
-                    Debug.Log("scenename : " + Scenemanager.instance.scenename);
+                    Debug.Log("scenename : " + Scenemanager.Instance.scenename);
                     yield return new WaitUntil(() => spawnmanager.webmaploader.MakeFinish);
                     //child_count = GameObject.Find("TargetCreater").transform.Find("Webmaploader").childCount;
                     child_count = spawnmanager.gameObject.transform.Find("Webmaploader").childCount;
@@ -53,11 +58,6 @@ namespace NRKernal.NRExamples
 
                 StartCoroutine(UntilConnecting());
 
-            }
-
-            private void OnDisable()
-            {
-                Debug.Log("when called?");
             }
 
 
@@ -69,7 +69,7 @@ namespace NRKernal.NRExamples
                 for(int i = 0;i<child_count;i++)
                 {
                     
-                    if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
+                    if (string.Equals(Scenemanager.Instance.scenemode, "BusStationScene"))
                     {
                         var entity = spawnmanager.gameObject.transform.Find("BusStationXML").GetChild(i);
                         button.adressPrint.text = entity.name;
@@ -84,7 +84,7 @@ namespace NRKernal.NRExamples
                             check.gameObject.SetActive(true);
                         }
                     }
-                    else if(string.Equals(Scenemanager.instance.scenemode, "Webmaploader"))
+                    else if(string.Equals(Scenemanager.Instance.scenemode, "Webmaploader"))
                     {
                         var entity = spawnmanager.gameObject.transform.Find("Webmaploader").GetChild(i);
                         button.adressPrint.text = entity.name;

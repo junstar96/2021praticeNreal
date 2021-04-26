@@ -68,12 +68,14 @@ namespace NRKernal.NRExamples.MyArrowProject
             }
         }
 
+        
+
         IEnumerator Start()
         {
+            Debug.Log("ienum start");
+
             sceneChange.SetActive(false);
             m_instance = this;
-            Debug.Log("immidiant gps start");
-            
 
             if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
             {
@@ -102,15 +104,13 @@ namespace NRKernal.NRExamples.MyArrowProject
 
 
             StartCoroutine(updateGPS());
-            
+
         }
 
-        
 
-        private void OnDisable()
+
+        private void OnApplicationQuit()
         {
-            //StopCoroutine(StartLocationService());
-            //StopCoroutine(updateGPS());
             Input.location.Stop();
         }
 
@@ -154,10 +154,10 @@ namespace NRKernal.NRExamples.MyArrowProject
             float UPDATE_TIME = 0.1f;
             WaitForSeconds updateTime = new WaitForSeconds(UPDATE_TIME);
 
+           
 
             while (true)
             {
-
                 /* mapScript.Refresh();*/
                 if (Input.location.isEnabledByUser == true)
                 {
@@ -166,12 +166,15 @@ namespace NRKernal.NRExamples.MyArrowProject
                     currentGPSposition = Input.location.lastData;
 
 
-
+                    
                 }
                 if(!sceneChange.activeSelf)
                 {
                     sceneChange.SetActive(true);
                 }
+                
+
+
                 yield return updateTime;
             }
         }

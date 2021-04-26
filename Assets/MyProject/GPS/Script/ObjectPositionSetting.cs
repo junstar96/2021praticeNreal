@@ -142,7 +142,7 @@ namespace NRKernal.NRExamples.MyArrowProject
         }
 
 
-        public double bearingP1toP2(double P1_latitude, double P1_longitude, double P2_latitude, double P2_longitude)
+        public double BearingP1toP2(double P1_latitude, double P1_longitude, double P2_latitude, double P2_longitude)
         {
             // 현재 위치 : 위도나 경도는 지구 중심을 기반으로 하는 각도이기 때문에 라디안 각도로 변환한다.
             double Cur_Lat_radian1 = ConvertDecimalDegreesToRadians(P1_latitude);

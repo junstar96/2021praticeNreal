@@ -8,7 +8,7 @@ public class Level_View : MonoBehaviour
     private RectTransform recttransform;
     
 
-    public GameObject level_view_ball;
+    public Image level_view_ball;
 
     private Vector3 defaultvector;
     public Text post;
@@ -17,31 +17,23 @@ public class Level_View : MonoBehaviour
     void Start()
     {
         recttransform = GetComponent<RectTransform>();
-        defaultvector = level_view_ball.transform.position;
+        defaultvector = recttransform.localPosition;
     }
-
     // Update is called once per frame
     void Update()
     {
-
-        var speed = Input.acceleration * 10 * Time.deltaTime;
-
+        var level_accuracy = Input.gyro.gravity * 50;
 
 
-        level_view_ball.transform.Translate(speed);
-      
-
-
+        recttransform.localPosition = defaultvector + level_accuracy;
 
 
         float gyro_degree = Input.gyro.attitude.z < 0 ? 180 - Input.gyro.attitude.w * 180 : Input.gyro.attitude.w * 180 + 180;
 
 
         post.text = "넣어주세요" + "\n"
-            +"gyro euler : " + Input.gyro.attitude.eulerAngles + "\n"
-           + "gyro : " + Input.gyro.attitude + "\n"
-           + "accelation : " + Input.acceleration + "\n"
-          + "current_gps : (" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + ")";
+            + "gyro euler : " + Input.gyro.attitude.eulerAngles + "\n"
+           + "gyro : " + Input.gyro.attitude;
         //        if (!Scenemanager.instance.isFixingCanvas)
         //        {
         //            post.text = "북쪽을 바라봐 주세요." + "\n"

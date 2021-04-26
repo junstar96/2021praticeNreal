@@ -12,11 +12,8 @@ EditorBuildSettings:
     path: Assets/MyProject/Scenes/Main Scene.unity
     guid: a3d536e63fcfdd34a92178e0517ccea5
   - enabled: 0
-    path: Assets/MyProject/Scenes/TestScene.unity
+    path: Assets/MyProject/Scenes/Testscene.unity
     guid: 169960632ae49624c9ed5d94dd151a25
-  - enabled: 0
-    path: Assets/MyProject/Scenes/ARanchor_Nreal_test.unity
-    guid: 2f78e05d1475a034cbcfa88c161f7102
   - enabled: 0
     path: Assets/NRSDK/Demos/HelloMR.unity
     guid: dd74f1c9685ef48499229d4957b58000

@@ -84,10 +84,6 @@ namespace NRKernal.NRExamples
 
             }
 
-            private void OnDisable()
-            {
-                //StopCoroutine(GPSArrowUpdate());
-            }
 
             // Update is called once per frame
             void Update()
@@ -105,7 +101,7 @@ namespace NRKernal.NRExamples
                 }
 
 
-                if (string.Equals(Scenemanager.instance.scenemode, "BusStationScene"))
+                if (string.Equals(Scenemanager.Instance.scenemode, "BusStationScene"))
                 {
 
                     var entity = GameObject.Find("TargetCreater").transform.Find("BusStationXML").transform.Find(target_name);
@@ -114,7 +110,7 @@ namespace NRKernal.NRExamples
                     arrow.transform.localRotation = looktarget;
                     distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
                 }
-                else if (string.Equals(Scenemanager.instance.scenemode, "Webmaploader"))
+                else if (string.Equals(Scenemanager.Instance.scenemode, "Webmaploader"))
                 {
 
                     var entity = GameObject.Find("TargetCreater").transform.Find("Webmaploader").transform.Find(target_name);

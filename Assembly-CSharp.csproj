@@ -84,6 +84,7 @@
     <Compile Include="Assets\MyProject\Scenes\script\SceneChanger.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\Scenemanager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\CanvasSelect.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\Compass.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\Level_View.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\LocationChange.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\NRCanvasFollowMove.cs" />
