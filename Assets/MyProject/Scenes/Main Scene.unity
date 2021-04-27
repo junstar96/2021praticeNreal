@@ -482,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islotationChange: 0
+  click_count: 0
 --- !u!114 &208501098 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8828274599729036747, guid: d18ed25381d78224ab9ca2f8e1234e21,
@@ -500,21 +501,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 208501095}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &208501100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208501096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c7906c48f0cd94393196c6c9f7cab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Anchor: 7
-  FollowSpeed: 5
-  Offset: {x: 0.1, y: 0.1}
 --- !u!1 &232132797
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,17 +961,17 @@ PrefabInstance:
     - target: {fileID: 2965254563883420179, guid: 53f2340d89ef08c44becdc7f7bf8a191,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2965254563883420179, guid: 53f2340d89ef08c44becdc7f7bf8a191,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2965254563883420179, guid: 53f2340d89ef08c44becdc7f7bf8a191,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2965254563883420179, guid: 53f2340d89ef08c44becdc7f7bf8a191,
         type: 3}
@@ -1041,12 +1027,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637185440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c7906c48f0cd94393196c6c9f7cab3, type: 3}
+  m_Script: {fileID: 11500000, guid: fc79162f9d6c8e14287c3a7953122a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Anchor: 7
-  FollowSpeed: 5
-  Offset: {x: 0.1, y: 0.1}
+  islotationChange: 0
+  click_count: 0
 --- !u!4 &1637185442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2965254563883420179, guid: 53f2340d89ef08c44becdc7f7bf8a191,
@@ -1093,7 +1078,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802245264}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

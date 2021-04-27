@@ -1,10 +1,12 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-
-namespace NRKernal.NRExamples
+﻿namespace NRKernal.NRExamples
 {
+
     namespace MyArrowProject
     {
+        using UnityEngine;
+        using UnityEngine.Events;
+        using System.Collections.Generic;
+
         /// <summary>
         /// 부모쪽에서 데이터를 보낼 때
         /// </summary>
@@ -23,21 +25,7 @@ namespace NRKernal.NRExamples
 
         public class ArrowController : MonoBehaviour, MygpsTrans
         {
-            // Start is called before the first frame update
-
-            //간단하게 마리오아울렛부터
-
             
-
-            //이 두 개를 이용해서 회전시킬 수 있는 것인지 알아보자.
-            //private double degree;
-            //public float checktime;
-
-            //private bool setting_pos;
-            //public UnityEngine.UI.Text check_target_point;
-
-            //GPScontroller를 받아온다.
-            //private GPScontroller gpscontroller;
 
             public GameObject arrow;
 
@@ -74,15 +62,30 @@ namespace NRKernal.NRExamples
                 isArrowview = true;
             }
 
-            private void PositionInitialize()
-            {
+            //private void PositionInitialize()
+            //{
+            //    if(NRInput.GetButtonDown(ControllerButton.APP))
+            //    {
+            //        click_count++;
 
-                //float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
-                //    - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
+            //        if(!IsInvoking("DoubleClick"))
+            //        {
+            //            Invoke("DoubleClick", 1.0f);
+            //        }
+
+            //    }
+            //    else if(click_count >= 2)
+            //    {
+            //        CancelInvoke("DoubleClick");
+            //        transform.position = NRInput.CameraCenter.position;
+            //        transform.rotation = NRInput.CameraCenter.rotation;
+            //    }
+            //    //float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
+            //    //    - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
 
                 
 
-            }
+            //}
 
 
             // Update is called once per frame
@@ -121,7 +124,7 @@ namespace NRKernal.NRExamples
                 }
 
                
-                PositionInitialize();
+                //PositionInitialize();
             }
 
            
@@ -141,9 +144,9 @@ namespace NRKernal.NRExamples
             {
                 arrow_target = target;
             }
+            
+           
         }
-
-       
     }
 }
 

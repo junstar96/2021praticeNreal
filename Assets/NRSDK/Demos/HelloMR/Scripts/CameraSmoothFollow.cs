@@ -14,6 +14,7 @@ namespace NRKernal.NRExamples
     /// <summary> A camera smooth follow. </summary>
     public class CameraSmoothFollow : MonoBehaviour
     {
+        
         /// <summary> The anchor. </summary>
         [Header("Window Settings")]
         [SerializeField, Tooltip("What part of the view port to anchor the window to.")]
@@ -54,6 +55,7 @@ namespace NRKernal.NRExamples
                     {
                         m_CenterCamera = Camera.main.transform;
                     }
+                    
                 }
                 return m_CenterCamera;
             }
@@ -62,6 +64,7 @@ namespace NRKernal.NRExamples
         /// <summary> Starts this object. </summary>
         void Start()
         {
+            
             HorizontalRotation = Quaternion.AngleAxis(defaultRotation.y, Vector3.right);
             HorizontalRotationInverse = Quaternion.Inverse(HorizontalRotation);
             VerticalRotation = Quaternion.AngleAxis(defaultRotation.x, Vector3.up);
@@ -69,6 +72,8 @@ namespace NRKernal.NRExamples
 
             defaultDistance = Vector3.Distance(transform.position, CenterCamera.position);
         }
+
+ 
 
         /// <summary> Late update. </summary>
         private void LateUpdate()

@@ -27,7 +27,9 @@ namespace NRKernal.NRExamples.MyArrowProject
         [HideInInspector]
         public string scenemode;
 
-   
+        public int sceneChangeCount = 0;
+
+
 
         private DateTime datetime;
         /// <summary>배치 후 오브젝트가 제대로 된 위치에 보정이 되는가를 확인하기 위한 bool값</summary>
@@ -124,7 +126,7 @@ namespace NRKernal.NRExamples.MyArrowProject
         {
             slider.value = 0.0f;
             loadingScene.SetActive(true);
-
+            
 
             AsyncOperation operation;
             if (string.Equals(SceneManager.GetActiveScene().name, "Logo scene"))
@@ -133,6 +135,7 @@ namespace NRKernal.NRExamples.MyArrowProject
             }
             else
             {
+                sceneChangeCount++;
                 operation = SceneManager.LoadSceneAsync("Logo scene");
 
             }
@@ -151,7 +154,7 @@ namespace NRKernal.NRExamples.MyArrowProject
             do
             {
                 operation.allowSceneActivation = false;
-                float progress = Mathf.Clamp(operation.progress, 0, 1);
+                float progress = Mathf.Clamp(operation.progress, 0, 1) * 10 / 9;
                 slider.value = progress;
                 Debug.Log("slider value :" + slider.value);
                 //Debug.Log(ARLocationProvider.Instance.HasStarted);
@@ -162,10 +165,18 @@ namespace NRKernal.NRExamples.MyArrowProject
             
 
             
-
-            slider.gameObject.SetActive(false);
-            loadingScene.SetActive(false);
-
+            if(scenename == "Logo scene")
+            {
+                slider.gameObject.SetActive(false);
+                loadingScene.SetActive(false);
+            }
+            else
+            {
+                slider.gameObject.SetActive(true);
+                loadingScene.SetActive(true);
+            }
+            
+            operation.allowSceneActivation = true;
             Debug.Log("operation is done");
             //yield return new WaitUntil(() => Input.compass.enabled);
 

@@ -28,6 +28,7 @@ ScriptsOnlyBuild:
     - NRKernal.NREmulatorManager
     - NRKernal.NRExamples.AppManager
     - NRKernal.NRExamples.CameraSmoothFollow
+    - NRKernal.NRExamples.EnsureSlamTrackingMode
     - NRKernal.NRExamples.NRHomeMenu
     - NRKernal.NRExamples.PlaneDetector
     - NRKernal.NRExamples.PolygonPlaneVisualizer
@@ -235,9 +236,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13856}
     - Class: 114
-      Script: {instanceID: 35894}
+      Script: {instanceID: 19770}
     - Class: 114
-      Script: {instanceID: 35896}
+      Script: {instanceID: 19772}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -277,6 +278,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -296,13 +299,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11366}
     - Class: 114
+      Script: {instanceID: 11456}
+    - Class: 114
       Script: {instanceID: 11592}
     - Class: 114
       Script: {instanceID: 11760}
     - Class: 114
       Script: {instanceID: 11830}
     - Class: 114
+      Script: {instanceID: 11836}
+    - Class: 114
       Script: {instanceID: 12012}
+    - Class: 114
+      Script: {instanceID: 12076}
     - Class: 114
       Script: {instanceID: 12118}
     - Class: 114
