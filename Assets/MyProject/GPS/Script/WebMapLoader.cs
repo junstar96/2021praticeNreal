@@ -147,6 +147,10 @@ namespace NRKernal.NRExamples.MyArrowProject
                 instance.AddComponent<Light>();
                 instance.GetComponent<Light>().type = LightType.Point;
 
+                instance.AddComponent<GPSChecker>();
+                instance.GetComponent<GPSChecker>().Latitude = Latitude;
+                instance.GetComponent<GPSChecker>().Longitude = Longitude;
+
                 instance.name = Label;
 
 

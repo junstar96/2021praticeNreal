@@ -91,6 +91,7 @@
     <Compile Include="Assets\MyProject\UIcontrol\script\SpawnManager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XMLButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XmlBusButtonController.cs" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\UNITYtestGPS.xml" />
     <None Include="Assets\Resources\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Unity_test_gps.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\GameGoal.xml" />

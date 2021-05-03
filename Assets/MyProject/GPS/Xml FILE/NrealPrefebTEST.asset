@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Entries:
   - MeshId: logo
-    Prefab: {fileID: 1341636462457712, guid: b76c07b35799f964b88ea24bca4cbb08, type: 3}
+    Prefab: {fileID: 1670058608702538374, guid: 0d25d72ad18bdca45946b7b71f2658bf,
+      type: 3}
   - MeshId: tower
     Prefab: {fileID: 919132149155446097, guid: d51d5df0e04220843b901f605ff23396, type: 3}
   - MeshId: train

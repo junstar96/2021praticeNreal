@@ -15,26 +15,33 @@ public class NRCanvasFollowMove : MonoBehaviour
 
     void Update()
     {
-        if(NRInput.GetButtonDown(ControllerButton.APP) || NRInput.GetButtonDown(ControllerButton.TRIGGER))
-        {
-            islotationChange = true;
-        }
-
-
-        if(!islotationChange)
-        {
-            return;
-        }
-
-        islotationChange = false;
         accuracy_camera = NRInput.CameraCenter;
+        if (gameObject.name == "arrowPivot")
+        {
+            Vector3 lotationvector = new Vector3(3.0f * Mathf.Sin(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y), 0, 3.0f * Mathf.Cos(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y));
+            gameObject.transform.position = accuracy_camera.transform.position + lotationvector;
+            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
+        }
+        else
+        {
+            if (NRInput.GetButtonDown(ControllerButton.APP) || NRInput.GetButtonDown(ControllerButton.TRIGGER))
+            {
+                islotationChange = true;
+            }
 
-        Vector3 lotationvector = new Vector3(3.0f * Mathf.Sin(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y), 0, 3.0f * Mathf.Cos(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y));
 
+            if (!islotationChange)
+            {
+                return;
+            }
 
-        Debug.Log("accuracy parent forward : " + accuracy_camera.parent.forward);
-        gameObject.transform.position = accuracy_camera.transform.position + lotationvector;
-        gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
+            islotationChange = false;
+           
+
+            Vector3 lotationvector = new Vector3(3.0f * Mathf.Sin(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y), 0, 3.0f * Mathf.Cos(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y));
+            gameObject.transform.position = accuracy_camera.transform.position + lotationvector;
+            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
+        }
         
         //if (NRInput.GetButtonDown(ControllerButton.APP)||NRInput.GetButtonDown(ControllerButton.TRIGGER))
         //{

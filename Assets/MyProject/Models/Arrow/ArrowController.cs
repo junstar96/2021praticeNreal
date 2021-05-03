@@ -106,21 +106,47 @@
 
                 if (string.Equals(Scenemanager.Instance.scenemode, "BusStationScene"))
                 {
-
                     var entity = GameObject.Find("TargetCreater").transform.Find("BusStationXML").transform.Find(target_name);
-                    Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
-                    looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
-                    arrow.transform.localRotation = looktarget;
-                    distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
+                    //Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
+                    //looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
+                    //arrow.transform.localRotation = looktarget;
+                    target_lati = entity.GetComponent<GPSChecker>().Latitude;
+                    target_longi = entity.GetComponent<GPSChecker>().Longitude;
+
+                    var degree = (float)(ObjectPositionSetting.BearingP1toP2(Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) - ObjectPositionSetting.CameraDegree() - 180);
+                    //Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
+                    //looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
+                    //arrow.transform.localRotation = looktarget;
+
+                    var isclose = ObjectPositionSetting.DistanceInKmBetweenEarthCoordinates(Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) * 1000;
+
+                    arrow.transform.localEulerAngles = new Vector3(isclose < 10.0 ? 90.0f : 0.0f, degree, 0);
+                    //arrow.transform.localEulerAngles = new Vector3(Vector3.Distance(NRInput.CameraCenter.position, entity.position) < 10.0 ? 90.0f : 0.0f, degree, 0);
+
+                    distance.text = isclose.ToString("N2") + "M";
+
+                   // distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
                 }
                 else if (string.Equals(Scenemanager.Instance.scenemode, "Webmaploader"))
                 {
-
+                    
                     var entity = GameObject.Find("TargetCreater").transform.Find("Webmaploader").transform.Find(target_name);
-                    Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
-                    looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
-                    arrow.transform.localRotation = looktarget;
-                    distance.text = Vector3.Distance(NRInput.CameraCenter.position, entity.position).ToString("N2") + "M";
+
+
+                    target_lati = entity.GetComponent<GPSChecker>().Latitude;
+                    target_longi = entity.GetComponent<GPSChecker>().Longitude;
+                    
+                    var degree = (float)(ObjectPositionSetting.BearingP1toP2(Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) - ObjectPositionSetting.CameraDegree() - 180);
+                    //Quaternion looktarget = Quaternion.LookRotation(entity.position, Vector3.up);
+                    //looktarget = looktarget * Quaternion.Inverse(gameObject.transform.rotation);
+                    //arrow.transform.localRotation = looktarget;
+
+                    var isclose = ObjectPositionSetting.DistanceInKmBetweenEarthCoordinates(Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) * 1000;
+
+                    arrow.transform.localEulerAngles = new Vector3(isclose < 10.0 ? 90.0f : 0.0f, degree, 0);
+                    //arrow.transform.localEulerAngles = new Vector3(Vector3.Distance(NRInput.CameraCenter.position, entity.position) < 10.0 ? 90.0f : 0.0f, degree, 0);
+
+                    distance.text = isclose.ToString("N2") + "M";
                 }
 
                

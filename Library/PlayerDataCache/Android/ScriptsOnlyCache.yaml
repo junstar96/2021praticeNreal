@@ -1,8 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - DontDestroyNrealScene
-    - Level_View
     - NRCanvasFollowMove
     - NRKernal.NRExamples.MyArrowProject.ArrowController
     - NRKernal.NRExamples.MyArrowProject.BUSstationXML
@@ -30,8 +28,10 @@ ScriptsOnlyBuild:
     - NRKernal.NRExamples.CameraSmoothFollow
     - NRKernal.NRExamples.EnsureSlamTrackingMode
     - NRKernal.NRExamples.NRHomeMenu
+    - NRKernal.NRExamples.PhotoCaptureExample
     - NRKernal.NRExamples.PlaneDetector
     - NRKernal.NRExamples.PolygonPlaneVisualizer
+    - NRKernal.NRExamples.VideoCapture2LocalExample
     - NRKernal.NRGlassesInitErrorTip
     - NRKernal.NRHMDPoseTracker
     - NRKernal.NRInput
@@ -150,6 +150,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11456}
     - Class: 114
+      Script: {instanceID: 11492}
+    - Class: 114
       Script: {instanceID: 11544}
     - Class: 114
       Script: {instanceID: 11630}
@@ -157,6 +159,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11716}
     - Class: 114
       Script: {instanceID: 11746}
+    - Class: 114
+      Script: {instanceID: 11836}
     - Class: 114
       Script: {instanceID: 11846}
     - Class: 114
@@ -177,8 +181,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12150}
     - Class: 114
       Script: {instanceID: 12214}
-    - Class: 114
-      Script: {instanceID: 12344}
     - Class: 114
       Script: {instanceID: 12420}
     - Class: 114
@@ -206,6 +208,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13328}
     - Class: 114
+      Script: {instanceID: 13352}
+    - Class: 114
       Script: {instanceID: 13366}
     - Class: 114
       Script: {instanceID: 13470}
@@ -226,8 +230,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13758}
     - Class: 114
-      Script: {instanceID: 13772}
-    - Class: 114
       Script: {instanceID: 13788}
     - Class: 114
       Script: {instanceID: 13834}
@@ -236,9 +238,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13856}
     - Class: 114
-      Script: {instanceID: 19770}
+      Script: {instanceID: 21040}
     - Class: 114
-      Script: {instanceID: 19772}
+      Script: {instanceID: 21042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -278,8 +280,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -299,19 +299,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11456}
-    - Class: 114
       Script: {instanceID: 11592}
     - Class: 114
       Script: {instanceID: 11760}
     - Class: 114
       Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 11836}
-    - Class: 114
       Script: {instanceID: 12012}
-    - Class: 114
-      Script: {instanceID: 12076}
     - Class: 114
       Script: {instanceID: 12118}
     - Class: 114
@@ -329,14 +323,14 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 13328}
-    - Class: 114
       Script: {instanceID: 13556}
     - Class: 114
       Script: {instanceID: 13772}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -433,9 +427,9 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: e8aa6bc84a0168a132f0be0274ece5ed
+      Hash: ffc0e62500558215d9000bf105623986
     assemblyName: Assembly-CSharp.dll
-    namespaceName: NRKernal.NRExamples
+    namespaceName: 
     className: GPSChecker
   - hash:
       serializedVersion: 2
@@ -949,7 +943,7 @@ ScriptsOnlyBuild:
     className: NREmulatorHeadPose
   - hash:
       serializedVersion: 2
-      Hash: e01902805a6a2b1aa0a2f13571d6b77b
+      Hash: 176e9584da6f94610319f87d7974b715
     assemblyName: Assembly-CSharp.dll
     namespaceName: NRKernal.NRExamples.MyArrowProject
     className: Scenemanager
@@ -1375,7 +1369,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 03dc5220a2cbd7273586039c71a12e40
+      Hash: a47dd50a169fa231bc742c8f8907a5de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NRCanvasFollowMove

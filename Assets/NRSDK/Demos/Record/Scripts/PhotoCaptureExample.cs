@@ -23,19 +23,35 @@ namespace NRKernal.NRExamples
         private NRPhotoCapture m_PhotoCaptureObject;
         /// <summary> The camera resolution. </summary>
         private Resolution m_CameraResolution;
+        private float time;
+        private float limit_time = 2.0f;
+        private bool iscapture = false;
 
         /// <summary> Starts this object. </summary>
         void Start()
         {
+            time = 0.0f;
             this.Create();
         }
 
         /// <summary> Updates this object. </summary>
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) || NRInput.GetButtonDown(ControllerButton.TRIGGER))
+            if (Input.GetKey(KeyCode.Space) || NRInput.GetButton(ControllerButton.TRIGGER))
             {
-                TakeAPhoto();
+                time += Time.deltaTime;
+                if (time > limit_time && ! iscapture)
+                {
+                    TakeAPhoto();
+                    iscapture = true;
+                }
+                
+            }
+
+            if(NRInput.GetButtonUp(ControllerButton.TRIGGER))
+            {
+                time = 0.0f;
+                iscapture = false;
             }
 
             if (m_PhotoCaptureObject != null)
