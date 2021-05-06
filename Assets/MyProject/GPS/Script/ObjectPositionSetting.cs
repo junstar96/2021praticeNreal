@@ -11,10 +11,13 @@ namespace NRKernal.NRExamples.MyArrowProject
     using UnityEngine;
     public class ObjectPositionSetting : MonoBehaviour
     {
+
+ 
         public static float CameraDegree()
         {
-            float degree = NRInput.CameraCenter.eulerAngles.y < 180 ?
-                NRInput.CameraCenter.eulerAngles.y : -(360.0f - NRInput.CameraCenter.eulerAngles.y);
+            float degree = NRSessionManager.Instance.CenterCameraAnchor.eulerAngles.y < 180 ?
+                NRSessionManager.Instance.CenterCameraAnchor.eulerAngles.y : -(360 - NRKernal.NRSessionManager.Instance.CenterCameraAnchor.eulerAngles.y);
+
 
 
 
@@ -27,7 +30,7 @@ namespace NRKernal.NRExamples.MyArrowProject
 
             if(Input.gyro.enabled)
             {
-                degree = Input.gyro.attitude.z < 0 ? 180 - Input.gyro.attitude.w * 180 : -(180 - Input.gyro.attitude.w * 180);
+                degree = Input.gyro.attitude.z < 0 ? 180 - Input.gyro.attitude.w * 180 : Input.gyro.attitude.w * 180 + 180;
                 return degree;
             }
            else

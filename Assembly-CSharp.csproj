@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MyProject\GPS\Script\BUSstationXML.cs" />
+    <Compile Include="Assets\MyProject\GPS\Script\DataClean.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\Enemy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSChecker.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSInfoContainer.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\MyProject\Scenes\script\DontDestroyNrealScene.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\SceneChanger.cs" />
     <Compile Include="Assets\MyProject\Scenes\script\Scenemanager.cs" />
+    <Compile Include="Assets\MyProject\Scenes\script\TestbadDebug.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\CanvasSelect.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\Compass.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\Level_View.cs" />
