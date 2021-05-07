@@ -1,9 +1,9 @@
 sceneSetups:
 - path: Assets/MyProject/Scenes/Testscene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
-- path: Assets/NRSDK/Demos/Input-ControllerInfo.unity
   isLoaded: 0
   isActive: 0
+  isSubScene: 0
+- path: Assets/MyProject/Scenes/Logo scene.unity
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0

@@ -20,16 +20,20 @@ public class TestbadDebug : MonoBehaviour
     {
         transform.position = NRKernal.NRSessionManager.Instance.CenterCameraAnchor.position;
         transform.rotation = NRKernal.NRSessionManager.Instance.CenterCameraAnchor.rotation;
+        
         if (!startcheck)
         {
             return;
         }
         var session_y = ObjectPositionSetting.CameraDegree();
+        var accuracy_gyro = Input.gyro.gravity * 30;
+
+        float magnet_radian = (ObjectPositionSetting.MagnetDegree() - ObjectPositionSetting.CameraDegree()) % 360;
 
 
-        float magnet_radian = (ObjectPositionSetting.GyroDegree() - ObjectPositionSetting.CameraDegree()) % 360;
-        debugtext.text = Input.location.lastData.latitude + "\n"
-            + Input.location.lastData.longitude + "\n"
+        debugtext.text = "자이로 :" + accuracy_gyro + "\n"
+            + "제공마그넷 :" + Input.compass.magneticHeading + "\n"
+            + "euler :" + Input.gyro.attitude.eulerAngles + "\n" 
             + "매니저 : " + session_y + "\n"
             + "마그넷 : " + magnet_radian;
     }
@@ -55,5 +59,22 @@ public class TestbadDebug : MonoBehaviour
         Input.gyro.enabled = true;
 
         startcheck = true;
+    }
+
+    public float VectorCross(Vector3 a, Vector3 b)
+    {
+        float c;
+
+        c = a.x * b.x + a.y * b.y + a.z * b.z;
+
+
+        return c;
+    }
+
+    public Vector3 VectorCross2(Vector3 a, Vector3 b)
+    {
+        Vector3 c = new Vector3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
+
+        return c;
     }
 }

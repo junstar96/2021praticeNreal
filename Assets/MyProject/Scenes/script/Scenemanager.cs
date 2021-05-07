@@ -16,6 +16,8 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         public Slider slider;
 
+        public Canvas compass;
+
         //public Slider oneSecondbar;
 
         //private CameraSmoothFollow camerafollower;
@@ -29,7 +31,7 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         public int sceneChangeCount = 0;
 
-
+        public bool compass_setting = false;
 
         private DateTime datetime;
         /// <summary>배치 후 오브젝트가 제대로 된 위치에 보정이 되는가를 확인하기 위한 bool값</summary>
@@ -64,6 +66,8 @@ namespace NRKernal.NRExamples.MyArrowProject
             //oneSecondbar.value = 0.0f;
             var check = FindObjectsOfType<Scenemanager>();
 
+            compass.gameObject.SetActive(false);
+
             Debug.Log("check : " + check.Length);
             if(check.Length == 1)
             {
@@ -85,6 +89,10 @@ namespace NRKernal.NRExamples.MyArrowProject
 
         private void Update()
         {
+            transform.position = NRSessionManager.Instance.CenterCameraAnchor.position;
+            transform.rotation = NRSessionManager.Instance.CenterCameraAnchor.rotation;
+
+
             if(loadingScene == null)
             {
                 return;
@@ -125,6 +133,7 @@ namespace NRKernal.NRExamples.MyArrowProject
         IEnumerator AsyncLoadScene(string name)
         {
             slider.value = 0.0f;
+            compass_setting = false;
             loadingScene.SetActive(true);
             
 
@@ -162,7 +171,6 @@ namespace NRKernal.NRExamples.MyArrowProject
 
                 yield return null;
             } while (slider.value < 0.9);
-            
 
             
             if(scenename == "Logo scene")
@@ -175,8 +183,16 @@ namespace NRKernal.NRExamples.MyArrowProject
                 slider.gameObject.SetActive(true);
                 loadingScene.SetActive(true);
             }
+
+            compass.gameObject.SetActive(true);
+            if(scenename == "Logo scene")
+            {
+                yield return new WaitUntil(() => compass_setting == true);
+            }
             
+
             operation.allowSceneActivation = true;
+            compass.gameObject.SetActive(false);
             Debug.Log("operation is done");
             //yield return new WaitUntil(() => Input.compass.enabled);
 

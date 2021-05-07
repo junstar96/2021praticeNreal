@@ -5,62 +5,54 @@ using NRKernal.NRExamples.MyArrowProject;
 
 public class Level_View : MonoBehaviour
 {
-    private RectTransform recttransform;
-    
+   
+    private Scenemanager scenemanager;
 
-    public Image level_view_ball;
+    public GameObject ball_pivot;
 
+    public float accuracy_value = 0.25f;
     private Vector3 defaultvector;
     public Text post;
+    public bool perent_bool = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        recttransform = GetComponent<RectTransform>();
-        defaultvector = recttransform.localPosition;
+        perent_bool = true;
+        scenemanager = transform.parent.parent.parent.GetComponent<Scenemanager>();
     }
     // Update is called once per frame
     void Update()
     {
-        var level_accuracy = Input.gyro.gravity * 50;
+        post.text = "공을 가운데에 맞춰주세요";
 
+        ball_pivot.transform.localPosition = new Vector3(Input.gyro.gravity.x * 30, Input.gyro.gravity.y * 30, 0);
 
-        recttransform.localPosition = defaultvector + level_accuracy;
+#if !UNITY_EDITOR
+        if(Input.gyro.gravity.x * 30 < 5 && Input.gyro.gravity.y * 30 < 5)
+        {
+            ball_pivot.transform.GetChild(0).GetComponent<Image>().color = new Color(255, 0, 0);
 
-
-        float gyro_degree = Input.gyro.attitude.z < 0 ? 180 - Input.gyro.attitude.w * 180 : Input.gyro.attitude.w * 180 + 180;
-
-
-        post.text = "넣어주세요" + "\n"
-            + "gyro euler : " + Input.gyro.attitude.eulerAngles + "\n"
-           + "gyro : " + Input.gyro.attitude;
-        //        if (!Scenemanager.instance.isFixingCanvas)
-        //        {
-        //            post.text = "북쪽을 바라봐 주세요." + "\n"
-        //                + "gps connect : " + Input.location.isEnabledByUser + "\n"
-        //                + "gyro y degree : " + gyro_degree + "\n"
-        //                + "magnetic degree : " + Input.compass.magneticHeading + "\n"
-        //                + "camera rotation : " + NRKernal.NRInput.CameraCenter.eulerAngles.y + "\n"
-        //                + "gps connected : " + GPScontroller.Instance.isGPSconnected;
-        //        }
-        //        else
-        //        {
-        //#if !UNITY_EDITOR
-        //           
-        //#else
-        //            post.text = "camera location :" + NRKernal.NRInput.CameraCenter.eulerAngles + "\n"
-        //                + "current_gps : (" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + ")";
-        //#endif
-        //        }
-        //- cameraCorrection;
+            if(Input.gyro.gravity.x * 30 < accuracy_value && Input.gyro.gravity.y * 30 < accuracy_value)
+            {
+                ball_pivot.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 255, 0);
+               
+                scenemanager.compass_setting = true;
+                
+               
+            }
+        }
+#else
+        ball_pivot.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 255);
+        scenemanager.compass_setting = true;
+#endif
 
 
 
 
 
 
-
-
-        recttransform.localEulerAngles = new Vector3(0, 0, gyro_degree) ;
     }
+
+    
 }

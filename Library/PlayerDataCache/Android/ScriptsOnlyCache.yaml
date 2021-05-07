@@ -1,7 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - TestbadDebug
+    - Level_View
+    - NRCanvasFollowMove
+    - NRKernal.NRExamples.MyArrowProject.ArrowController
+    - NRKernal.NRExamples.MyArrowProject.BUSstationXML
+    - NRKernal.NRExamples.MyArrowProject.GPScontroller
+    - NRKernal.NRExamples.MyArrowProject.LocationChange
+    - NRKernal.NRExamples.MyArrowProject.Scenemanager
+    - NRKernal.NRExamples.MyArrowProject.SpawnManager
+    - NRKernal.NRExamples.MyArrowProject.WebMapLoader
+    - NRKernal.NRExamples.MyArrowProject.XMLButtonController
+    - NrealPrefebdatabase
+    - SceneChanger
     NRSDK.dll:
     - NRKernal.CanvasRaycastTarget
     - NRKernal.ControllerAnchorsHelper
@@ -16,7 +27,11 @@ ScriptsOnlyBuild:
     - NRKernal.NREmulatorManager
     - NRKernal.NRExamples.AppManager
     - NRKernal.NRExamples.CameraSmoothFollow
+    - NRKernal.NRExamples.EnsureSlamTrackingMode
     - NRKernal.NRExamples.NRHomeMenu
+    - NRKernal.NRExamples.PlaneDetector
+    - NRKernal.NRExamples.PolygonPlaneVisualizer
+    - NRKernal.NRExamples.VideoCapture2LocalExample
     - NRKernal.NRGlassesInitErrorTip
     - NRKernal.NRHMDPoseTracker
     - NRKernal.NRInput
@@ -30,6 +45,7 @@ ScriptsOnlyBuild:
     - NRKernal.NRPointerRaycaster
     - NRKernal.NRSessionBehaviour
     - NRKernal.NRSessionConfig
+    - NRKernal.NRTrackableBehaviour
     - NRKernal.NRTrackingImageDatabase
     - NRKernal.NRVirtualDisplayer
     - NRKernal.NRVisualProfiler
@@ -55,18 +71,26 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.SpatialTracking.dll:
+    - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/MyProject/Scenes/Testscene.unity:
+    Assets/MyProject/Scenes/Logo scene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -87,6 +111,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 83
@@ -106,6 +132,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11354}
     - Class: 114
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
       Script: {instanceID: 11360}
     - Class: 114
       Script: {instanceID: 11362}
@@ -115,6 +145,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11366}
     - Class: 114
       Script: {instanceID: 11368}
+    - Class: 114
+      Script: {instanceID: 11370}
+    - Class: 114
+      Script: {instanceID: 11456}
     - Class: 114
       Script: {instanceID: 11544}
     - Class: 114
@@ -132,6 +166,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12066}
     - Class: 114
+      Script: {instanceID: 12076}
+    - Class: 114
       Script: {instanceID: 12084}
     - Class: 114
       Script: {instanceID: 12108}
@@ -141,6 +177,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12150}
     - Class: 114
       Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12344}
+    - Class: 114
+      Script: {instanceID: 12420}
     - Class: 114
       Script: {instanceID: 12516}
     - Class: 114
@@ -154,47 +194,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12560}
     - Class: 114
+      Script: {instanceID: 12578}
+    - Class: 114
       Script: {instanceID: 12674}
     - Class: 114
       Script: {instanceID: 12852}
     - Class: 114
       Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 13260}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13332}
     - Class: 114
-      Script: {instanceID: 13368}
+      Script: {instanceID: 13356}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 13370}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 13474}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13574}
     - Class: 114
-      Script: {instanceID: 13610}
+      Script: {instanceID: 13588}
     - Class: 114
-      Script: {instanceID: 13624}
+      Script: {instanceID: 13612}
     - Class: 114
-      Script: {instanceID: 13710}
+      Script: {instanceID: 13626}
     - Class: 114
-      Script: {instanceID: 13714}
+      Script: {instanceID: 13704}
     - Class: 114
-      Script: {instanceID: 13760}
+      Script: {instanceID: 13712}
     - Class: 114
-      Script: {instanceID: 13790}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 13762}
+    - Class: 114
+      Script: {instanceID: 13792}
     - Class: 114
       Script: {instanceID: 13838}
     - Class: 114
-      Script: {instanceID: 13858}
+      Script: {instanceID: 13840}
     - Class: 114
-      Script: {instanceID: 17850}
+      Script: {instanceID: 13860}
     - Class: 114
-      Script: {instanceID: 17852}
+      Script: {instanceID: 17064}
     - Class: 114
-      Script: {instanceID: 18460}
+      Script: {instanceID: 17066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -206,6 +250,99 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/MyProject/Scenes/Main Scene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11348}
+    - Class: 114
+      Script: {instanceID: 11350}
+    - Class: 114
+      Script: {instanceID: 11352}
+    - Class: 114
+      Script: {instanceID: 11354}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 11366}
+    - Class: 114
+      Script: {instanceID: 11456}
+    - Class: 114
+      Script: {instanceID: 11592}
+    - Class: 114
+      Script: {instanceID: 11760}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 11836}
+    - Class: 114
+      Script: {instanceID: 12012}
+    - Class: 114
+      Script: {instanceID: 12076}
+    - Class: 114
+      Script: {instanceID: 12118}
+    - Class: 114
+      Script: {instanceID: 12294}
+    - Class: 114
+      Script: {instanceID: 12316}
+    - Class: 114
+      Script: {instanceID: 12400}
+    - Class: 114
+      Script: {instanceID: 12424}
+    - Class: 114
+      Script: {instanceID: 12510}
+    - Class: 114
+      Script: {instanceID: 12524}
+    - Class: 114
+      Script: {instanceID: 12586}
+    - Class: 114
+      Script: {instanceID: 13560}
+    - Class: 114
+      Script: {instanceID: 13776}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -710,7 +847,7 @@ ScriptsOnlyBuild:
     className: XMLButtonController
   - hash:
       serializedVersion: 2
-      Hash: 0dba9f0ffb0714be2e8e4d067cca052f
+      Hash: c86e365662845013219f21a0889509c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Level_View
@@ -812,7 +949,7 @@ ScriptsOnlyBuild:
     className: NREmulatorHeadPose
   - hash:
       serializedVersion: 2
-      Hash: 176e9584da6f94610319f87d7974b715
+      Hash: 49d2eaf74888e1a1ce233fe22e5274ed
     assemblyName: Assembly-CSharp.dll
     namespaceName: NRKernal.NRExamples.MyArrowProject
     className: Scenemanager
@@ -978,6 +1115,12 @@ ScriptsOnlyBuild:
     assemblyName: NRSDK.dll
     namespaceName: NRKernal.NRExamples
     className: HelloMRController
+  - hash:
+      serializedVersion: 2
+      Hash: 36dfe07acf81244b1c3eac5a006da3af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TestbadDebug
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -1302,13 +1445,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 36dfe07acf81244b1c3eac5a006da3af
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TestbadDebug
   platform: 13
   scenePathNames:
-  - Assets/MyProject/Scenes/Testscene.unity
+  - Assets/MyProject/Scenes/Logo scene.unity
+  - Assets/MyProject/Scenes/Main Scene.unity
   playerPath: C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/gpstour.apk

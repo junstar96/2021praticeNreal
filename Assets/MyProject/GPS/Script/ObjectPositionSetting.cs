@@ -24,13 +24,13 @@ namespace NRKernal.NRExamples.MyArrowProject
             return degree;
         }
 
-        public static float GyroDegree()
+        public static float MagnetDegree()
         {
             float degree;
 
-            if(Input.gyro.enabled)
+            if(Input.compass.enabled)
             {
-                degree = Input.gyro.attitude.z < 0 ? 180 - Input.gyro.attitude.w * 180 : Input.gyro.attitude.w * 180 + 180;
+                degree = Input.compass.trueHeading;
                 return degree;
             }
            else
