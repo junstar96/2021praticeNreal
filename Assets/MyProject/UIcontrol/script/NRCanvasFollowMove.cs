@@ -5,122 +5,66 @@ public class NRCanvasFollowMove : MonoBehaviour
 {
     // Start is called before the first frame update
    
-    public bool islotationChange = false;
     private Transform accuracy_camera;
     //private Transform accuracy_camera;
 
-    public int click_count = 0;
+    public Canvas button_menu;
+    public GameObject arrow_pivot;
+
+    public int clicked = 0;
+    public float click_time = 0.0f;
+    public float click_delay = 0.5f;
 
     // Update is called once per frame
 
     void Update()
     {
-        accuracy_camera = NRInput.CameraCenter;
-        if (gameObject.name == "arrowPivot")
-        {
-            Vector3 lotationvector = new Vector3(3.0f * Mathf.Sin(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y), 0, 3.0f * Mathf.Cos(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y));
-            gameObject.transform.position = accuracy_camera.transform.position + lotationvector;
-            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
-        }
-        else
-        {
-            if (NRInput.GetButtonDown(ControllerButton.APP) || NRInput.GetButtonDown(ControllerButton.TRIGGER))
-            {
-                islotationChange = true;
-            }
-
-
-            if (!islotationChange)
-            {
-                return;
-            }
-
-            islotationChange = false;
-           
-
-            Vector3 lotationvector = new Vector3(3.0f * Mathf.Sin(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y), 0, 3.0f * Mathf.Cos(Mathf.Deg2Rad * accuracy_camera.eulerAngles.y));
-            gameObject.transform.position = accuracy_camera.transform.position + lotationvector;
-            gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
-        }
-        
-        //if (NRInput.GetButtonDown(ControllerButton.APP)||NRInput.GetButtonDown(ControllerButton.TRIGGER))
-        //{
-        //    click_count++;
-           
-        //    if (!IsInvoking("DoubleClick"))
-        //    {
-        //        Invoke("DoubleClick", 1.0f);
-        //    }
-        //}
-        //else if(click_count >=2)
-        //{
-        //    CancelInvoke("DoubleClick");
-        //    click_count = 0;
-
-           
-        //}
-        
-
-
-    
-
-        //if (NRInput.GetButtonDown(ControllerButton.APP) || NRInput.GetButtonDown(ControllerButton.TRIGGER))
-        //{
-        //    click_count++;
-
-        //    if(!IsInvoking("DoubleClick"))
-        //    {
-        //        Invoke("DoubleClick", 1.0f);
-        //    }
-           
-
-            
-
-
-        //}
-        //else if(click_count >= 2)
-        //{
-        //    CancelInvoke("DoubleClick");
-        //    click_count = 0;
-        //    if (gameObject.name == "compass" && NRKernal.NRExamples.MyArrowProject.Scenemanager.Instance.scenename == "Logo scene")
-        //    {
-        //        Debug.Log("press");
-        //        gameObject.GetComponent<NRKernal.NRExamples.CameraSmoothFollow>().enabled = !gameObject.GetComponent<NRKernal.NRExamples.CameraSmoothFollow>().enabled;
-        //        return;
-        //    }
-        //    else if (gameObject.name == "XMLLocationCanvas ")
-        //    {
-        //        Debug.Log("Main scene press");
-        //        gameObject.GetComponent<NRKernal.NRExamples.CameraSmoothFollow>().enabled = !gameObject.GetComponent<NRKernal.NRExamples.CameraSmoothFollow>().enabled;
-        //        return;
-        //    }
-        //    else if(gameObject.name == "arrowPivot")
-        //    {
-        //        Debug.Log("arrow press");
-        //        gameObject.GetComponent<NRKernal.NRExamples.CameraSmoothFollow>().enabled = !gameObject.GetComponent<NRKernal.NRExamples.CameraSmoothFollow>().enabled;
-        //        return;
-        //    }
-        //}
+        gameObject.transform.position = NRSessionManager.Instance.CenterCameraAnchor.position;
+        gameObject.transform.rotation = NRSessionManager.Instance.CenterCameraAnchor.rotation;
         //accuracy_camera = NRInput.CameraCenter;
-        //if (islotationChange)
-        //{
+       
 
-        //    islotationChange = false;
-        //    gameObject.transform.position = accuracy_camera.position + new Vector3(3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) - 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180),
-        //        0, 3 * Mathf.Cos(accuracy_camera.eulerAngles.y * Mathf.PI / 180) + 3 * Mathf.Sin(accuracy_camera.eulerAngles.y * Mathf.PI / 180));
-        //    gameObject.transform.eulerAngles = accuracy_camera.eulerAngles;
-        //}
+        if (DoubleClick())
+        {
+            Debug.Log("click success");
+          
+        }
     }
 
-    public void DoubleClick()
+    public bool DoubleClick()
     {
-        click_count = 0;
+        Debug.Log("double click, count : " + clicked);
+        if(NRInput.GetButtonDown(ControllerButton.TRIGGER) || Input.GetKeyDown(KeyCode.Q))
+        {
+            clicked++;
+            if(clicked==1)
+            {
+                click_time = Time.time;
+            }
+        }
+        else if(clicked >= 2)
+        {
+            clicked = 0;
+            click_time = 0.0f;
+            if(!button_menu.gameObject.activeSelf)
+            {
+                button_menu.gameObject.SetActive(true);
+            }
+
+            return true;
+        }
+        else if(clicked < 2 && Time.time - click_time > click_delay)
+        {
+            clicked = 0;
+        }
+
+        return false;
     }
 
-    public void SetIsLotationChange(bool check)
-    {
-        islotationChange = check;
-    }
+    //public void SetIsLotationChange(bool check)
+    //{
+    //    islotationChange = check;
+    //}
 }
 
 //public class NRCanvasFollowMove : MonoBehaviour

@@ -72,11 +72,9 @@
     <Compile Include="Assets\MyProject\GPS\Script\GPSLocationConverter.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSaccuacy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPScontroller.cs" />
-    <Compile Include="Assets\MyProject\GPS\Script\GPSprint.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\LerpEnemyMake.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\MygpsTrans.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealPrefebdatabase.cs" />
-    <Compile Include="Assets\MyProject\GPS\Script\NrealVectorSerialiable.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\ObjectPositionSetting.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\WebMapLoader.cs" />
     <Compile Include="Assets\MyProject\Models\Arrow\ArrowController.cs" />
