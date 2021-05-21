@@ -66,13 +66,10 @@
   <ItemGroup>
     <Compile Include="Assets\MyProject\GPS\Script\BUSstationXML.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\DataClean.cs" />
-    <Compile Include="Assets\MyProject\GPS\Script\Enemy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSChecker.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSInfoContainer.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPSLocationConverter.cs" />
-    <Compile Include="Assets\MyProject\GPS\Script\GPSaccuacy.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\GPScontroller.cs" />
-    <Compile Include="Assets\MyProject\GPS\Script\LerpEnemyMake.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\MygpsTrans.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\NrealPrefebdatabase.cs" />
     <Compile Include="Assets\MyProject\GPS\Script\ObjectPositionSetting.cs" />
@@ -85,9 +82,12 @@
     <Compile Include="Assets\MyProject\Scenes\script\TestbadDebug.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\CanvasSelect.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\Compass.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\Enemy.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\LerpEnemyMake.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\Level_View.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\LocationChange.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\NRCanvasFollowMove.cs" />
+    <Compile Include="Assets\MyProject\UIcontrol\script\Nranchortest.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\SpawnManager.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XMLButtonController.cs" />
     <Compile Include="Assets\MyProject\UIcontrol\script\XmlBusButtonController.cs" />

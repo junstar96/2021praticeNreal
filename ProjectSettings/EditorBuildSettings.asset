@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyProject/Scenes/Logo scene.unity
+    path: Assets/MyProject/Scenes/SelectManu.unity
     guid: 1822800ec63cb6c4191ec0096ecba9c2
   - enabled: 1
     path: Assets/MyProject/Scenes/Main Scene.unity
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/NRSDK/Demos/HelloMR-3dof.unity
     guid: 1930205874b70904a994853afcaa90af
+  - enabled: 0
+    path: Assets/NRSDK/Demos/ImageTracking.unity
+    guid: cae4e384337e206419d07ea80c82ee12
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8d8355fefa586f5498825bca503db1bb,
       type: 2}

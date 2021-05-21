@@ -18,14 +18,22 @@ namespace NRKernal.NRExamples
 
    
 
-
+    /// <summary>
+    /// 화살표를 이동시키는 데 관여하는 함수들은 이 네임스페이스를 쓴다.
+    /// </summary>
     namespace MyArrowProject
     {
         using System.Xml;
         using System.Globalization;
+        /// <summary>
+        /// 버스 정류장의 위치를 표시하기 위해 xml 데이터를 인터넷에서 받아와 읽는다.
+        /// </summary>
         public class BUSstationXML : MonoBehaviour
         {
-            
+            /// <summary>
+            /// 기존에 사용하던 에셋의 방식에 맞게 적은 데이터 셋
+            /// 다 쓰지 않을 경우 중요한 lat, lng, name은 중요하니까 이것만이라도 추출해서 쓰자.
+            /// </summary>
             public class DataEntry
             {
                 public int id;
@@ -61,7 +69,11 @@ namespace NRKernal.NRExamples
                 }
             }
 
-
+            /// <summary>
+            /// 원래는 이 곳에 gps 정보를 받았으나 
+            /// gps 정보를 받는 함수를 인스턴스화 해서
+            /// 디버그 등의 경우에나 쓰게 됨.
+            /// </summary>
             public struct GPSinfo
             {
                 public string name;
@@ -69,13 +81,16 @@ namespace NRKernal.NRExamples
                 public double longi;
             }
 
+            /// <summary>
+            /// 어떤 오브젝트를 만들 것인가 하는 변수
+            /// </summary>
             public NrealPrefebdatabase prefebdatabase;
 
             //받아온 api를 이용하여 관광에 도움을 줄 수 있는 버스 정보를 알아보자.
             //gpsLati : 위도좌표
             //gpsLong : 경도좌표
 
-
+            //버스 정류장 api를 읽어올 url이다.
             [HideInInspector]
             public string url = string.Empty;
 
@@ -106,16 +121,6 @@ namespace NRKernal.NRExamples
                 }
             }
 
-            //public List<PlaceAtLocation> PlaceAtComponents
-            //{
-            //    get
-            //    {
-            //        return _placeAtComponents;
-            //    }
-            //}
-
-
-
             //먼저 아이템 구분을 저장하도록 하고, 호출이 왔을 때 이 안에서 데이터를 나눠서 전달하도록 해보자. 
             //아직 수정 안 함.
             string[] station_name;
@@ -132,35 +137,41 @@ namespace NRKernal.NRExamples
                 }
             }
 
+
+            //유니티 상에서는 gps를 읽을 수 없으므로 회사 gps를 받아놓은 것
             private double current_lat = 37.478892238702564;
             private double current_long = 126.88646609599695;
 
 
+            //끝났는지 확인용.
             public bool makefinish = false;
 
-
+            /// <summary>
+            /// 씬이 넘어가면서 한 번만 호출되면 됨.
+            /// </summary>
             private void Awake()
             {
+                if (!Input.location.isEnabledByUser)
+                {
+                    current_lat = 37.478892238702564;
+                    current_long = 126.88646609599695;
+                }
+                else
+                {
+                    current_lat = GPScontroller.Instance.lat;
+                    current_long = GPScontroller.Instance.longi;
+                }
+
                 current_lat = GPScontroller.Instance.lat;
                 current_long = GPScontroller.Instance.longi;
                
                
-
-                //byte[] byteforencoding = Encoding.UTF8.GetBytes("4954u%2BzYV4y%2F5BRah3wXrxdhkbCaLFoKjzT7dLDNPzn44g%2BUeL30JEGzj2MitqPY9PMyqdb8yW4%2F8eo4xB1xYw%3D%3D");
-                //string encodingkey = Convert.ToBase64String(byteforencoding);
-                //url = "http://openapi.tago.go.kr/openapi/service/BusSttnInfoInqireService/getSttnNoList"; 이건 gps를 안 사용하는 물건
                 url = "http://openapi.tago.go.kr/openapi/service/BusSttnInfoInqireService/getCrdntPrxmtSttnList"; //gps를 사용해서 정보를 받아오는 물건
                 url += "?ServiceKey=" + "4954u%2BzYV4y%2F5BRah3wXrxdhkbCaLFoKjzT7dLDNPzn44g%2BUeL30JEGzj2MitqPY9PMyqdb8yW4%2F8eo4xB1xYw%3D%3D";
                 url += "&gpsLati=" + current_lat;
                 url += "&gpsLong=" + current_long; //이건 내가 있는 위치 기준으로 받아오는 게 좋지 않으려나?
 
-                // Debug.Log(current_lat.ToString());
-
-                //url += "&cityCode=25";
-                //url += "&nodeNm=전통시장";
-                //url += "&nodeNo=44810";
-                //url += "&numOfRows=10";
-                //url += "&pageNo=1";
+              
             }//여기서 url 주소를 정의해놓는다.
 
             private void OnEnable()//일단 실행되면 url에 연결하여 값을 받아온다. 
@@ -169,14 +180,12 @@ namespace NRKernal.NRExamples
                 BuildGameObjects();
             }
 
+
+            /// <summary>
+            /// url을 연결하고 다음 xml 정보를 읽어서 데이터를 추출.
+            /// </summary>
             public void MyLocationFound()
             {
-
-         
-                
-                current_lat = 37.478892238702564;
-                current_long = 126.88646609599695;
-                //Debug.Log("url found");
 
                 url = "";
                 url = "http://openapi.tago.go.kr/openapi/service/BusSttnInfoInqireService/getCrdntPrxmtSttnList"; //gps를 사용해서 정보를 받아오는 물건
@@ -185,7 +194,7 @@ namespace NRKernal.NRExamples
                 url += "&gpsLong=" + current_long; //이건 내가 있는 위치 기준으로 받아오는 게 좋지 않으려나?
 
                 //string[] splitSupport = {   "<citycode>", "</citycode>", "<nodeid>","</nodeid>","</nodenm>",
-                //                                    "<nodeno>","</nodeno>", "</gpslati>", "</gpslong>"};
+                //                                    "<nodeno>","</nodeno>", "</gpslati>", "</gpslong>"}; 혹시 다른 방식으로 사용될 가능성이 있으므로 여기다 적어둠.
 
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 request.Method = "GET";
@@ -211,12 +220,9 @@ namespace NRKernal.NRExamples
                     var root = busXml.SelectSingleNode("response/body/items");
                     var nodes = root.ChildNodes;
 
-                    //Debug.Log(nodes[0].ToString());
+                    
 
-                    //station_name = results.Split(splitSupport, StringSplitOptions.None);
-
-                    //StartCoroutine(GPSNextFollower());
-
+                    //이 함수 말고 webmaploader를 베이스로 만들었기에 이런 형식
                     foreach (XmlNode node in nodes)
                     {
                         //Debug.Log(node.InnerText);
@@ -258,15 +264,16 @@ namespace NRKernal.NRExamples
                         };
 
                         _dataEntries.Add(entry);
-                        //CheckConvertGPS(lat, lng);
                         Debug.Log(ObjectPositionSetting.GPSConvertWorldPos(current_lat, current_long, lat, lng));
-                        //Debug.Log($"{id}, {lat}, {lng}, {altitude}, {altitudeMode}, {name}, {meshId}, {movementSmoothing}, {maxNumberOfLocationUpdates}, {useMovingAverage}, {hideObjectUtilItIsPlaced}");
 
 
                     }
                 }
             }
 
+            /// <summary>
+            /// 지금은 업데이트 할 필요 없지만 데이터를 갱신하거나 할 경우엔 필요.
+            /// </summary>
             private void Update()
             {
                 if(!Input.location.isEnabledByUser)
@@ -282,7 +289,11 @@ namespace NRKernal.NRExamples
             }
 
 
-
+            /// <summary>
+            /// 현재는 사용하지 않는 방식.
+            /// </summary>
+            /// <param name="count"></param>
+            /// <returns></returns>
             public GPSinfo ButtonInfo(int count)
             {
                 GPSinfo buttoninfo = new GPSinfo();
@@ -323,7 +334,10 @@ namespace NRKernal.NRExamples
                 return buttoninfo;
             }
 
-            void BuildGameObjects()
+            /// <summary>
+            /// 버스 정류장의 위치에 instantiate 하는 함수
+            /// </summary>
+            public void BuildGameObjects()
             {
                 foreach (var entry in _dataEntries)
                 {
@@ -357,6 +371,11 @@ namespace NRKernal.NRExamples
                 makefinish = true;
             }
 
+
+            /// <summary>
+            /// 버튼을 통해 목적지의 gps 정보를 갱신
+            /// </summary>
+            /// <param name="target"></param>
             public void ChangeTargetGPS(GPSinfo target)
             {
                 Debug.Log("target : " + target.name);
@@ -364,6 +383,13 @@ namespace NRKernal.NRExamples
                 current_long = target.longi;
             }
 
+
+            /// <summary>
+            /// 버튼을 통해 목적지의 gps 정보 갱신, 이 쪽은 나중에 interface를 적용할 수도 있어서 남겨둠.
+            /// </summary>
+            /// <param name="name"></param>
+            /// <param name="lati"></param>
+            /// <param name="longi"></param>
             public void GetTargetGPS(string name, double lati, double longi)
             {
                 Debug.Log("get name :" + name);
@@ -372,8 +398,6 @@ namespace NRKernal.NRExamples
             }
 
             
-
-           
         }
     }
 }

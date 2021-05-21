@@ -12,7 +12,11 @@ namespace NRKernal.NRExamples.MyArrowProject
     public class ObjectPositionSetting : MonoBehaviour
     {
 
- 
+        /// <summary>
+        /// nreal에서 제공하는 카메라의 각도를 0~360에서
+        /// -180~180으로 바꿔 설정했다.
+        /// </summary>
+        /// <returns></returns>
         public static float CameraDegree()
         {
             float degree = NRSessionManager.Instance.CenterCameraAnchor.eulerAngles.y < 180 ?
@@ -24,6 +28,11 @@ namespace NRKernal.NRExamples.MyArrowProject
             return degree;
         }
 
+        /// <summary>
+        /// compass에서 북쪽 방향을 가리키는 값을 받아온다.
+        /// input.compass.enable = true를 설정하지 않을 경우 밑의 값이 나온다.
+        /// </summary>
+        /// <returns></returns>
         public static float MagnetDegree()
         {
             float degree;
@@ -59,6 +68,14 @@ namespace NRKernal.NRExamples.MyArrowProject
             return new Vector3((float)x, (float)y, (float)z);
         }
 
+        /// <summary>
+        /// gps를 월드 좌표로 바꾸기 위한 함수
+        /// </summary>
+        /// <param name="player_lat"></param>
+        /// <param name="player_lng"></param>
+        /// <param name="target_lat"></param>
+        /// <param name="target_lng"></param>
+        /// <returns></returns>
         static public Vector2 GPSConvertWorldPos(double player_lat, double player_lng, double target_lat, double target_lng)
         {
             var rad = Math.PI / 180;
@@ -81,16 +98,35 @@ namespace NRKernal.NRExamples.MyArrowProject
             return new Vector2((float)n, (float)e);
         }
 
+        /// <summary>
+        /// 각도를 라디안 값으로 바꾼다.
+        /// </summary>
+        /// <param name="deg"></param>
+        /// <returns></returns>
         public static double ConvertDecimalDegreesToRadians(double deg)
         {
             return (deg * Math.PI / 180);
         }
 
+        /// <summary>
+        /// 라디안 값을 각도로 바꾼다.
+        /// </summary>
+        /// <param name="rad"></param>
+        /// <returns></returns>
         public static double ConvertRadiansToDecimalDegrees(double rad)
         {
             return (rad * 180 / Math.PI);
         }
 
+
+        /// <summary>
+        /// gps 간의 거리를 km 단위로 반환한다. 
+        /// </summary>
+        /// <param name="lat1"></param>
+        /// <param name="lon1"></param>
+        /// <param name="lat2"></param>
+        /// <param name="lon2"></param>
+        /// <returns>미터 단위가 필요하면 반환 값에 1000을 곱한다.</returns>
         public static double DistanceInKmBetweenEarthCoordinates(double lat1, double lon1, double lat2, double lon2)
         {
             var earthRadiusKm = 6371;

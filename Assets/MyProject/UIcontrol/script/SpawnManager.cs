@@ -48,6 +48,8 @@ namespace NRKernal.NRExamples.MyArrowProject
         {
             Debug.Log("gameobject_base name : " + gameobject_base.name);
             
+
+            //여기서 오브젝트들이 전부 생성되기까지 기다린다.
             if(gameobject_base.GetComponent<WebMapLoader>() != null)
             {
                 yield return new WaitUntil(() => gameobject_base.GetComponent<WebMapLoader>().MakeFinish);
@@ -61,35 +63,22 @@ namespace NRKernal.NRExamples.MyArrowProject
 
             float camera_accuracy = ObjectPositionSetting.CameraDegree();
             Debug.Log("camera_accuracy : " + camera_accuracy);
-            float magnet_degree = ObjectPositionSetting.MagnetDegree();
-            float magnet_radian = (magnet_degree - camera_accuracy) * Mathf.PI / 180;
+            float magnet_degree = ObjectPositionSetting.MagnetDegree() - camera_accuracy;
+           
+            //float magnet_radian = (magnet_degree - camera_accuracy) * Mathf.PI / 180;
             //float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
             //           - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
+
+            gameobject_base.transform.eulerAngles = gameobject_base.transform.eulerAngles + new Vector3(0, -magnet_degree, 0);
+
 
             Debug.Log("gameobject name : " + gameobject_base.gameObject.name);
 
             if (gameobject_base.GetComponent<WebMapLoader>() != null)
             {
-                yield return new WaitUntil(() => gameobject_base.GetComponent<WebMapLoader>().MakeFinish);
 
                 foreach (var follow_target in gameobject_base.GetComponent<WebMapLoader>().stagePoint)
                 {
-                    //if (!follow_target.activeSelf)
-                    //{
-                    //    follow_target.SetActive(true);
-                    //}
-
-                    Debug.Log("current degree : " + magnet_radian * 180 / Mathf.PI);
-                    Debug.Log("current gps : " + Input.location.lastData.latitude + ", " + Input.location.lastData.longitude);
-                    Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-                    follow_target.transform.position =
-                                        new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
-                                        follow_target.transform.position.y,
-                                        follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
-                    Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-
-
-
 
                     follow_target.transform.localScale = new Vector3(Mathf.Sqrt(Mathf.Abs(follow_target.transform.position.y)) + 1.0f,
                         Mathf.Sqrt(Mathf.Abs(follow_target.transform.position.y)) + 1.0f,
@@ -97,29 +86,11 @@ namespace NRKernal.NRExamples.MyArrowProject
                     //follow_target.GetComponent<PlaceAtLocation>().Location.Altitude;
                 }
             }
-            else if (gameobject_base.GetComponent<BUSstationXML>() != null)
-            {
-                yield return new WaitUntil(() => gameobject_base.GetComponent<BUSstationXML>().makefinish);
-                foreach (var follow_target in gameobject_base.GetComponent<BUSstationXML>().stagePoint)
-                {
-                    if (!follow_target.activeSelf)
-                    {
-                        follow_target.SetActive(true);
-                    }
-                    Debug.Log("current degree : " + magnet_radian);
-                    Debug.Log("current lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-                    follow_target.transform.position =
-                                        new Vector3(follow_target.transform.position.x * Mathf.Cos(magnet_radian) - follow_target.transform.position.z * Mathf.Sin(magnet_radian),
-                                        0,
-                                        follow_target.transform.position.z * Mathf.Cos(magnet_radian) + follow_target.transform.position.x * Mathf.Sin(magnet_radian));
-                    Debug.Log("after lotation : " + follow_target.transform.position.x + "," + follow_target.transform.position.y + "," + follow_target.transform.position.z);
-                }
-            }
-
-
-
-       
+            
         }
+
+
+
     }
 }
 

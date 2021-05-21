@@ -4,6 +4,11 @@ using System.Globalization;
 using System.Xml;
 using UnityEngine;
 
+
+/// <summary>
+/// 인터넷에서 만든 xml 정보를 바탕으로 오브젝트를 만든다.
+/// 에셋에서 뜯어낸 형태
+/// </summary>
 namespace NRKernal.NRExamples.MyArrowProject
 {
     public class WebMapLoader : MonoBehaviour
@@ -99,13 +104,15 @@ namespace NRKernal.NRExamples.MyArrowProject
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("scenemode  :  " + Scenemanager.Instance.scenemode);
+            //Debug.Log("scenemode  :  " + Scenemanager.Instance.scenemode);
             LoadXmlFile();
             BuildGameObjects();
         }
 
   
-
+        /// <summary>
+        /// 목적지의 오브젝트를 생성한다.
+        /// </summary>
         void BuildGameObjects()
         {
             foreach (var entry in _dataEntries)
@@ -117,23 +124,6 @@ namespace NRKernal.NRExamples.MyArrowProject
                     Debug.LogWarning($"[ARLocation#WebMapLoader]: Prefab {entry.meshId} not found.");
                     continue;
                 }
-
-                //var PlacementOptions = new PlaceAtLocation.PlaceAtOptions()
-                //{
-                //    MovementSmoothing = entry.movementSmoothing,
-                //    MaxNumberOfLocationUpdates = entry.maxNumberOfLocationUpdates,
-                //    UseMovingAverage = entry.useMovingAverage,
-                //    HideObjectUntilItIsPlaced = entry.hideObjectUtilItIsPlaced
-                //};
-
-                //var location = new Location()
-                //{
-                //    Latitude = entry.lat,
-                //    Longitude = entry.lng,
-                //    Altitude = entry.altitude,
-                //    AltitudeMode = entry.getAltitudeMode(),
-                //    Label = entry.name
-                //};
 
                 var Latitude = entry.lat;
                 var Longitude = entry.lng;
@@ -161,7 +151,10 @@ namespace NRKernal.NRExamples.MyArrowProject
             MakeFinish = true;
         }
 
-        // Update is called once per frame
+
+        /// <summary>
+        /// xml파일을 읽은 뒤 원하는 데이터로 분리해서 적용한다.
+        /// </summary>
         void LoadXmlFile()
         {
             var xmlString = XmlDataFile.text;
@@ -214,8 +207,6 @@ namespace NRKernal.NRExamples.MyArrowProject
                 };
 
                 _dataEntries.Add(entry);
-
-                //Debug.Log($"{id}, {lat}, {lng}, {altitude}, {altitudeMode}, {name}, {meshId}, {movementSmoothing}, {maxNumberOfLocationUpdates}, {useMovingAverage}, {hideObjectUtilItIsPlaced}");
             }
         }
     }

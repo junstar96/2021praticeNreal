@@ -9,11 +9,17 @@ namespace NRKernal.NRExamples.MyArrowProject
     using System;
     using UnityEngine.SceneManagement;
     using UnityEngine.UI;
+
     public class Scenemanager : MonoBehaviour
     {
         
         public GameObject loadingScene;
 
+
+        /// <summary>
+        /// 전환할 씬이 무거울 경우 비동기화 하여 로딩 시간을 표시하는 슬라이더
+        /// 현재 작업한 파일은 둘 다 씬이 가벼워서 금방 넘어간다.
+        /// </summary>
         public Slider slider;
 
         public Canvas compass;
@@ -26,17 +32,20 @@ namespace NRKernal.NRExamples.MyArrowProject
         [HideInInspector]
         public string scenename;
 
+        //생성할 타입을 고르자.
         [HideInInspector]
         public string scenemode;
 
+        //씬을 몇 번 바꿨고, 혹시 몇 번 이상 바꿨을 때
+        //오류가 생기진 않는지 확인용으로
         public int sceneChangeCount = 0;
 
         public bool compass_setting = false;
 
         private DateTime datetime;
-        /// <summary>배치 후 오브젝트가 제대로 된 위치에 보정이 되는가를 확인하기 위한 bool값</summary>
+        
 
-
+        
         private static Scenemanager m_instance;
 
         public static Scenemanager Instance
@@ -69,6 +78,9 @@ namespace NRKernal.NRExamples.MyArrowProject
             compass.gameObject.SetActive(false);
 
             Debug.Log("check : " + check.Length);
+
+            //씬을 오가면서 여러개 생성되는 경우가 있다.
+            //그 경우 이렇게 숫자를 세서 1개 이상이면 삭제한다.
             if(check.Length == 1)
             {
                 m_instance = this;
@@ -138,14 +150,14 @@ namespace NRKernal.NRExamples.MyArrowProject
             
 
             AsyncOperation operation;
-            if (string.Equals(SceneManager.GetActiveScene().name, "Logo scene"))
+            if (string.Equals(SceneManager.GetActiveScene().name, "SelectManu"))
             {
                 operation = SceneManager.LoadSceneAsync("Main Scene");
             }
             else
             {
                 sceneChangeCount++;
-                operation = SceneManager.LoadSceneAsync("Logo scene");
+                operation = SceneManager.LoadSceneAsync("SelectManu");
 
             }
 
@@ -173,7 +185,7 @@ namespace NRKernal.NRExamples.MyArrowProject
             } while (slider.value < 0.9);
 
             
-            if(scenename == "Logo scene")
+            if(scenename == "SelectManu")
             {
                 slider.gameObject.SetActive(false);
                 loadingScene.SetActive(false);
@@ -185,7 +197,7 @@ namespace NRKernal.NRExamples.MyArrowProject
             }
 
             compass.gameObject.SetActive(true);
-            if(scenename == "Logo scene")
+            if(scenename == "SelectManu")
             {
                 yield return new WaitUntil(() => compass_setting == true);
             }

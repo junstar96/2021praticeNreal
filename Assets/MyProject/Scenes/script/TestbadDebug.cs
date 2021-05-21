@@ -5,6 +5,10 @@ using UnityEngine.Android;
 using UnityEngine.UI;
 using NRKernal.NRExamples.MyArrowProject;
 
+
+/// <summary>
+/// 값들을 체크하기 위한 디버그 함수
+/// </summary>
 public class TestbadDebug : MonoBehaviour
 {
     public Text debugtext;

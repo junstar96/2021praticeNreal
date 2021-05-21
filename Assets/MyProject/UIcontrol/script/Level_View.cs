@@ -3,6 +3,11 @@ using UnityEngine.UI;
 using System;
 using NRKernal.NRExamples.MyArrowProject;
 
+
+/// <summary>
+/// 오브젝트가 평평한 시점에서 생성이 되도록 하기 위해서 
+/// 캔버스로 수평계 역할을 해서 오브젝트를 생성한다.
+/// </summary>
 public class Level_View : MonoBehaviour
 {
    
@@ -11,14 +16,12 @@ public class Level_View : MonoBehaviour
     public GameObject ball_pivot;
 
     public float accuracy_value = 0.25f;
-    private Vector3 defaultvector;
     public Text post;
-    public bool perent_bool = true;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        perent_bool = true;
         scenemanager = transform.parent.parent.parent.GetComponent<Scenemanager>();
     }
     // Update is called once per frame

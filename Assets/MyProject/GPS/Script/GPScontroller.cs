@@ -69,7 +69,10 @@ namespace NRKernal.NRExamples.MyArrowProject
         }
 
         
-
+        /// <summary>
+        /// GPS연결을 시작함.
+        /// </summary>
+        /// <returns></returns>
         IEnumerator Start()
         {
             Debug.Log("ienum start");
@@ -108,41 +111,12 @@ namespace NRKernal.NRExamples.MyArrowProject
         }
 
 
-
+        /// <summary>
+        /// 해당 앱이 종료되었을 때 
+        /// </summary>
         private void OnApplicationQuit()
         {
             Input.location.Stop();
-        }
-
-        public IEnumerator StartLocationService()
-        {
-            if (Input.location.isEnabledByUser)
-            {
-                Debug.Log("User has not enabled GPS");
-                yield break;
-            }
-
-
-            Input.location.Start(0, 0);
-
-            int maxWait = 20;
-            while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
-            {
-                yield return new WaitForSeconds(1);
-                maxWait--;
-            }
-            if (maxWait < 1)
-            {
-                isConnected = false;
-                Debug.Log("Timed out");
-                yield break;
-            }
-
-
-            isConnected = true;
-            lat = Input.location.lastData.latitude;
-            longi = Input.location.lastData.longitude;
-            StartCoroutine(updateGPS());
         }
 
         /// <summary>

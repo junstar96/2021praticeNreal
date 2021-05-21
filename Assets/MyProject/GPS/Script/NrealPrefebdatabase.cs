@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// namespace NRKernal.NRExamples.MyArrowProject
+/// 에서 사용되는 데이터셋을 만드는 함수.
+/// </summary>
 [CreateAssetMenu(fileName = "Arrow Project", menuName = "MYproject/MyPrefebdatabase")]
 public class NrealPrefebdatabase : ScriptableObject
 {
