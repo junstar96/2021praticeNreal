@@ -63,11 +63,6 @@ public class NRCanvasFollowMove : MonoBehaviour
 
         return false;
     }
-
-    //public void SetIsLotationChange(bool check)
-    //{
-    //    islotationChange = check;
-    //}
 }
 
 

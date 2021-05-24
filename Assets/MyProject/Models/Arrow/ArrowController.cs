@@ -40,10 +40,11 @@
             //거리를 표시하는 텍스트
             public UnityEngine.UI.Text distance;
 
-            
+            public float compareDistance = 5.0f;
 
             //원래는 이걸로 화살표의 타겟을 정했음.
             private Vector3 arrow_target = new Vector3(100,100,100);
+            private Vector3 arrowDown = Vector3.down;
             //public double first_magnetic_degree;
 
             //타겟의 gps 정보를 읽어서 타겟으로 삼는다.
@@ -51,14 +52,8 @@
             public double target_longi;
             private string target_name = string.Empty;
 
-            //public static System.Action<string, double, double> statechanged;
-
-            //public GameObject test_target;
-
             private void Awake()
             {
-                //arrowset = new UnityEvent();
-                //player = GameObject.FindWithTag("Player").GetComponent<Transform>();
                 arrowset.AddListener(SetArrow);
             }
 
@@ -85,9 +80,6 @@
 
                 TargetSelect();
                
-
-               
-                //PositionInitialize();
             }
 
            
@@ -108,46 +100,30 @@
                 arrow_target = target;
             }
             
+
+            /// <summary>
+            /// 타겟을 찾고 나서 그 타겟을 화살표가 가리킨다.
+            /// </summary>
             public void TargetSelect()
             {
+                Transform entity = transform;
                 if (string.Equals(Scenemanager.Instance.scenemode, "BusStationScene"))
                 {
-                    var entity = GameObject.Find("TargetCreater").transform.Find("BusStationXML").transform.Find(target_name);
-                    target_lati = entity.GetComponent<GPSChecker>().Latitude;
-                    target_longi = entity.GetComponent<GPSChecker>().Longitude;
-
-                    var degree = (float)(ObjectPositionSetting.BearingP1toP2(Input.location.lastData.latitude,
-                        Input.location.lastData.longitude, target_lati, target_longi) - ObjectPositionSetting.CameraDegree() - 180);
-
-
-                    var isclose = ObjectPositionSetting.DistanceInKmBetweenEarthCoordinates(
-                        Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) * 1000;
-
-                    arrow.transform.localEulerAngles = new Vector3(isclose < 10.0 ? 90.0f : 0.0f, degree, 0);
-
-
-                    distance.text = isclose.ToString("N2") + "M";
+                    entity = GameObject.Find("TargetCreater").transform.Find("BusStationXML").transform.Find(target_name);
                 }
                 else if (string.Equals(Scenemanager.Instance.scenemode, "Webmaploader"))
                 {
-
-                    var entity = GameObject.Find("TargetCreater").transform.Find("Webmaploader").transform.Find(target_name);
-
-
-                    target_lati = entity.GetComponent<GPSChecker>().Latitude;
-                    target_longi = entity.GetComponent<GPSChecker>().Longitude;
-
-                    var degree = (float)(ObjectPositionSetting.BearingP1toP2(Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) - ObjectPositionSetting.CameraDegree() - 180);
-
-
-                    var isclose = ObjectPositionSetting.DistanceInKmBetweenEarthCoordinates(Input.location.lastData.latitude, Input.location.lastData.longitude, target_lati, target_longi) * 1000;
-
-                    //거리가 10m 안으로 들어오면 화살표가 아래를 가리킨다. 그 외에는 오브젝트를 가리킨다.
-                    //오브젝트의 lookat을 사용할 경우 lookat은 전역transform 기준이라 올바르게 적용되지 않는다.
-                    arrow.transform.localEulerAngles = new Vector3(isclose < 10.0 ? 90.0f : 0.0f, degree, 0);
-
-                    distance.text = isclose.ToString("N2") + "M";
+                    entity = GameObject.Find("TargetCreater").transform.Find("Webmaploader").transform.Find(target_name);
                 }
+
+
+                var target_position = new Vector3(entity.transform.position.x, arrow.transform.position.y, entity.transform.position.z);
+                var isclose = Vector3.Distance(target_position, arrow.transform.position);
+                arrowDown = Vector3.down + arrow.transform.position;
+
+                arrow.transform.LookAt(isclose > compareDistance ? entity.transform.position : arrowDown, arrow.transform.up);
+
+                distance.text = isclose.ToString("N2") + "M";
             }
         }
     }

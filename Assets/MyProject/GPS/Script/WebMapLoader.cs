@@ -93,13 +93,7 @@ namespace NRKernal.NRExamples.MyArrowProject
             }
         }
 
-        //public List<PlaceAtLocation> PlaceAtComponents
-        //{
-        //    get
-        //    {
-        //        return _placeAtComponents;
-        //    }
-        //}
+        
 
         // Start is called before the first frame update
         void Start()
@@ -136,10 +130,6 @@ namespace NRKernal.NRExamples.MyArrowProject
                 var instance = Instantiate(Prefab, new Vector3(convertgps.y, (float)Altitude, convertgps.x), Quaternion.identity, gameObject.transform);
                 instance.AddComponent<Light>();
                 instance.GetComponent<Light>().type = LightType.Point;
-
-                instance.AddComponent<GPSChecker>();
-                instance.GetComponent<GPSChecker>().Latitude = Latitude;
-                instance.GetComponent<GPSChecker>().Longitude = Longitude;
 
                 instance.name = Label;
 

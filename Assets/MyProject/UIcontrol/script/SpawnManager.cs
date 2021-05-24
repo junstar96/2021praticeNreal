@@ -42,8 +42,6 @@ namespace NRKernal.NRExamples.MyArrowProject
             }
         }
 
-        // Update is called once per frame
-
         IEnumerator RotationObject(GameObject gameobject_base)
         {
             Debug.Log("gameobject_base name : " + gameobject_base.name);
@@ -64,10 +62,6 @@ namespace NRKernal.NRExamples.MyArrowProject
             float camera_accuracy = ObjectPositionSetting.CameraDegree();
             Debug.Log("camera_accuracy : " + camera_accuracy);
             float magnet_degree = ObjectPositionSetting.MagnetDegree() - camera_accuracy;
-           
-            //float magnet_radian = (magnet_degree - camera_accuracy) * Mathf.PI / 180;
-            //float magnet_radian = Input.location.isEnabledByUser ? ((float)ARLocationProvider.Instance.Provider.CurrentHeading.magneticHeading
-            //           - Camera.main.transform.eulerAngles.y/* - (float)degree_correction*/) * Mathf.PI / 180 : Mathf.PI / 2.0f;
 
             gameobject_base.transform.eulerAngles = gameobject_base.transform.eulerAngles + new Vector3(0, -magnet_degree, 0);
 

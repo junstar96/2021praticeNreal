@@ -326,9 +326,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13856}
     - Class: 114
-      Script: {instanceID: 25418}
+      Script: {instanceID: 29264}
     - Class: 114
-      Script: {instanceID: 25420}
+      Script: {instanceID: 29266}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -868,7 +868,7 @@ ScriptsOnlyBuild:
     className: NRRenderer
   - hash:
       serializedVersion: 2
-      Hash: fca7c5df58104eef037cbd4a05766bd2
+      Hash: 1a0af65e025f404a3cf435acf5386d09
     assemblyName: Assembly-CSharp.dll
     namespaceName: NRKernal.NRExamples.MyArrowProject
     className: ArrowController
@@ -1440,4 +1440,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/MyProject/Scenes/SelectManu.unity
   - Assets/MyProject/Scenes/Main Scene.unity
-  playerPath: C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/imagetrack.apk
+  playerPath: C:/Users/dnsoft/Desktop/Practice/2021_practice/instant app/2021praticeNreal/gpstour.apk

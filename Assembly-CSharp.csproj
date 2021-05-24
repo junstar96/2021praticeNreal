@@ -93,12 +93,11 @@
     <Compile Include="Assets\MyProject\UIcontrol\script\XmlBusButtonController.cs" />
     <None Include="Assets\MyProject\GPS\Xml FILE\UNITYtestGPS.xml" />
     <None Include="Assets\Resources\Plugins\Android\AndroidManifest.xml" />
-    <None Include="Assets\MyProject\GPS\Xml FILE\Unity_test_gps.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\GameGoal.xml" />
     <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
     <None Include="Assets\MyProject\GPS\Xml FILE\Update_Data.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\yongsan_data.xml" />
-    <None Include="Assets\MyProject\GPS\Xml FILE\data (2).xml" />
+    <None Include="Assets\MyProject\GPS\Xml FILE\Gasan_database.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\AltitudeResetting.xml" />
     <None Include="Assets\MyProject\GPS\Xml FILE\popular_korean_tour_spot.xml" />
     <Reference Include="UnityEngine">

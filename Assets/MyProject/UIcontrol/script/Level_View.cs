@@ -16,6 +16,7 @@ public class Level_View : MonoBehaviour
     public GameObject ball_pivot;
 
     public float accuracy_value = 0.25f;
+    public float borderline = 5.0f;
     public Text post;
     
 
@@ -30,12 +31,14 @@ public class Level_View : MonoBehaviour
         post.text = "공을 가운데에 맞춰주세요";
 
         ball_pivot.transform.localPosition = new Vector3(Input.gyro.gravity.x * 30, Input.gyro.gravity.y * 30, 0);
+        
 
+        //경계선 언저리에 들어와 있을 경우 색깔이 붉게 변하고 좀 더 정확하게 가면 
 #if !UNITY_EDITOR
-        if(Input.gyro.gravity.x * 30 < 5 && Input.gyro.gravity.y * 30 < 5)
+        if(Input.gyro.gravity.x * 30 < borderline && Input.gyro.gravity.y * 30 < borderline)
         {
             ball_pivot.transform.GetChild(0).GetComponent<Image>().color = new Color(255, 0, 0);
-
+            post.text = "좀만 더";
             if(Input.gyro.gravity.x * 30 < accuracy_value && Input.gyro.gravity.y * 30 < accuracy_value)
             {
                 ball_pivot.transform.GetChild(0).GetComponent<Image>().color = new Color(0, 255, 0);
